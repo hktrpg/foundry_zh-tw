@@ -2,7 +2,7 @@
   "name": "foundry_zh-tw",
   "title": "Translation: 正體中文 [Core]",
   "description": "為 FVTT 核心系统增加了正體中文。",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "minimumCoreVersion": "0.6.6",
   "compatibleCoreVersion": "0.7.9",
   "author": "Sad",
@@ -18,5 +18,5 @@
   ],
   "url": "https://github.com/hktrpg/foundry_zh-tw",
   "manifest": "https://github.com/hktrpg/foundry_zh-tw/releases/latest/download/module.json",
-  "download": "https://github.com/hktrpg/foundry_zh-tw/releases/download/0.1.4/foundry_zh-tw.zip"
+  "download": "https://github.com/hktrpg/foundry_zh-tw/archive/main.zip"
 }
