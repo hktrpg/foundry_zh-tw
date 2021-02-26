@@ -17,6 +17,6 @@
     }
   ],
   "url": "https://github.com/hktrpg/foundry_zh-tw",
-  "manifest": "https://github.com/hktrpg/foundry_zh-tw/releases/latest/download/module.json",
+  "manifest": "https://raw.githubusercontent.com/hktrpg/foundry_zh-tw/main/module.json",
   "download": "https://github.com/hktrpg/foundry_zh-tw/archive/main.zip"
 }
