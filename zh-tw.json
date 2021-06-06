@@ -162,7 +162,7 @@
   "CONTROLS.WallSecret": "密門",
   "CONTROLS.WallSelect": "框選牆體",
   "CONTROLS.WallSnap": "强制網格吸附",
-  "CONTROLS.WallClone": "克隆牆體",
+  "CONTROLS.WallClone": "複製牆體",
   "CONTROLS.WallClear": "清除牆體",
   "CONTROLS.GroupLighting": "光線控制",
   "CONTROLS.LightDraw": "繪製光源",
