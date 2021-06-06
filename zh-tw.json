@@ -753,7 +753,7 @@
   "SOUND.ConfigHint": "設定Token移動到半徑內時，播放音訊文件的環境音。",
   "SOUND.Create": "新增環境音",
   "SOUND.Update": "更新環境音",
-  "SOUND.SourcePath": "源文件位置",
+  "SOUND.SourcePath": "來源文件位置",
   "SOUND.Radius": "效果半徑",
   "SOUND.TypeLocal": "局部聲音",
   "SOUND.TypeGlobal": "全域聲音",
