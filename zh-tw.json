@@ -1226,10 +1226,10 @@
   "TILE.VideoAutoplay": "自動播放影片",
   "TILE.VideoVolume": "影片音量",
   "TOKEN.Opacity": "Token不透明度",
-  "TOKEN.WarningNoActor": "此Token引用了世界中不再存在的 Actor。",
+  "TOKEN.WarningNoActor": "此Token引用了世界中不再存在的 角色。",
   "TOKEN.WarningNoVision": "在這個場景中，你沒有任何具有視覺的Token",
   "USERS.DeleteWarning": "此用戶將從遊戲世界中永久刪除。",
-  "USERS.DeleteGMWarning": "您將要刪除一個 Game Master 用戶！",
+  "USERS.DeleteGMWarning": "您將要刪除一個 Game Master 帳號！",
   "WALLS.Sight": "視線限制",
   "WALLS.Sound": "聲音限制",
   "WORLD.Title": "世界的標題",
@@ -1241,5 +1241,14 @@
   "WORLD.ResetKeys": "重置用戶訪問密碼",
   "WORLD.LaunchSafeMode": "在安全模式中啓動",
   "WORLD.SafeModeHint": "禁用所有MOD和活動場景，並停止任何播放音頻",
-  "WORLD.Description": "世界的描述"
+  "WORLD.Description": "世界的描述",
+  "COMBAT.CombatantNotInScene": "您當前查看的場景中不存在參戰者 {name}",
+  "SETTINGS.PermissionReset": "將用戶的權限重置為默認值.",
+  "SETTINGS.PermissionUpdate": "已更新用戶的權限.",
+  "SETUP.PackageStatusUpdating": "更新中",
+  "SETUP.PackageStatusUpdated": "已更新",
+  "JOIN.ErrorUserDoesNotExist": "請求的用戶 \"{user}\" 並不存在！",
+  "JOIN.ErrorInvalidPassword": "為 {user} 輸入的密碼無效!",
+  "JOIN.ErrorBanned": "{user} 無權訪問此世界!",
+  "JOIN.LoginSuccess": "以{user}身份登錄成功，正在進入遊戲!"
 }
