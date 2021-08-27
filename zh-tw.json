@@ -1252,5 +1252,8 @@
   "JOIN.ErrorBanned": "{user} 無權訪問此世界!",
   "JOIN.LoginSuccess": "以{user}身份登錄成功，正在進入遊戲!",
   "SETTINGS.DemoMode": "展示模式",
-  "PACKAGE.UpdateCheckTimedOut": "超時"
+  "PACKAGE.UpdateCheckTimedOut": "超時",
+  "HUD.AssignStatusEffects": "分配狀態的效果",
+  "HUD.ToggleCombatState": "切換戰鬥狀態",
+  "WEBRTC.PTTKeyWarn": "你的《發言/靜音鍵》正在使用舊版本設定，可能導致無法按正常運作，請重新設置."
 }
