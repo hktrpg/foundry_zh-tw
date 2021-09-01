@@ -1,3 +1,5 @@
+![download](https://img.shields.io/github/downloads/hktrpg/foundry_zh-tw/total)
+
 # Foundry VTT 核心系統正體中文化
 
 根據'https://github.com/fvtt-cn/foundry_chn' 修改
