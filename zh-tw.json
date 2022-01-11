@@ -1480,7 +1480,7 @@
   "LIGHT.AnimationSwirlingRainbow": "旋轉彩虹",
   "LIGHT.AnimationRadialRainbow": "放射彩虹",
   "LIGHT.AnimationFairyLight": "彩燈",
-  "MODMANAGE.Build": "建構",
+  "MODMANAGE.Build": "Build",
   "NUE.FirstLaunchBody": "看起來這是一個新世界。要開始使用，您應該首先通過 <a class=\"nue-tab\" data-tab=\"settings\">用戶管理</a>設定和新增您可能需要的任何其他玩家。然後，您可以為他們新增<a class=\"nue-tab\" data-tab=\"actors\">角色</a>，以及任何您需要表示的其他重要角色。地圖和其他視覺效果可以使用 <a class=\"nue-tab\" data-tab=\"scenes\">場景</a> 以及手記、筆記和其他信息可以存儲在<a class=\"nue-tab\" data-tab=\"journal\">日誌條目</a>中。",
   "NUE.FirstLaunchHeader": "開始使用",
   "NUE.FirstLaunchHint": "<i class=\"fas fa-info-circle\"></i> 這個聊天欄可以按右鍵彈出，也可以右鍵點擊頂部的對話氣泡圖標來彈出整個聊天標籤。你也可以做同樣的事情來彈出任何其他的側邊欄標籤。",
