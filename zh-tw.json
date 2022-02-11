@@ -1590,5 +1590,9 @@
   "TOKEN.VisionBright": "明亮",
   "TOKEN.VisionDim": "昏暗",
   "TOKEN.VisionAngle": "視野角度",
-  "WALLS.Light": "光線限制"
+  "WALLS.Light": "光線限制",
+  "Collapse": "折疊",
+  "Expand": "展開",
+  "CHAT.Chat": "聊天",
+  "DOCUMENT.Imported": "已成功從 JSON 導入 {document} \"{name}\" 的數據."
 }
