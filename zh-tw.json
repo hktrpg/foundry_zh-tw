@@ -1594,5 +1594,14 @@
   "Collapse": "折疊",
   "Expand": "展開",
   "CHAT.Chat": "聊天",
-  "DOCUMENT.Imported": "已成功從 JSON 導入 {document} \"{name}\" 的數據."
+  "DOCUMENT.Imported": "已成功從 JSON 導入 {document} \"{name}\" 的數據.",
+  "GridSpaces": "網格空間",
+  "TABLE.DrawFlavor": "從 {name} 表中抽取結果",
+  "TABLE.DrawFlavorPlural": "從 {name} 表中抽取 {number} 個結果",
+  "TIME.Now": "現在",
+  "TIME.SecondsAbbreviation": "s",
+  "TIME.MinutesAbbreviation": "m",
+  "TIME.HoursAbbreviation": "h",
+  "TIME.DaysAbbreviation": "d",
+  "TIME.Since": "自從 {since} "
 }
