@@ -318,7 +318,7 @@
   "EFFECT.StatusDead": "死亡",
   "EFFECT.StatusUnconscious": "昏迷",
   "EFFECT.StatusStunned": "震懾",
-  "EFFECT.StatusProne": "伏地",
+  "EFFECT.StatusProne": "倒地",
   "EFFECT.StatusRestrained": "束縛",
   "EFFECT.StatusParalysis": "麻痹",
   "EFFECT.StatusFlying": "飛行",
