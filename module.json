@@ -2,7 +2,7 @@
   "name": "foundry_zh-tw",
   "title": "Translation: 正體中文 [Core]",
   "description": "為 FVTT V10 核心系统提供正體中文翻譯。Discord  :<a href='https://discord.gg/vx4kcm7'> https://discord.gg/vx4kcm7 </a></p>",
-  "version": "1.10.0.0",
+  "version": "1.10.1.0",
   "minimumCoreVersion": "0.6.6",
   "compatibleCoreVersion": "10",
   "coreTranslation": true,
