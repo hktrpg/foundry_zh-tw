@@ -720,7 +720,7 @@
   "SETUP.UpdateButtonDownload": "下載更新 {version}",
   "SETUP.UpdateInfoAvailable": "Foundry Virtual Tabletop版本{version}更新可用！",
   "SETUP.WorldMigrationRequiredTitle": "需要遷移世界資料",
-  "SETUP.WorldMigrationRequired": "<p>啓動世界<strong>{world}</strong> 將把其舊有核心版本{oldVersion}的資料模型遷移到當前安裝的版本{newVersion}上。</p><p>該過程同時也會自動禁用<strong>已安裝的{nModules}個MOD中{nIncompatible}個</strong>可能與新版本不兼容的MOD。你需要重新手動開啓這些MOD。</p><p>請確認當前是否有任何可用的遊戲系統和模組的更新，並且請周期性備份重要的世界資料。你想要繼續進行嗎？</p>",
+  "SETUP.WorldMigrationRequired": "<p>啓動世界<strong>{world}</strong> 將把其舊有核心版本<strong>{oldVersion}</strong>的資料模型遷移到當前安裝的版本<strong>{newVersion}</strong>上。",
   "SETUP.AdminAccess": "管理員權限",
   "SETUP.AdminKeyLabel": "管理員密碼",
   "SETUP.AdminKeyHint": "你可以爲該設定界面指定一個特別的管理員密碼。",
