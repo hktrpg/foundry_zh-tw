@@ -3,10 +3,17 @@
   "title": "Translation: 正體中文 [Core]",
   "description": "為 FVTT V10 核心系统提供正體中文翻譯。Discord  :<a href='https://discord.gg/vx4kcm7'> https://discord.gg/vx4kcm7 </a></p>",
   "version": "1.11.0.0",
-  "minimumCoreVersion": "0.6.6",
-  "compatibleCoreVersion": "10",
+  "compatibility": {
+    "minimum": "10",
+    "verified": "10"
+  },
   "coreTranslation": true,
-  "author": "Sad, HKTRPG",
+  "authors": [
+    {
+      "name": "HKTRPG",
+      "discord": "zzz#8939"
+    }
+  ],
   "scripts": [],
   "styles": [],
   "packs": [],
