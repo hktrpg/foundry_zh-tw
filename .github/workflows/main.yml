@@ -13,7 +13,7 @@ jobs:
         id: checkout
         uses: actions/checkout@v2
 
-      - name: Install jq and unzip
+      - name: Install jq 
         run: |
           sudo apt-get install -y jq
 
@@ -28,7 +28,7 @@ jobs:
 
       - name: Create Artifact
         id: build-zip
-        run: zip -r "./.github/${{ steps.read_version.outputs.version }}/module.zip"  -i  module.json zh-tw.json
+        run: zip -r ./.github/${{ steps.read_version.outputs.version }}/module.zip  -i  module.json zh-tw.json
 
       - name: Update Release with Files
         id: create_version_release
