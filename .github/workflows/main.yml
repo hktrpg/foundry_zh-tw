@@ -15,7 +15,7 @@ jobs:
 
       - name: Install jq and unzip
         run: |
-          sudo apt-get install -y jq 
+          sudo apt-get install -y jq
 
       - name: Download pf2_cn.zip
         run: wget https://raw.githubusercontent.com/hktrpg/foundry_zh-tw/main/module.json -O ./.github/module.json
@@ -28,7 +28,7 @@ jobs:
 
       - name: Create Artifact
         id: build-zip
-        run: zip -r "./.github/${{ steps.read_version.outputs.version }}/module.zip"   "module.json zh-tw.json"
+        run: zip -r "./.github/${{ steps.read_version.outputs.version }}/module.zip"  -i  module.json zh-tw.json
 
       - name: Update Release with Files
         id: create_version_release
