@@ -28,7 +28,9 @@ jobs:
 
       - name: Create Artifact
         id: build-zip
-        run: zip -r ./.github/${{ steps.read_version.outputs.version }}/module.zip  module.json zh-tw.json
+        run: |
+          mkdir ./.github/${{ steps.read_version.outputs.version }}
+          zip -r ./.github/${{ steps.read_version.outputs.version }}/module.zip  module.json zh-tw.json
 
       - name: Update Release with Files
         id: create_version_release
