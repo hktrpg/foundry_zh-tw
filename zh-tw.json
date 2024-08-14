@@ -1198,7 +1198,7 @@
   "SETTINGS.ReloadPromptBody": "某些更改的設定需要重新加載應用程式才能生效。你現在要重新加載嗎？",
   "SETUP.NavLabel": "設定標籤",
   "SETUP.CoreVersion": "核心軟件版本",
-  "SETUP.CoreVersionHint": "如果FoundryVTT核心軟件有更新，則可以在此處更新。你當前正在使用{coreVersion}版本。",
+  "SETUP.CoreVersionHint": "如果FoundryVTT核心軟件有更新，則可以在此處更新。你當前正在使用{versionDisplay}版本。",
   "SETUP.SettingsHeader": "軟件設定",
   "SETUP.YouMustInstallASystem": "你必須在建立新的世界前安裝一個系統",
   "SETUP.UpdateAvailable": "現在可以更新到{channel}頻道下{version}版本！",
