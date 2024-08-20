@@ -1,0 +1,56 @@
+name: Check and Release
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  check_version_and_release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Check module.json version
+        id: check_version
+        run: |
+          # Get the current version from module.json
+          CURRENT_VERSION=$(jq -r .version /module.json)
+          # Get the latest release version
+          LATEST_VERSION=$(curl -s https://api.github.com/repos/${{ github.repository }}/releases/latest | jq -r .tag_name)
+
+          echo "Current version: $CURRENT_VERSION"
+          echo "Latest version: $LATEST_VERSION"
+
+          if [ "$CURRENT_VERSION" != "$LATEST_VERSION" ]; then
+            echo "Version has been updated."
+            echo "::set-output name=updated::true"
+            echo "::set-output name=new_version::$CURRENT_VERSION"
+          else
+            echo "No version update."
+            echo "::set-output name=updated::false"
+          fi
+
+      - name: Create zip if updated
+        if: steps.check_version.outputs.updated == 'true'
+        run: |
+          zip -r module.zip /
+
+      - name: Upload release asset
+        if: steps.check_version.outputs.updated == 'true'
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.check_version.outputs.new_version }}
+          files: module.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
