@@ -25,7 +25,7 @@ jobs:
         id: check_version
         run: |
           # Get the current version from module.json
-          CURRENT_VERSION=$(jq -r .version /module.json)
+          CURRENT_VERSION=$(jq -r .version module.json)
           # Get the latest release version
           LATEST_VERSION=$(curl -s https://api.github.com/repos/${{ github.repository }}/releases/latest | jq -r .tag_name)
 
