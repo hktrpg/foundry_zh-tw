@@ -3,7 +3,7 @@ name: Check and Release
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   check_version_and_release:
