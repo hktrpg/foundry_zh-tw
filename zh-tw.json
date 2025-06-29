@@ -2,22 +2,22 @@
   "Invalid": "無效",
   "units": "單位",
   "Unknown": "未知",
-  "ADVENTURE.ExportPackNoSystem": "您正在嘗試將「角色」或「物品」匯出到與其系統無關的「冒險」。「冒險」合集 必須有與這些「物品」或「物品」相符合的數據欄位。",
+  "ADVENTURE.ExportPackNoSystem": "您正在嘗試將「角色」或「物品」匯出到一個不限遊戲系統的「冒險」中。該「冒險」合集必須擁有一個與這些「角色」或「物品」所屬系統相符的系統欄位。",
   "ADVENTURE.CreateSuccess": "已成功新增冒險 「{name}」!",
   "ADVENTURE.UpdateSuccess": "已成功更新冒險 「{name}」!",
   "CHAT.UnknownUser": "未知使用者",
   "CHAT.To": "對",
   "COMBAT.PingInvisibleToken": "你不能Ping一個你看不見的Token。",
   "COMBAT.Turn": "回合",
-  "CONTROLS.GroupWall": "牆體",
-  "EDITOR.HorizontalRule": "橫尺",
+  "CONTROLS.GroupWall": "牆體控制",
+  "EDITOR.HorizontalRule": "水平線",
   "INVITATIONS.DiscoveryFailed": "我們的 IP 檢測功能無法識別您的正確 IP 地址，您正在使用 IPv6，或者您當前未連接到 Internet。",
   "Activate": "啓動",
   "all": "全部",
   "Angle": "角度",
   "Author": "作者",
   "AuthorPl": "作者",
-  "SETTINGS.PhotosensitiveModeN": "感光（Photosensitivity ）模式",
+  "SETTINGS.PhotosensitiveModeN": "感光（Photosensitivity）模式",
   "SETTINGS.PhotosensitiveModeL": "啟用此模式可以減少閃爍、快速移動和重複動畫和效果的頻率和強度。",
   "AreYouSure": "你確定嗎？",
   "and": "及",
@@ -73,7 +73,7 @@
   "Image": "圖片",
   "None": "沒有",
   "Path": "位置",
-  "Packs": "包",
+  "Packs": "合集包",
   "Permissions": "許可",
   "Position": "位置",
   "Pixels": "像素",
@@ -90,7 +90,7 @@
   "Scope": "範圍",
   "Seconds": "秒",
   "selected": "已選",
-  "Sheet": "卡範本",
+  "Sheet": "資訊卡介面",
   "System": "系統",
   "Software": "軟件",
   "Template": "模板",
@@ -223,7 +223,7 @@
   "CHAT.RollBlind": "僅GM",
   "CHAT.RollDefault": "預設",
   "CHAT.RollPublic": "公開",
-  "CHAT.RollPrivate": "非公開",
+  "CHAT.RollPrivate": "私密擲骰 (GM)",
   "CHAT.RollSelf": "僅自己",
   "CHAT.RollTables": "隨機表",
   "CHAT.PrivateRollContent": "{user} 進行了暗骰",
@@ -389,7 +389,7 @@
   "CONTROLS.CanvasLeftDrag": "使用當前工具",
   "CONTROLS.CanvasSelectCancel": "取消左鍵拖拽操作",
   "CONTROLS.CanvasZoom": "縮放畫布",
-  "CONTROLS.CharacterSheet": "切換角色表",
+  "CONTROLS.CharacterSheet": "切換角色資訊卡介面",
   "CONTROLS.LeftClick": "鼠標左鍵",
   "CONTROLS.LeftClick2": "左鍵雙擊",
   "CONTROLS.LeftDrag": "左鍵拖拽",
@@ -417,7 +417,7 @@
   "CONTROLS.RulerWaypoint": "設定位置點",
   "CONTROLS.RulerMove": "按位置移動Token",
   "CONTROLS.RulerWhile": "在以Token爲起點測量時",
-  "CONTROLS.ObjectSheet": "打開對象對應的卡牌",
+  "CONTROLS.ObjectSheet": "開啟關聯對像的資訊卡",
   "CONTROLS.ObjectHUD": "顯示對象HUD（如果可用）",
   "CONTROLS.ObjectConfig": "打開對象設定表單",
   "CONTROLS.ObjectDrag": "移動受控對象",
@@ -817,7 +817,7 @@
   "KEYBINDINGS.Copy": "複製物件",
   "KEYBINDINGS.Paste": "貼上物件",
   "KEYBINDINGS.Target": "目標指示物",
-  "KEYBINDINGS.ToggleCharacterSheet": "切換角色表",
+  "KEYBINDINGS.ToggleCharacterSheet": "切換角色卡介面",
   "KEYBINDINGS.PTTKey": "按鍵發話/按鍵靜音",
   "KEYBINDINGS.PanUp": "移動或向上移動",
   "KEYBINDINGS.PanLeft": "移動或向左移動",
@@ -1394,11 +1394,11 @@
   "JOIN.ErrorInvalidPassword": "為{user}提供的密碼無效！",
   "JOIN.ErrorBanned": "{user}無權訪問此世界！",
   "JOIN.LoginSuccess": "作為{user}成功登錄，加入遊戲！",
-  "SHEETS.ThisSheet": "該卡",
-  "SHEETS.DefaultSheet": "預設卡",
+  "SHEETS.ThisSheet": "該資訊卡介面",
+  "SHEETS.DefaultSheet": "預設資訊卡介面",
   "SHEETS.DefaultDocumentSheet": "預設的{document}工作表",
   "SHEETS.DocumentSheetHint": "覆蓋你想為這個特定文件使用的工作表類型。",
-  "SHEETS.TypeSheetHint": "設定用於此類實體的預設卡範本（僅GM）。",
+  "SHEETS.TypeSheetHint": "設定此類型文件所預設使用的資訊卡介面（僅限GM）。",
   "SHEETS.DocumentSheetPrivate": "你沒有足夠的權限來查看這個文件表。",
   "SHEETS.Save": "儲存設定",
   "SHEETS.FormNavLabel": "表單標籤導航",
@@ -2237,7 +2237,7 @@
   "TOKEN.Adjectives.vengeful": "圖謀報復的",
   "TOKEN.Adjectives.vindictive": "報復心重的",
   "TOKEN.Adjectives.worried": "擔憂的",
-  "TOKEN.Adjectives.zen": "放鬆的",
+  "TOKEN.Adjectives.zen": "禪定的",
   "TYPES.Cards.deck": "牌組",
   "TYPES.Cards.hand": "手牌",
   "TYPES.Cards.pile": "牌堆",
@@ -2538,7 +2538,7 @@
   "AUDIO.CHANNELS.INTERFACE.label": "介面",
   "AUDIO.CHANNELS.INTERFACE.tooltip": "控制與用戶界面或用戶交互相關的聲音的本地音量。",
   "COMBAT.PanToCombatant": "移動至戰鬥者",
-  "COMBAT.WarnNonVisibleToken": "此戰鬥者對您不可見。",
+  "COMBAT.WarnNonVisibleToken": "此戰鬥者對您來說不可見。",
   "COMBAT.CannotLinkToScene": "您無法將戰鬥連結到不包含所有戰鬥者的場景。",
   "COMPENDIUM.ART.CONFIG.Hint": "使用箭頭調整藝術來源的優先級。當單個角色由多個來源提供藝術時，優先級最高的將被使用。",
   "COMPENDIUM.ART.CONFIG.Portraits": "肖像",
@@ -2863,5 +2863,3148 @@
   "USER.SHEET.HEADERS.INFO": "玩家信息",
   "USER.SHEET.HEADERS.CHAR": "玩家角色",
   "USER.SHEET.BUTTONS.SAVE": "保存玩家設定",
-  "LIGHT.FIELDS.attenuation.label": "衰減"
+  "LIGHT.FIELDS.attenuation.label": "衰減",
+  "Information": "信息",
+  "ADVENTURE": {
+    "ImportSubmit": "導入冒險",
+    "ImportProgress": "正在導入",
+    "ImportHeaderOverview": "概覽",
+    "ImportHeaderContents": "內容",
+    "ImportHeaderOptions": "選項",
+    "ImportOverwriteTitle": "覆蓋現有內容？",
+    "ImportOverwriteWarning": "你的世界已經存在著來自 {name} 冒險的一些內容。如果你導入冒險，該內容將被覆蓋。你要繼續嗎？",
+    "ImportAll": "全部導入",
+    "ImportContent": "導入 {label}",
+    "Importer": {
+      "V1": "冒險導入器 (V1)",
+      "V2": "冒險導入器 (V2)"
+    },
+    "Create": "創造冒險",
+    "ExportEdit": "重建冒險",
+    "ExportSubmit": "構建冒險",
+    "ExportDropZone": "從你的世界中拖放內容，以將內容加入到冒險中。",
+    "ExportPackNoSystem": "您正在嘗試將「角色」或「物品」匯出到與其系統無關的「冒險」。「冒險」合集 必須有與這些「物品」或「物品」相符合的數據欄位。",
+    "ExportPrimaryDocumentsOnly": "您只能添加存在於World中的主要文件。",
+    "CreateSuccess": "已成功新增冒險 「{name}」!",
+    "UpdateSuccess": "已成功更新冒險 「{name}」!",
+    "DocumentUpdate": "當冒險建立時，此文件將被更新。",
+    "DocumentAdd": "當冒險建立時，此文件將被添加。",
+    "DocumentMissing": "此文件世界中缺失，冒險建立時將不會更新。",
+    "DocumentRemove": "當冒險建立時，此文件將被移除。",
+    "FIELDS": {
+      "name": {
+        "label": "冒險名稱",
+        "hint": "為這次冒險選擇一個獨立唯一的名字，而且包括在包含它的package。"
+      },
+      "img": {
+        "label": "橫幅圖片",
+        "hint": "提供一個寬度至少為 768 像素、高度為 300 像素的橫幅圖像，該圖像將為此冒險顯示。"
+      },
+      "caption": {
+        "label": "橫幅標題",
+        "hint": "將顯示在橫幅圖像下方的文字標題位置。此標題可能包含 HTML 或純文本。"
+      },
+      "description": {
+        "label": "冒險描述",
+        "hint": "包括冒險概述和概要的描述。"
+      }
+    },
+    "TABS": {
+      "summary": "摘要",
+      "contents": "內容"
+    },
+    "ACTIONS": {
+      "ClearSection": "清除段落",
+      "RestoreSection": "還原段落"
+    }
+  },
+  "AMBIENT_LIGHT": {
+    "ACTIONS": {
+      "CREATE": "新增環境光",
+      "UPDATE": "更新環境光",
+      "RESET": "重置高級選項"
+    },
+    "FIELDS": {
+      "x": {
+        "label": "X"
+      },
+      "y": {
+        "label": "Y"
+      },
+      "elevation": {
+        "label": "高度"
+      },
+      "rotation": {
+        "label": "旋轉角度"
+      },
+      "vision": {
+        "label": "提供視野",
+        "hint": "啟用此選項的光源作為Token的額外視野點。啟用此選項以允許Token始終看到它照亮的區域，即使該區域在牆壁後面或在Token的視野範圍之外。"
+      },
+      "walls": {
+        "label": "受牆壁限制",
+        "hint": "設定此光源的影響範圍是否受附近牆壁的限制。"
+      }
+    },
+    "LABELS": {
+      "radius": "光線半徑",
+      "radiusHint": "設定從此源發出的光線距離，其中明亮光的半徑包含在暗光的半徑內。",
+      "darknessAdvancedWarning": "高級設定選項僅支持非黑暗源。"
+    },
+    "SECTIONS": {
+      "appearance": "光線外觀",
+      "placement": "光線放置"
+    },
+    "TABS": {
+      "basic": "基本設定",
+      "animation": "光線動畫",
+      "advanced": "高級選項"
+    }
+  },
+  "AMBIENT_SOUND": {
+    "ACTIONS": {
+      "CREATE": "新增環境音效",
+      "UPDATE": "更新環境音效"
+    },
+    "FIELDS": {
+      "x": {
+        "label": "X"
+      },
+      "y": {
+        "label": "Y"
+      },
+      "elevation": {
+        "label": "高度"
+      },
+      "path": {
+        "label": "源文件路徑",
+        "hint": "設定當Token移動到其半徑內時播放音頻文件的環境音效。"
+      },
+      "radius": {
+        "label": "效果半徑"
+      },
+      "volume": {
+        "label": "最大音量",
+        "hint": "定義音源在其原點（如果緩和）或區域中的最大音量。"
+      },
+      "easing": {
+        "label": "音量緩和",
+        "hint": "當Token靠近原點時，調整聲音的音量級別。"
+      },
+      "hidden": {
+        "label": "隱藏",
+        "hint": "切換此聲音源是否暫時禁用。"
+      },
+      "walls": {
+        "label": "受牆壁限制",
+        "hint": "設定此音頻源的影響範圍是否受附近牆壁的限制。"
+      },
+      "darkness": {
+        "label": "黑暗激活範圍",
+        "hint": "您可以指定在此黑暗音效可聽到的黑暗級別範圍。",
+        "min": {
+          "label": "介於"
+        },
+        "max": {
+          "label": "和"
+        }
+      },
+      "effects": {
+        "base": {
+          "type": {
+            "label": "基本效果"
+          },
+          "intensity": {
+            "label": "基本效果強度"
+          },
+          "hint": "對聲音應用一種過濾或轉換其聲音的音頻效果。"
+        },
+        "muffled": {
+          "type": {
+            "label": "消音效果"
+          },
+          "intensity": {
+            "label": "消音效果強度"
+          },
+          "hint": "對聲音應用一種效果，當聲音被介入的牆壁消音時，將替換基本效果。只有當聲音不受牆壁限制時，才能消音聲音。"
+        }
+      }
+    },
+    "SECTIONS": {
+      "SOURCE": "來源",
+      "PLACEMENT": "放置",
+      "PLACEMENT_HINT": "設定音頻源的原點位置、高度和半徑。高度目前尚未使用，僅供參考。",
+      "VOLUME": "音量",
+      "ACTIVATION": "激活",
+      "EFFECTS": "特殊效果"
+    }
+  },
+  "APPLICATION": {
+    "TOOLS": {
+      "ControlsMenu": "應用程式控制",
+      "ToggleControls": "切換控制",
+      "Close": "關閉視窗"
+    },
+    "IMAGE_POPOUT.AltText": "一張特色圖片：主體未知。"
+  },
+  "AUDIO": {
+    "CHANNELS": {
+      "MUSIC": {
+        "label": "音樂",
+        "tooltip": "控制被歸類為音樂的播放列表和聲音的本地音量。"
+      },
+      "ENVIRONMENT": {
+        "label": "環境",
+        "tooltip": "控制被歸類為環境的播放列表和環境音效的本地音量。"
+      },
+      "INTERFACE": {
+        "label": "介面",
+        "tooltip": "控制與用戶界面或用戶交互相關的聲音的本地音量。"
+      }
+    }
+  },
+  "CALENDAR": {
+    "GREGORIAN": {
+      "January": "一月",
+      "JanuaryAbbr": "一月",
+      "February": "二月",
+      "FebruaryAbbr": "二月",
+      "March": "三月",
+      "MarchAbbr": "三月",
+      "April": "四月",
+      "AprilAbbr": "四月",
+      "May": "五月",
+      "MayAbbr": "五月",
+      "June": "六月",
+      "JuneAbbr": "六月",
+      "July": "七月",
+      "JulyAbbr": "七月",
+      "August": "八月",
+      "AugustAbbr": "八月",
+      "September": "九月",
+      "SeptemberAbbr": "九月",
+      "October": "十月",
+      "OctoberAbbr": "十月",
+      "November": "十一月",
+      "NovemberAbbr": "十一月",
+      "December": "十二月",
+      "DecemberAbbr": "十二月",
+      "Monday": "星期一",
+      "MondayAbbr": "週一",
+      "Tuesday": "星期二",
+      "TuesdayAbbr": "週二",
+      "Wednesday": "星期三",
+      "WednesdayAbbr": "週三",
+      "Thursday": "星期四",
+      "ThursdayAbbr": "週四",
+      "Friday": "星期五",
+      "FridayAbbr": "週五",
+      "Saturday": "星期六",
+      "SaturdayAbbr": "週六",
+      "Sunday": "星期日",
+      "SundayAbbr": "週日",
+      "Spring": "春季",
+      "Summer": "夏季",
+      "Fall": "秋季",
+      "Winter": "冬季"
+    }
+  },
+  "CARDS": {
+    "CardsDeck": "卡牌組",
+    "CardsHand": "手牌",
+    "CardsPile": "牌堆",
+    "DeckPreset": "預設設定",
+    "DeckPresetPokerDark": "撲克牌（深色）",
+    "DeckPresetPokerLight": "撲克牌（淺色）",
+    "DealHint": "選擇一組要發牌的手牌或牌堆。所有選擇的手牌/牌堆都發相同數量的牌。",
+    "DealTitle": "發牌",
+    "DealTo": "發牌給",
+    "DealWarnNoTargets": "你必須新增一個手牌或牌堆來發牌。",
+    "DeleteCannot": "不能删除",
+    "DeleteCannotHint": "以下牌组仍有抽出的牌，不能删除，請先重置：{decks}",
+    "DeleteMustReset": "這副 {type} 必須先重置才能刪除，你要繼續嗎？",
+    "Dimensions": "預設尺寸",
+    "DrawFrom": "抽牌自",
+    "DrawTitle": "抽牌",
+    "DrawHint": "選擇一副牌，從中抽取一定數量的咭牌。",
+    "DrawMode": "抽牌模式",
+    "DrawModeTop": "抽牌（頂部）",
+    "DrawModeBottom": "抽牌（底部）",
+    "DrawModeRandom": "隨機",
+    "DrawWarnNoSources": "沒有可用的牌組，可供你從中抽取。",
+    "Facedown": "蓋牌",
+    "HeaderDetails": "設定",
+    "HeaderCards": "卡牌",
+    "Number": "數量",
+    "NoCards": "没有卡牌存在",
+    "PassTo": "出牌給",
+    "PassTitle": "出牌",
+    "PassHint": "將一定數量的咭牌傳給另一副手牌或牌堆。",
+    "PassWarnNoTargets": "沒有可用的手牌或牌堆，可供你傳給他們。",
+    "ResetConfirm": "你確定要重置 {name} 嗎？所有發過的牌都會被重新回收。",
+    "ReturnConfirm": "你確定嗎？所有 {name} 中的牌將被送回原來的牌組。",
+    "NotifyShuffle": "已洗牌：{link}",
+    "NotifyPass": "將{number}牌傳給：{link}",
+    "NotifyPlay": "打了{number}張牌給：{link}",
+    "NotifyDiscard": "丟棄{number}張牌給：{link}",
+    "NotifyDraw": "抽出{number}張牌自：{link}",
+    "NotifyDeal": "給每個人發了{number}張牌：{link}",
+    "NotifyReset": "收回所有的牌給：{link}",
+    "NotifyReturn": "歸還所有卡牌：{link}",
+    "FIELDS": {
+      "img.label": "預設的卡牌背面圖片",
+      "type.label": "牌堆類型"
+    },
+    "ACTIONS": {
+      "Create": "新增卡牌",
+      "Delete": "刪除卡牌",
+      "Deal": "發牌",
+      "Draw": "抽牌",
+      "Edit": "編輯卡牌",
+      "NextFace": "下一張牌面",
+      "Pass": "出牌",
+      "PreviousFace": "上一張牌面",
+      "Reset": "重置",
+      "ResetDelete": "重置和删除",
+      "Save": "保存",
+      "Shuffle": "洗牌",
+      "ToggleSortMode": "切換排序模式"
+    },
+    "TABS": {
+      "details": "詳情",
+      "cards": "卡牌"
+    }
+  },
+  "CARD": {
+    "Image": "卡牌圖片",
+    "Dimensions": "預設尺寸",
+    "Save": "保存卡牌",
+    "Unknown": "未知的（{source}）",
+    "Play": "出牌",
+    "PlayHint": "通過將這張咭牌傳遞到其他手牌或牌堆來打出這張咭牌。",
+    "ACTIONS": {
+      "AddFace": "新增牌面",
+      "DeleteFace": {
+        "Title": "刪除牌面",
+        "Warning": "刪除此卡面，將從卡牌中永久刪除其數據。"
+      }
+    },
+    "TABS": {
+      "details": "詳情",
+      "faces": "牌面",
+      "back": "牌背"
+    },
+    "FIELDS": {
+      "suit.label": "花色",
+      "value.label": "數值",
+      "drawn.label": "抽出",
+      "face.label": "牌面",
+      "faces": {
+        "element": {
+          "name.label": "牌面名稱",
+          "img.label": "牌面圖片",
+          "text.label": "牌面文字"
+        }
+      },
+      "back": {
+        "name.label": "牌背名稱",
+        "img.label": "牌背圖片",
+        "text.label": "牌背文字"
+      }
+    }
+  },
+  "CHAT.Dismiss": "關閉",
+  "CHAT.EnterMessage": "輸入訊息",
+  "COMBAT.ClearMovementHistories": "清除移動歷史",
+  "COMBAT.InitiativeScore": "先攻值",
+  "COMBAT.CombatantUpdateNamed": "更新參戰者: {name}",
+  "COMBAT.CombatantClearMovementHistory": "清除移動歷史",
+  "COMBAT.CombatantMovementHistoryCleared": "已清除Token \"{name}\"的移動歷史。",
+  "COMBAT.FIELDS": {
+    "round.label": "戰鬥輪",
+    "turn.label": "回合"
+  },
+  "COMBAT.TURN_MARKERS": {
+    "ANIMATIONS": {
+      "SPIN": "旋轉",
+      "SPIN_PULSE": "旋轉脈衝",
+      "PULSE": "脈動"
+    }
+  },
+  "COMBAT.CONFIG": {
+    "SHEET": {
+      "TURN_MARKERS": "Token 回合標記"
+    },
+    "FIELDS": {
+      "core.combatTrackerConfig": {
+        "skipDefeated": {
+          "label": "忽略戰敗",
+          "hint": "自動忽略已被標記爲戰敗的參戰者。"
+        },
+        "resource": {
+          "label": "追踪資源",
+          "hint": "爲每位參戰者選擇一種屬性來追踪。"
+        },
+        "turnMarker": {
+          "enabled": {
+            "label": "啟用標記",
+            "hint": "預設為所有Token啟用戰鬥回合標記。"
+          },
+          "src": {
+            "label": "媒體來源",
+            "hint": "預設用作Token回合標記的圖像或影片檔案。"
+          },
+          "animation": {
+            "label": "動畫",
+            "hint": "預設用於每個Token回合標記的動畫類型。"
+          },
+          "disposition": {
+            "label": "傾向色調",
+            "hint": "根據Token的傾向為回合標記應用色調。"
+          }
+        }
+      }
+    }
+  },
+  "COMPENDIUM.Delete": {
+    "Option": "删除合集",
+    "Title": "删除合集: {compendium}",
+    "Warning": "該合集包將被永久刪除且無法恢復。"
+  },
+  "COMPENDIUM.Duplicate": {
+    "Option": "複製合集",
+    "Title": "複製合集: {compendium}",
+    "Label": "新增合集標題",
+    "Hint": "你可以將此合集作爲一個本地資料複製到你的世界。",
+    "Submit": "複製"
+  },
+  "COMPENDIUM.ImportAll": {
+    "Option": "導入全部內容",
+    "Title": "導入全部內容: {compendium}",
+    "Submit": "導入",
+    "Hint": "該合集的所有內容將被導入你的世界中一個可命名的文件夾內。請注意，導入大型合集包將對應用程式性能產生負面影響。",
+    "Start": "正在將 {number} {type} 文件和 {folderNumber} 資料夾匯入到 {folder} 資料夾中。請耐心等待。",
+    "Finish": "已成功將 {number} 個{type}文件和 {folderNumber} 個資料夾匯入到 {folder} 資料夾中。"
+  },
+  "COMPENDIUM.Locked": "{title} [已鎖定]",
+  "COMPENDIUM.ToggleLocked": {
+    "Option": "切換編輯鎖定",
+    "Title": "切換編輯鎖定: {compendium}",
+    "Unlock": "解鎖",
+    "Warning": "解鎖這個（不屬於該世界的）合集將使之可被編輯。然而，當包含此合集的系統或MOD有任何變更時，你對該合集的改動可能會丟失。你可以考慮複製此合集到你的世界中作爲替代。你依然想要解鎖嗎？"
+  },
+  "COMPENDIUM.ART": {
+    "CONFIG": {
+      "Hint": "使用箭頭調整藝術來源的優先級。當單個角色由多個來源提供藝術時，優先級最高的將被使用。",
+      "Portraits": "肖像",
+      "PriorityDecrease": "降低優先級",
+      "PriorityIncrease": "提高優先級",
+      "Tokens": "Token"
+    },
+    "SETTING": {
+      "Hint": "設定應使用哪些系統和Module提供的藝術。",
+      "Label": "設定藝術",
+      "Title": "匯總藝術"
+    }
+  },
+  "CONTROLS": {
+    "Title": "遊戲控制參考",
+    "NavLabel": "畫布控制面板",
+    "Instructions": "該表格描述了用於控制FVTT環境各個方面的通用鍵盤和鼠標指令。某些操作僅適用於GM用戶，這些操作以淺紫色突出顯示。",
+    "GroupToken": "Token控制",
+    "CommonForceSnap": "强制網格吸附",
+    "BasicSelect": "選擇Token",
+    "BasicSelectP": "選擇您擁有的任何Token以查看它們的視線。當未選擇Token時，您將看到所有您擁有的Token可以看到的內容。",
+    "TargetSelect": "選擇目標",
+    "TargetSelectP": "選擇您能看到的任何Token。",
+    "BasicMeasure": "測量距離",
+    "GroupMeasure": "測量控制",
+    "MeasureType": "模板類型",
+    "MeasureConfigHint": "設定測量模板的放置和顯示.",
+    "MeasureCircle": "圓形範本",
+    "MeasureCone": "錐形範本",
+    "MeasureRect": "矩形範本",
+    "MeasureRay": "線形範本",
+    "MeasureClear": "清除範本",
+    "GroupTile": "圖塊控制",
+    "TileSelect": "選擇圖塊",
+    "TilePlace": "放置圖塊",
+    "TilePlaceHeading": "放置",
+    "TileForeground": "前景層",
+    "TileBrowser": "圖塊檢視器",
+    "GroupDrawing": "繪製控制",
+    "DrawingSelect": "選擇繪製",
+    "DrawingRect": "繪製矩形",
+    "DrawingEllipse": "繪製橢圓",
+    "DrawingPoly": "繪製多邊形",
+    "DrawingPolyP": "<span class=\"reference\">點擊+拖動</span> 以開始，然後 <span class=\"reference\">單擊</span> 以添加點。<span class=\"reference\">雙擊</span> 以完成。",
+    "DrawingFree": "自由繪製",
+    "DrawingText": "繪製文字",
+    "DrawingClear": "清除繪製",
+    "DrawingConfig": "設定繪製",
+    "DrawingRole": "切換信息繪製",
+    "GroupWall": "牆體控制",
+    "WallDraw": "繪製牆體",
+    "WallBasic": "基本牆壁",
+    "WallBasicBlocks": "阻擋移動、視線和聽覺",
+    "WallInvisible": "隱形牆",
+    "WallInvisibleBlocks": "移動",
+    "WallTerrain": "地形牆",
+    "WallTerrainBlocks": "阻擋視線穿越第二堵牆、移動和聽覺",
+    "WallEthereal": "幽靈牆",
+    "WallEtherealBlocks": "阻擋視線和聽覺",
+    "WallDoors": "繪製門",
+    "DoorBlocks": "除非打開，否則阻擋移動、視線和聽覺",
+    "WallSecret": "密門",
+    "WallSecretHidden": "隱藏",
+    "WallSecretHiddenP": "秘密門對玩家不可見",
+    "WallSelect": "框選牆體",
+    "CommonMoveWithoutSnapping": "不對齊移動",
+    "WallSelectEdit": "<span class=\"reference\">雙擊</span>",
+    "WallSnapP": "啟用時，牆壁會對齊到最近的網格頂點",
+    "WallClone": "複製牆體",
+    "WallCloseDoors": "關閉所有門",
+    "WallDoorsClosed": "已關閉 {number} 扇門",
+    "WallClear": "清除牆體",
+    "WallWindow": "窗牆",
+    "WallWindowBlocks": "限制一定距離之外的視線、移動和聽覺",
+    "GroupLighting": "光線控制",
+    "LightDraw": "繪製光源",
+    "LightClear": "清除光源",
+    "LightReset": "重置戰爭迷霧",
+    "LightResetP": "重置此場景中所有玩家的已探索戰爭迷霧。",
+    "LightDay": "過渡到白天",
+    "MakeDayH": "白天",
+    "MakeDayP": "將場景的黑暗程度平滑過渡至 0。",
+    "AutoLightToggleH": "自動燈光切換",
+    "AutoLightToggleP": "燈光可以設定為僅在特定的黑暗等級中啟用，並自動開啟/關閉。",
+    "LightNight": "過渡到夜晚",
+    "MakeNightH": "黑夜",
+    "MakeNightP": "將場景的黑暗程度平滑過渡至 1。",
+    "FOWResetTitle": "重置已探索的戰爭迷霧？",
+    "FOWResetDesc": "這將重置所有玩家在該場景內的戰爭迷霧。",
+    "GroupSound": "環境音控制",
+    "SoundDraw": "新增環境音",
+    "SoundPreview": "預覽環境音",
+    "SoundPreviewP": "當啟用時，將滑鼠懸停在環境音效上，您將能聽到該音效，就像您的角色Token位於該位置一樣。",
+    "SoundClear": "清除音效",
+    "GroupNotes": "日誌筆記",
+    "NoteSelect": "選擇筆記",
+    "NoteToggle": "切換筆記顯示",
+    "NoteClear": "清除筆記",
+    "RegionShape": "向所選區域添加形狀。如果未選擇區域，將新增新區域。同一區域中重疊的形狀將合併。同一區域中的形狀共享相同的顏色。",
+    "GroupRegion": "區域控制",
+    "RegionSelect": "選擇區域",
+    "RegionSelectP": "在場景中選擇一個或多個區域。選定的區域是單色的，未選定的區域是有條紋的。",
+    "RegionRectangle": "繪製矩形",
+    "RegionEllipse": "繪製橢圓",
+    "RegionPolygon": "繪製多邊形",
+    "RegionHole": "新增孔",
+    "RegionHoleP": "當激活時，使用任何形狀工具在區域上繪製的任何形狀將在區域的行為不適用的地方新增一個孔。",
+    "RegionSnap": "當激活時，使用任何形狀工具在區域上繪製的任何形狀將捕捉到網格。",
+    "RegionClear": "清除區域",
+    "RegionPerformance": "<em>性能提示：</em>每個繪圖都是自己的形狀。請勿將多個形狀完全放在彼此內部。與其組合簡單的形狀以新增複雜的形狀，不如考慮使用區域多邊形工具。",
+    "ClearAll": "清除所有對象",
+    "ClearAllHint": "是否清除該場景內所有{type}對象？",
+    "HeaderGame": "基礎遊戲控制",
+    "HeaderGameNotes": "這些操作通常適用於所有Foundry功能。",
+    "HeaderCanvas": "畫布圖層控制",
+    "HeaderCanvasNotes": "這些操作適用於與特定的畫布圖層交互時。",
+    "HeaderObjects": "可放置對象控制",
+    "HeaderObjectsNotes": "這些操作適用於與放置在畫布上的對象交互時。",
+    "HeaderSpecial": "特定控制",
+    "HeaderSpecialNotes": "這些操作僅適用於特定的交互。",
+    "MouseControls": "鼠標控制",
+    "KeyboardControls": "鍵盤控制",
+    "GameMenu": "切換主菜單",
+    "GameClose": "關閉打開的視窗",
+    "GamePause": "切換遊戲暫停",
+    "CanvasCancel": "取消待定移動",
+    "CanvasMove": "移動對象",
+    "CanvasPan": "平移畫布",
+    "CanvasPing": "Ping 畫布",
+    "CanvasPingAlert": "警告 Ping 畫布",
+    "CanvasPingPull": "將畫布平移到 Ping",
+    "CanvasSelect": "選擇對象",
+    "CanvasSelectAll": "選擇所有對象",
+    "CanvasSelectMany": "新增或移除已選擇的對象",
+    "CanvasLeftDrag": "使用當前工具",
+    "CanvasSelectCancel": "取消左鍵拖拽操作",
+    "CanvasZoom": "縮放畫布",
+    "CharacterSheet": "切換角色表",
+    "LeftClick": "鼠標左鍵",
+    "LeftClick2": "左鍵雙擊",
+    "LeftDrag": "左鍵拖拽",
+    "LongPress": "長按",
+    "RightClick": "鼠標右鍵",
+    "RightClick2": "雙擊右鍵",
+    "RightClickDuringDrag": "拖曳時右鍵",
+    "MiddleClick": "中鍵點擊",
+    "AltRightClick": "{alt} +右鍵",
+    "Click": "點擊",
+    "ClickDrag": "點擊 + 拖曳",
+    "ClickOrClickDrag": "<span class=\"reference\">點擊</span> 或 <span class=\"reference\">點擊 + 拖曳</span>",
+    "Control": "控制",
+    "Ctrl": "控制",
+    "CtrlAbbr": "CTRL",
+    "CtrlClickDrag": "{mod} + 點擊 + 拖曳",
+    "Alt": "ALT",
+    "AltClick": "{alt} + 點擊",
+    "AltClickDrag": "{alt} + 點擊 + 拖動",
+    "CtrlClick": "{mod} + 點擊",
+    "ShiftClick": "SHIFT + 點擊",
+    "ChainCtrlClick": "按住 <span class=\"reference\">{mod}</span> 然後 <span class=\"reference\">點擊</span>",
+    "DoubleClick": "雙擊",
+    "Shift": "Shift",
+    "ShiftScroll": "SHIFT + 捲動",
+    "ShiftOrCtrlScroll": "<span class=\"reference\">SHIFT + 捲動</span> 或 <span class=\"reference\">{mod} + 捲動</span>",
+    "ShiftDrag": "SHIFT + 拖曳",
+    "Spacebar": "空格鍵",
+    "Delete": "刪除",
+    "Drag": "拖",
+    "Drop": "放",
+    "KeyHighlight": "高亮畫布對象",
+    "KeyPan": "平移畫布",
+    "KeyZoomIn": "放大",
+    "KeyZoomOut": "縮小",
+    "KeyCycle": "切換Token或重置視圖",
+    "KeyMove": "鍵盤移動（Token或圖塊）",
+    "KeyMoveDiag": "斜向移動",
+    "KeyMoveFace": "朝向",
+    "KeyDelete": "删除選擇對象",
+    "KeyCopy": "複製畫布元素",
+    "KeyPaste": "貼上畫布元素",
+    "KeyUndo": "撤銷畫布操作",
+    "KeyHotbar": "啓用快捷欄",
+    "RulerPlaceWaypoint": "設定位置點",
+    "RulerRemoveWaypoint": "移除尺規路徑點",
+    "ObjectSheet": "開啟關聯對像的資訊卡",
+    "ObjectHUD": "顯示對象HUD（如果可用）",
+    "ObjectConfig": "打開對象設定表格",
+    "ObjectDrag": "移動受控對象",
+    "ObjectDragCancel": "取消拖拽",
+    "ObjectRotateSlow": "旋轉對象（慢）",
+    "ObjectRotateFast": "旋轉對象（快）",
+    "ObjectNoSnap": "忽略網格吸附",
+    "MouseWheel": "鼠標滾輪",
+    "DragDrop": "鼠標拖放",
+    "UnconstrainedMovement": "無限制移動",
+    "UnconstrainedMovementP": "啟用時，您可以將Token移動通過牆壁和不可通行的地形。",
+    "TokenHeader": "Token控制",
+    "TokenPlaceHidden": "放置隱藏Token",
+    "TokenTarget": "選擇(非擁有)Token作爲目標",
+    "TokenPlaceHiddenCreate": "新增Token時.",
+    "TooltipDismiss": "關閉鎖定工具提示",
+    "TooltipLock": "鎖定工具提示",
+    "WallHeader": "牆體層控制",
+    "WallChain": "新增連續牆體",
+    "WallSelectChain": "選擇牆體鏈段",
+    "DrawingHeader": "繪圖工具控制",
+    "DrawingTextConfirm": "確認繪製文字",
+    "DrawingTextCancel": "取消繪製文字",
+    "CommonCreate": "新增",
+    "CommonMove": "移動",
+    "CommonEdit": "編輯",
+    "CommonHide": "隱藏",
+    "CommonDelete": "刪除",
+    "CommonRotate": "旋轉",
+    "CommonToggleHUD": "切換 HUD",
+    "CommonDraw": "繪製",
+    "CommonDrawProportional": "按比例繪製",
+    "CommonPlace": "放置",
+    "CommonBlocks": "區塊",
+    "CommonChain": "鏈接",
+    "CommonMovePoint": "移動點",
+    "CommonOpenClose": "開啟/關閉",
+    "CommonOpenCloseSilently": "悄悄開啟/關閉",
+    "CommonLock": "鎖定",
+    "CommonLockSilently": "悄悄鎖定",
+    "CommonOnOff": "切換開/關",
+    "CommonSelect": "選擇",
+    "CommonSelectMultiple": "選取多個",
+    "CommonOpenSheet": "開啟表格",
+    "DisableToolclips": "在設定中禁用工具提示",
+    "CutObjects": "剪下 {count} 個 {type} 物件。",
+    "CopiedObjects": "已複製 {count} {type} 對象。",
+    "PastedObjects": "已粘貼 {count} {type} 對象。",
+    "DeletedObjects": "已刪除 {count} {type} 對象。",
+    "UndoCreateObjects": "已還原新增 {count} {type} 對象。",
+    "UndoDeleteObjects": "已還原刪除 {count} {type} 對象。",
+    "EmptyUndoHistory": "無法再追蹤 {type} 對象的歷史以進行還原。",
+    "ObjectIsLocked": "當 {type} 對象被鎖定時，您無法執行此操作。",
+    "ObjectConfigured": "當設定另一個對象時，您無法執行此操作。"
+  },
+  "DICE": {
+    "ErrorNonNumeric": "擲骰公式{formula}未産生結果數值。",
+    "ErrorNotParsable": "擲骰公式 \"{formula}\" 不是一個字串。",
+    "ManualRoll": "手動擲骰",
+    "RollResolution": "擲骰解析",
+    "SubmitRoll": "提交擲骰",
+    "SubmitRollPl": "提交擲骰",
+    "WarnMissingData": "屬性{match}未在相應的擲骰結果中産生。",
+    "CONFIG": {
+      "Hint": "設定如何執行擲骰。",
+      "Label": "設定擲骰",
+      "Title": "擲骰設定"
+    },
+    "FULFILLMENT": {
+      "Default": "Foundry VTT數字擲骰",
+      "Mersenne": "數字擲骰（Mersenne Twister）",
+      "Manual": "手動輸入"
+    }
+  },
+  "DOCUMENT": {
+    "Create": "新增新 {type}",
+    "Delete": "刪除 {type}",
+    "New": "新 {type}",
+    "NewCount": "新 {type} ({count})",
+    "Update": "更新 {type}",
+    "SkipCreate": "跳過創造",
+    "ImportData": "導入資料",
+    "ImportDataError": "你沒有上傳資料文件!",
+    "ImportDataHint1": "你可以用已導出的JSON檔案來 為這 {document} 導入資料.",
+    "ImportDataHint2": "此操作將更新 {name} 的資料且無法取消。",
+    "ImportSource": "來源資料",
+    "Imported": "已成功從 JSON 導入 {document} \"{name}\" 的數據.",
+    "SheetPermissionWarn": "你無權查看此 {document} 工作表.",
+    "UsePermissionWarn": "你無權使用此 {document}.",
+    "IdCopiedClipboard": "{label} {type} \"{id}\" 複製到剪貼板。",
+    "ActiveEffect": "主動效果",
+    "ActiveEffects": "啓動的效果",
+    "ActorDelta": "角色 Delta",
+    "ActorDeltas": "角色 Deltas",
+    "Actor": "角色",
+    "Actors": "角色",
+    "Adventure": "冒險",
+    "Adventures": "冒險",
+    "AmbientLight": "環境光",
+    "AmbientLights": "環境光源",
+    "AmbientSound": "環境音",
+    "AmbientSounds": "環境聲音",
+    "Card": "卡牌",
+    "CardPlural": "卡牌",
+    "Cards": "牌堆",
+    "CardsPlural": "牌堆",
+    "ChatMessage": "聊天消息",
+    "ChatMessages": "聊天信息",
+    "Combat": "戰鬥遭遇",
+    "Combats": "戰鬥遭遇",
+    "Combatant": "參戰者",
+    "Combatants": "戰鬥人員",
+    "CombatantGroup": "參戰者群組",
+    "CombatantGroups": "參戰者群組",
+    "CopyOf": "{name} (複製)",
+    "Document": "文件",
+    "Drawing": "繪圖",
+    "Drawings": "繪製",
+    "Folder": "文件夾",
+    "Folders": "文件夾",
+    "Item": "物品",
+    "Items": "物品",
+    "JournalEntry": "日誌條目",
+    "JournalEntries": "日誌條目",
+    "JournalEntryCategory": "類別",
+    "JournalEntryCategories": "類別",
+    "JournalEntryPage": "頁面",
+    "JournalEntryPages": "頁數",
+    "Macro": "Macro",
+    "Macros": "Macros",
+    "MeasuredTemplate": "測量板",
+    "MeasuredTemplates": "測量模板",
+    "Note": "筆記",
+    "Notes": "筆記",
+    "Playlist": "播放清單",
+    "Playlists": "播放列表",
+    "PlaylistSound": "播放清單音效",
+    "PlaylistSounds": "播放列表聲音",
+    "Scene": "場景",
+    "Scenes": "場景",
+    "Setting": "設定",
+    "Settings": "設定",
+    "RollTable": "隨機表",
+    "RollTables": "隨機表",
+    "Region": "區域",
+    "Regions": "區域",
+    "RegionBehavior": "區域行為",
+    "RegionBehaviors": "區域行為",
+    "TableResult": "表格結果",
+    "TableResults": "表格結果",
+    "Tile": "圖塊",
+    "Tiles": "圖塊",
+    "Token": "Token",
+    "Tokens": "Tokens",
+    "User": "用戶",
+    "Users": "用戶",
+    "Wall": "牆",
+    "Walls": "牆體",
+    "TypePageFormat": "{type} {page}",
+    "FIELDS": {
+      "name.label": "名稱",
+      "type.label": "類型",
+      "img.label": "圖片位置",
+      "description.label": "描述",
+      "width.label": "寬度",
+      "height.label": "高度",
+      "hidden.label": "隱藏",
+      "elevation.label": "高度",
+      "rotation.label": "旋轉",
+      "sort": {
+        "label": "排序順序",
+        "hint": "設定此文檔相對於其他集合的順序。較低的數字較前。"
+      },
+      "x.label": "X",
+      "y.label": "Y"
+    }
+  },
+  "DRAWING.TABS": {
+    "position": "位置",
+    "lines": "輪廓",
+    "fill": "填充",
+    "text": "文本"
+  },
+  "DRAWING.FIELDS": {
+    "sort.label": "排序"
+  },
+  "EFFECT.ChangePriority": "優先級",
+  "EFFECT.FIELDS": {
+    "name.label": "效果名稱",
+    "img.label": "效果圖示",
+    "tint.label": "圖示色調",
+    "description.label": "效果描述",
+    "disabled.label": "效果暫停",
+    "origin.label": "效果來源",
+    "transfer": {
+      "label": "將效果應用到角色上",
+      "hint": "若勾選，此效果將應用於擁有此效果的父物品的任何角色。"
+    },
+    "statuses.label": "狀態條件",
+    "duration": {
+      "seconds.label": "效果時長（秒）",
+      "rounds.label": "戰鬥輪",
+      "turns.label": "回合",
+      "startTime.label": "效果起始時間",
+      "startRound.label": "戰鬥輪",
+      "startTurn.label": "回合",
+      "combat.label": "戰鬥遭遇"
+    }
+  },
+  "EFFECT.TABS": {
+    "details": "詳情",
+    "duration": "時長",
+    "changes": "效果"
+  },
+  "ERROR": {
+    "BrowserVersion": "Foundry Virtual Tabletop 使用JavaScript 功能，這些功能在{browser} 版本低於{minimum} 時不被支持。你使用的是{browser} 版本{version}。請更新或使用另一個檢視器。",
+    "ElectronVersion": "你使用的是舊版本的 Foundry Virtual Tabletop Electron 客戶端。為了獲得最佳性能，我們建議你重新下載所需的 Foundry Virtual Tabletop 版本，並執行軟件的完整重新安裝。",
+    "NoWebGL": "你的檢視器不支持FoundryVTT所需要的WebGL渲染。請確保在檢視器中啓用了硬件渲染和WebGL。",
+    "NoWebGL2": "您的瀏覽器目前不支援 WebGL 版本 2 的渲染，這對於Foundry Virtual Tabletop 正常運作是必需的。因此可能會導致出現錯誤或異常的圖形問題。",
+    "BackgroundTextureSize": "你正在使用的場景背景紋理大小爲{width}x{height}像素。其一或兩者都超出了裝置所支持的最大紋理{max}像素。",
+    "InvalidAdminKey": "你提供的管理員密碼無效。如果你忘記了設定的密碼，則需要從用戶資料所在位置中，手動删除<strong>Config/admin.txt</strong>文件。",
+    "LoadPackages": "瀏覽現有Package的請求未能與Foundry服務器連接。請確保你的應用程式允許出站連接。",
+    "NoTargetUsersForWhisper": "此私訊沒有目標用戶。檢查你的拼寫或改為嘗試 \"/w [User Name]\"。",
+    "CantWhisper": "你沒有權限對其他玩家發送私訊聊天消息。",
+    "RendererNotDetected": "你的GPU渲染器無法被識別，可能會出現意外的性能問題。",
+    "NoHardwareAcceleration": "您的網頁瀏覽器未啟用硬體加速。這將嚴重影響 Foundry Virtual Tabletop 的性能，並可能導致圖形錯誤和異常。請確保在瀏覽器設定中啟用硬體加速功能。",
+    "RequiresFullReinstall": "Foundry Virtual Tabletop 版本 {version} 現已推出，但無法在 Foundry Virtual Tabletop 應用程式內進行安裝，因為此版本需要更新核心依賴項目，而這些更新僅能通過從 <a href=\"https://foundryvtt.com/me/licenses\" target=\"_blank\">foundryvtt.com</a> 網站重新安裝該軟體來獲得。",
+    "RequiresGenerationReinstall": "Foundry Virtual Tabletop 版本 {version} 現已推出，但無法在 Foundry Virtual Tabletop 應用程式內進行安裝，因為此版本是新一代的更新，必須透過從 <a href=\"https://foundryvtt.com/me/licenses\" target=\"_blank\">foundryvtt.com</a> 網站重新手動安裝軟體來取得。",
+    "RequiresElectronReinstall": "Foundry Virtual Tabletop 版本 {version} 現已推出，但無法在 Foundry Virtual Tabletop 應用程式內進行安裝，因為此版本包含新的 Electron 版本，只能透過從 <a href=\"https://foundryvtt.com/me/licenses\" target=\"_blank\">foundryvtt.com</a> 網站重新手動安裝軟體來取得。",
+    "RESOLUTION": {
+      "Screen": "Foundry Virtual Tabletop 需要 {reqWidth}px x {reqHeight}px 或更高的螢幕解析度。您的螢幕解析度為 {curWidth}px x {curHeight}px。您必須提高解析度或使用不同的顯示設備，否則軟體的某些功能將無法正常運作。",
+      "Scale": "Foundry Virtual Tabletop 需要 {reqWidth}px x {reqHeight}px 或更高的可用視窗尺寸。此視窗目前的尺寸為 {curWidth}px x {curHeight}px。您目前在作業系統或瀏覽器層級套用了縮放因子，這會減少視窗的有效大小。您必須放大視窗或減少套用於瀏覽器的縮放因子，否則軟體的某些功能將無法正常運作。",
+      "Window": "Foundry Virtual Tabletop 需要 {reqWidth}px x {reqHeight}px 或更高的可用視窗尺寸。此視窗目前的尺寸為 {curWidth}px x {curHeight}px。您必須放大視窗，否則軟體的某些功能將無法正常運作。"
+    }
+  },
+  "EULA": {
+    "Acknowledge": "確認協議",
+    "Agree": "同意",
+    "AgreeLabel": "我同意這些條款",
+    "AgreeHint": "透過選擇上述的核取方塊，您表示您已閱讀並同意 Foundry Virtual Tabletop 的最終使用者授權協議的條款。",
+    "Decline": "拒絕",
+    "Declined": "您已拒絕最終用戶許可協議，無法使用軟件。",
+    "ErrorAgreeRequired": "您必須勾選框以確認您接受此協議才能繼續。"
+  },
+  "ELEMENTS": {
+    "DOCUMENT_TAGS": {
+      "Add": "添加文檔",
+      "Remove": "刪除文檔"
+    },
+    "TAGS": {
+      "Add": "添加標籤",
+      "Remove": "刪除標籤",
+      "ErrorBlank": "HTMLStringTagsElement中的標籤不能為空。",
+      "ErrorNonUnique": "標籤“{tag}”已設置。"
+    }
+  },
+  "FILES": {
+    "CreateDirectory": "新增文件夾",
+    "CreateSubfolder": "新增子文件夾",
+    "DirectoryName": {
+      "Label": "文件夾名",
+      "Placeholder": "我的文件夾"
+    },
+    "TogglePrivacy": "切換公開模式",
+    "DisplayMode": "顯示模式",
+    "DisplayModeList": "查看列表",
+    "DisplayModeTiles": "圖塊列表",
+    "DisplayModeThumbs": "查看預覽",
+    "DisplayModeImages": "查看圖片",
+    "FavoritesLabel": "收藏夾",
+    "AddFavorite": "將當前資料夾添加到收藏夾",
+    "RemoveFavorite": "從收藏夾中移除資料夾",
+    "DirectoryPathLabel": "文件夾路徑",
+    "FilterLabel": "篩選結果",
+    "S3Label": "S3文件夾",
+    "Selected": "已選擇",
+    "SelectFile": "選擇文件",
+    "SelectFolder": "選擇目錄",
+    "TileSize": "素材網格大小",
+    "TileSizeHint": "指定源圖塊圖稿的像素網格大小，以便在放置到啓用的場景中時將自動調整其大小。",
+    "TraverseBack": "返回",
+    "NoResults": "在此位置找不到匹配的結果。",
+    "Upload": "上傳",
+    "CannotUpload": "禁止上傳到此資料夾，因為此處的內容可能會在更新期間被覆寫。請改為上傳到您的「assets」資料夾或其他允許的位置。",
+    "Search": "搜尋",
+    "ErrorTooLarge": "你正在嘗試上傳的文件太大，代理服務器無法處理。",
+    "ErrorSomethingWrong": "你的文件上傳請求出了點問題。",
+    "WarnUploadModules": "文件已上傳到MOD或系統目錄中。 這通常是<strong>不安全</strong>的，因爲更新系統或MOD時將會删除你上傳的文件。",
+    "AlreadyFavorited": "{path} 已經在您的收藏夾中。",
+    "TitleAny": "文件瀏覽器",
+    "TitleFolder": "目錄檢視器",
+    "TitleFont": "字體瀏覽器",
+    "TitleImageVideo": "媒體檢視器",
+    "TitleImage": "圖片檢視器",
+    "TitleVideo": "影片檢視器",
+    "TitleAudio": "音樂檢視器",
+    "TitleText": "文件瀏覽器",
+    "TitleGraphics": "3D 瀏覽器",
+    "BrowseTooltip": "瀏覽文件",
+    "ErrorDisallowedExtension": "文件“{name}”具有無效的擴展名“{ext}”，不允許此FilePicker類型。\n允許的擴展名包括：{allowed}。",
+    "TABS": {
+      "data": "用戶資料",
+      "public": "核心資料",
+      "s3": "Amazon S3"
+    }
+  },
+  "FONTS": {
+    "AddFont": "新增字體",
+    "Type": "字體類型",
+    "TypeFile": "文件",
+    "TypeSystem": "系統",
+    "TypeHint": "'File' 類型字體從您的資料夾載入並由您的玩家下載。'System' 類型字體依賴於每個使用者的作業系統。出於安全原因，瀏覽器無法列出它們，因此您必須輸入確切的名稱。如果使用者缺少該字體，他們將看到備用字體。",
+    "Family": "Font Family",
+    "File": "字體檔案",
+    "FontPreview": "Sphinx of black quartz, judge my vow。黑石英獅身人面像，審判我的誓言。",
+    "RemoveFont": "刪除字體",
+    "Style": "字體樣式",
+    "Weight": "字體粗細",
+    "WarnNoFamily": "您必須提供字體家族名稱。",
+    "WarnNoFile": "您必須提供字體的檔案路徑。",
+    "Styles": {
+      "Normal": "正常",
+      "Italic": "斜體"
+    }
+  },
+  "HOTBAR": {
+    "LABEL": "動作欄",
+    "MUTE": "靜音",
+    "UNMUTE": "取消靜音",
+    "MENU": "主菜單",
+    "LOCK": "鎖定快捷列",
+    "UNLOCK": "解鎖快捷列",
+    "PAGE_NEXT": "下一頁",
+    "PAGE_PREV": "上一頁",
+    "CLEAR": "清除快捷列",
+    "CLEAR_CONFIRM": "確定要清除快捷列上所有已指派的Macro嗎？"
+  },
+  "HUD.SelectMovementAction": "選擇移動動作",
+  "JOURNAL.ImageOptions": "圖片選項",
+  "JOURNAL.EditPage": "編輯頁面",
+  "JOURNAL.ModeMultiple": "多頁模式",
+  "JOURNAL.ModeSingle": "單頁模式",
+  "JOURNAL.LockModeLocked": "目錄已鎖定。點擊以解鎖。",
+  "JOURNAL.LockModeUnlocked": "目錄已解鎖。點擊以鎖定。",
+  "JOURNAL.ConfigureCategories": "設定類別",
+  "JOURNAL.ConfigureCategoriesTitle": "{name} 類別",
+  "JOURNAL.CategoryName": "類別名稱",
+  "JOURNAL.Uncategorized": "未分類",
+  "JOURNAL.UnnamedCategory": "<未命名類別>",
+  "JOURNALENTRYPAGE.VideoAutoplay": "自動播放影片",
+  "JOURNALENTRYPAGE.VideoLoop": "循環影片",
+  "JOURNALENTRYPAGE.VideoVolume": "影片音量",
+  "JOURNALENTRYPAGE.Category": "頁面類別",
+  "KEYBINDINGS": {
+    "Title": "控制設定",
+    "ActionCategories": "行動類別",
+    "AllActions": "所有行動",
+    "BoundKey": "綁定鍵",
+    "Uneditable": "不可更改的綁定",
+    "ActionFilter": "動作過濾",
+    "ActionName": "動作名稱",
+    "ResetTitle": "重置預設的按鍵綁定",
+    "ResetWarning": "你希望將所有的鍵位綁定重置為預設值嗎？",
+    "ResetSuccess": "所有按鍵綁定都已重置為預設值。",
+    "Conflict": "與{conflicts}有潛在的衝突",
+    "CoreKeybindings": "核心按鍵綁定",
+    "CoreMouse": "核心滑鼠控制",
+    "Restricted": "僅限GM",
+    "ReservedModifiers": "特殊修改。{modifiers}",
+    "HowToEdit": "使用{icon}或雙擊鍵綁定來改變數值。",
+    "CycleView": "循環畫布視圖或移動動作",
+    "Dismiss": "切換目錄 / 關閉所有視窗",
+    "Pause": "暫停遊戲",
+    "Delete": "刪除物件",
+    "Highlight": "突出顯示物件",
+    "SelectAll": "選擇所有物件",
+    "Undo": "撤銷最後一次操作",
+    "Cut": "剪下物件",
+    "Copy": "複製物件",
+    "Paste": "貼上物件",
+    "Target": "目標指示物",
+    "Ruler": "切換距離尺",
+    "SendToBack": "將對象發送到後面",
+    "BringToFront": "將對象帶到前面",
+    "ToggleCharacterSheet": "切換角色資訊卡介面",
+    "PTTKey": "按鍵發話/按鍵靜音",
+    "PanUp": "移動或向上移動",
+    "PanLeft": "移動或向左移動",
+    "PanDown": "移動或向下移動",
+    "PanRight": "移動或向右移動",
+    "PanUpLeft": "移動或向上+向左平移",
+    "PanUpRight": "移動或向上+向右移動",
+    "PanDownLeft": "移動或向下+向左移動",
+    "PanDownRight": "移動或向下+向右移動",
+    "ZoomIn": "垂直上升或放大畫布",
+    "ZoomOut": "垂直下降或放大畫布",
+    "RulerWaypoint": "設定位置點",
+    "ExecuteMacro": "執行快捷欄 {number}",
+    "SwapMacroPage": "切換到快捷欄頁面 {page}",
+    "MustBeArray": "必須傳入一組數字",
+    "ErrorProtectedKey": "不能將受保護的密鑰{key}設定為綁定",
+    "ErrorIllegalModifier": "請求的修改鍵 {key}不是KeyboardManager.MODIFIER_KEYS中的有效值",
+    "ErrorReservedModifier": "不能將 \"{key}\"設定為綁定，因為它是這個綁定動作的保留修改器",
+    "FocusChat": "焦點聊天",
+    "ACTIONS": {
+      "AddBinding": "新增綁定",
+      "CancelEdit": "取消編輯",
+      "EditBinding": "編輯綁定",
+      "SaveBinding": "保存綁定",
+      "DeleteBinding": "刪除綁定"
+    }
+  },
+  "LIGHT.FIELDS": {
+    "alpha": {
+      "label": "顏色強度",
+      "hint": "修改此光源發出的顏色強度。"
+    },
+    "animation": {
+      "label": "光線動畫",
+      "type": {
+        "label": "光源動畫類型"
+      },
+      "speed": {
+        "label": "動畫速度",
+        "hint": "增加動畫速度會使動畫播放速度更快。"
+      },
+      "intensity": {
+        "label": "動畫强度",
+        "hint": "增加動畫強度會使動畫更明顯。"
+      },
+      "reverse": {
+        "label": "反轉方向"
+      }
+    },
+    "angle": {
+      "label": "發射角度",
+      "hint": "限制這個光源的角度，並設定其旋轉。"
+    },
+    "attenuation": {
+      "label": "衰減",
+      "hint": "在明亮、昏暗和黑暗之間逐漸過渡照明。"
+    },
+    "color": {
+      "label": "光源顏色",
+      "hint": "對這個光源應用顏色，並設定它的強度。"
+    },
+    "coloration": {
+      "label": "著色技術",
+      "hint": "應用於光源的著色技術，令混合的對像產生變化。"
+    },
+    "contrast": {
+      "label": "對比度",
+      "hint": "調整被這個光源照亮的背景表面的對比度。標準光源的預設值是0。"
+    },
+    "dim": {
+      "label": "昏暗"
+    },
+    "bright": {
+      "label": "光度"
+    },
+    "luminosity": {
+      "label": "亮度",
+      "hint": "調整這個光源的亮度。亮度更強的光源在黑暗中的減弱程度更小。標準光源的預設值是0.5。"
+    },
+    "negative": {
+      "label": "是黑暗源",
+      "hint": "黑暗源阻擋光線和視野，並抑制位於其影響範圍內的光線或視野源。"
+    },
+    "priority": {
+      "label": "優先級",
+      "hint": "決定光線和黑暗源如何互動。較高優先級的光線會排斥較低優先級的黑暗，但如果優先級相同，黑暗會佔上風。"
+    },
+    "saturation": {
+      "label": "飽和度",
+      "hint": "調整被該光源照亮的背景表面的飽和度。標準光源的預設值是0。"
+    },
+    "shadows": {
+      "label": "陰影",
+      "hint": "增強或此光源照亮的陰影的強度。標準光源的預設值是0。"
+    },
+    "darkness": {
+      "label": "黑暗激活範圍",
+      "hint": "你可以指定一個範圍的黑暗等級，這其中此光源將是可見的。",
+      "min": {
+        "label": "介於"
+      },
+      "max": {
+        "label": "及"
+      }
+    }
+  },
+  "LIGHT.AnimationReactivePulse": "聲音反應脈衝",
+  "LIGHT.AnimationDenseSmoke": "濃煙",
+  "MACRO": {
+    "Delete": "删除Macro",
+    "DeleteWarning": "此Macro將在所有用戶裡被永久刪除。",
+    "Edit": "編輯Macro",
+    "Error": "您的Macro語法中有錯誤。請查看控制台（F12）以獲取詳細信息。",
+    "Execute": "執行Macro",
+    "Remove": "移除Macro",
+    "Save": "儲存Macro",
+    "CollapseHotbar": "折疊Macro快捷欄",
+    "Directory": "瀏覽Macro目錄",
+    "PageUp": "下一頁快捷欄",
+    "PageDown": "上一頁快捷欄",
+    "NavLabel": "Macro快捷鍵",
+    "LockBar": "鎖定快捷列",
+    "UnlockBar": "解鎖快捷列",
+    "EmptySlot": "空槽 {slot}",
+    "CannotOverwrite": "無法覆蓋此Macro，因為快捷列已鎖定。",
+    "FIELDS": {
+      "command.label": "指令"
+    }
+  },
+  "MODMANAGE.OptionalDependencies": "建議依賴項",
+  "MODMANAGE.DependencyResolution": "依賴性解析",
+  "NOTE.SECTIONS": {
+    "CONTENT": "內容",
+    "POSITION": "位置",
+    "ICON": "圖示",
+    "LABEL": "標籤"
+  },
+  "NOTE.FIELDS": {
+    "entryId.label": "日誌條目",
+    "pageId.label": "頁面",
+    "text.label": "文字標籤",
+    "sort.label": "排序",
+    "global": {
+      "label": "全局可見",
+      "hint": "允許有查看權限的玩家在地圖上的任何地方看到此地圖註釋。"
+    },
+    "texture": {
+      "src.label": "實體圖示",
+      "tint.label": "圖示色調"
+    },
+    "iconSize.label": "圖示大小",
+    "fontFamily.label": "字體家族",
+    "fontSize.label": "字體大小",
+    "textColor.label": "文本顔色",
+    "textAnchor.label": "文字錨點"
+  },
+  "PLAYERS": {
+    "Title": "玩家",
+    "List": "玩家列表",
+    "CharSelect": "選擇角色",
+    "CharSelected": "選擇角色",
+    "CharRelease": "釋放角色",
+    "ConfigTitle": "玩家設定",
+    "PlayerColor": "玩家顔色",
+    "PlayerAvatar": "玩家形象",
+    "PlayerPronouns": "玩家代詞",
+    "PullToScene": "移到場景",
+    "ViewAvatar": "查看玩家形象",
+    "Kick": "踢出玩家",
+    "Ban": "封禁玩家",
+    "UnBan": "解封玩家",
+    "LATENCY": "延遲",
+    "FPS": "FPS"
+  },
+  "PLAYLIST.DefaultChannel": "播放列表音頻通道",
+  "PLAYLIST.BulkImport": {
+    "Title": "批量導入音效",
+    "Hint": "選擇包含要導入音效的文件夾。",
+    "Button": "批量導入",
+    "Warning": "所請求的 \"{path}\" 目錄中沒有有效的播放列表音樂被導入"
+  },
+  "PLAYLIST.FIELDS": {
+    "name.label": "播放列表名稱",
+    "mode.label": "播放模式",
+    "channel.label": "音頻通道",
+    "sorting.label": "排序模式",
+    "fade.label": "淡出時間",
+    "description.label": "播放列表描述"
+  },
+  "PLAYLIST.VOLUME": {
+    "CONTROLS": "用戶音量控制",
+    "TOOLTIP": "音量：{volume}%"
+  },
+  "PLAYLIST_SOUND.Update": "更新音軌",
+  "PLAYLIST_SOUND.FIELDS": {
+    "name.label": "音軌名稱",
+    "path.label": "音訊源",
+    "channel.label": "音頻通道",
+    "volume.label": "音量",
+    "repeat.label": "重複",
+    "fade.label": "淡出時間",
+    "description.label": "音效描述"
+  },
+  "SCENE.Accessibility": "可用性",
+  "SCENE.AccessibilityGM": "僅GM",
+  "SCENE.AccessibilityAll": "所有玩家",
+  "SCENE.Activate": "啓用",
+  "SCENE.BackgroundScale": "背景圖片大小",
+  "SCENE.BackgroundScaleHint": "使用 SHIFT+鼠標滾輪或 SHIFT+向上箭頭和 SHIFT+向下箭頭來調整背景圖片大小.",
+  "SCENE.CaptureInitialViewPosition": "在場景設定表單中捕獲畫布位置作為初始視圖。",
+  "SCENE.Configure": "設定",
+  "SCENE.Dimensions": "場景大小",
+  "SCENE.DimensionsHint": "當首次設定背景圖片時，場景大小會自動設置為與背景圖片相匹配的大小。",
+  "SCENE.DimensionChangeTitle": "改變場景大小？",
+  "SCENE.DimensionChangeWarning": "你正在嘗試修改該場景的基礎大小，如果你已在該場景上放置了對象，這些對象和背景圖片的相對位置可能會偏移。",
+  "SCENE.DimensionLinked": "場景尺寸當前已連結，更改一個將更改另一個以保持長寬比。點擊取消連結。",
+  "SCENE.DimensionUnlinked": "場景尺寸當前未連結，更改一個將不會改變另一個。點擊連結。",
+  "SCENE.DistortedDimensionsTitle": "扭曲的場景尺寸",
+  "SCENE.DistortedDimensionsWarning": "您選擇了與原始比例不同的新尺寸。您是否希望自動重新放置物件，如Token？結果可能看起來會失真。",
+  "SCENE.GenerateThumb": "產生預覽圖",
+  "SCENE.GenerateThumbNoCanvas": "在「禁用遊戲畫布」設定處於啓動狀態時，無法生成場景縮略圖。",
+  "SCENE.GenerateThumbUploadDenied": "由於用戶沒有上傳文件的權限，因此無法生成場景縮略圖。",
+  "SCENE.GenerateThumbProgress": "正在為場景 {name} 生成縮略圖。",
+  "SCENE.GenerateThumbSuccess": "為場景 {name} 生成縮略圖。",
+  "SCENE.GridConfigTool": "網格設定工具",
+  "SCENE.GridConfigToolHint": "使用鼠標滾輪和箭頭鍵設定網格和背景圖片位置，或通過手動設定以下字段.",
+  "SCENE.GridGridless": "無網格",
+  "SCENE.GridSquare": "方格",
+  "SCENE.GridHexOddR": "六邊形-奇數行",
+  "SCENE.GridHexEvenR": "六邊形-偶數行",
+  "SCENE.GridHexOddQ": "六邊形-奇數列",
+  "SCENE.GridHexEvenQ": "六邊形-偶數列",
+  "SCENE.GridSizeError": "此調整尺寸會將網格尺寸降低到最小值 50px 以下。如果您想要縮小到這個尺寸，請先切換到無網格，然後在調整尺寸後重新設置新網格。",
+  "SCENE.GridResizeHint": "使用 ALT + 滑鼠滾輪 或 ALT + 上 和 ALT+ 下 來調整網格大小。",
+  "SCENE.GridPosition": "網格偏移位置",
+  "SCENE.GridPositionHint": "使用箭頭鍵移動網格偏移.",
+  "SCENE.GridScale": "網格尺度",
+  "SCENE.GridReset": "重置變更",
+  "SCENE.InitialView": "初始視圖位置",
+  "SCENE.InitialViewButton": "獲取當前視圖位置",
+  "SCENE.InitialViewHint": "設定此場景出現時的初始位置。",
+  "SCENE.InvalidDimension": "所提供的尺寸會導致另一個尺寸的非整數值。請嘗試使用不同的值或取消鏈接尺寸。",
+  "SCENE.Loading": "載入{name}中",
+  "SCENE.Notes": "場景筆記",
+  "SCENE.Pixels": "像素",
+  "SCENE.Preload": "預載入場景",
+  "SCENE.View": "查看場景",
+  "SCENE.ShiftBG": "背景偏移量",
+  "SCENE.ToggleNav": "切換導航欄顯示",
+  "SCENE.Ambience": {
+    "Base": "基本氛圍",
+    "Dark": "黑暗氛圍",
+    "ResetEnvironment": "重置為默認選項"
+  },
+  "SCENE.FIELDS": {
+    "name.label": "場景名",
+    "navigation.label": "顯示在導航欄",
+    "navName": {
+      "label": "導航名",
+      "hint": "在導航欄顯示的給玩家的場景別名。"
+    },
+    "background": {
+      "src": {
+        "label": "背景圖片",
+        "hint": "設定該場景主地圖的背景圖片和大小。"
+      },
+      "offsetX.label": "水平",
+      "offsetY.label": "垂直"
+    },
+    "backgroundColor.label": "背景顔色",
+    "foreground": {
+      "label": "前景圖片",
+      "hint": "一張被繪製於此場景的其他物件前的可選的前景圖片。"
+    },
+    "foregroundElevation": {
+      "label": "前景高度",
+      "hint": "以距離為單位的高度，用於設定前景圖像和過頂Tites的高度。"
+    },
+    "initial.scale.label": "縮放",
+    "grid": {
+      "type.label": "網格類型",
+      "size": {
+        "label": "網格大小",
+        "hint": "單個網格空間的像素大小。使用網格設定工具來視覺化調整此項。"
+      },
+      "thickness.label": "網格厚度",
+      "color.label": "網格顔色",
+      "alpha.label": "網格不透明度",
+      "distance.label": "距離",
+      "units.label": "單位",
+      "style.label": "網格樣式"
+    },
+    "padding": {
+      "label": "內距比例",
+      "hint": "額外填充圍繞場景背景的圖片，提供可用的畫布空間。"
+    },
+    "tokenVision": {
+      "label": "Token視野",
+      "hint": "根據受控的Token和其視野來决定在該場景內的可見部分。如果禁用，整個場景都可見。"
+    },
+    "fog": {
+      "exploration": {
+        "label": "戰爭迷霧",
+        "hint": "如果啟用此設定，戰爭迷霧的探索將按使用者進行追蹤，並在探索場景時儲存到資料庫中。否則，將不進行戰爭迷霧探索，而是將Token限制為僅能看到他們目前所能看見的內容。"
+      },
+      "overlay": {
+        "label": "戰爭迷霧",
+        "hint": "可選的戰爭迷霧圖像，繪製在場景的未探索部分之上。"
+      },
+      "colors": {
+        "explored": {
+          "label": "已探索戰爭迷霧顏色",
+          "hint": "應用於場景中所有已探索但在當前視覺區域之外的區域的顏色。"
+        },
+        "unexplored": {
+          "label": "未探索戰爭迷霧顏色",
+          "hint": "應用於場景中所有未探索區域的純色。"
+        }
+      }
+    },
+    "environment": {
+      "globalLight": {
+        "enabled": {
+          "label": "全域光照",
+          "hint": "此場景包含一個全域光源，為場景所有區域提供基礎照明。"
+        },
+        "darkness.max": {
+          "label": "全域光照閾值",
+          "hint": "一個介於 0 和 1 之間的黑暗閾值。當場景黑暗等級超過此閾值時，全域光照將自動禁用。"
+        }
+      },
+      "darknessLevel": {
+        "label": "黑暗水平",
+        "hint": "設定黑暗疊加層，使場景模糊不清，以模擬夜晚或昏暗的情况。"
+      },
+      "darknessLock": {
+        "label": "黑暗級別鎖定",
+        "hint": "當勾選此選項時，黑暗級別無法更改。"
+      },
+      "cycle": {
+        "label": "混合氛圍",
+        "hint": "當勾選此選項時，基本氛圍值將根據黑暗氛圍值與黑暗級別相對應地合併。"
+      }
+    },
+    "environment.base": {
+      "luminosity": {
+        "label": "亮度",
+        "hint": "控制場景的亮度。較高的亮度使場景明亮如晴天，而較低的亮度使其看起來更暗和陰沉。"
+      },
+      "saturation": {
+        "label": "飽和度",
+        "hint": "調整場景中顏色的純度。大於0的設置使顏色更飽和（強烈和鮮豔），而負設置使顏色變暗和減弱。"
+      },
+      "shadows": {
+        "label": "陰影",
+        "hint": "提高此滑塊會使場景的陰影和較暗元素變得更暗和更深。"
+      },
+      "hue": {
+        "label": "色調",
+        "hint": "選擇要混合到整個場景中的色調（顏色）。要激活顏色滑塊，必須具有大於0的強度。"
+      },
+      "intensity": {
+        "label": "色調強度",
+        "hint": "調整所選色調混合到場景中的強度。高色調強度會使場景飽和該顏色，可能壓倒現有的顏色。較低的色調強度會更加細緻地混合所選顏色。"
+      }
+    },
+    "journal": {
+      "label": "日誌條目",
+      "hint": "鏈接到一條日誌條目，為GM提供關於這個場景的筆記。"
+    },
+    "journalEntryPage": {
+      "label": "日誌條目頁面",
+      "hint": "連結日誌條目中的特定頁面。"
+    },
+    "playlist": {
+      "label": "場景播放列表",
+      "hint": "當此場景啟用時，自動開始播放選擇的播放列表。"
+    },
+    "playlistSound": {
+      "label": "播放列表音效",
+      "hint": "你可以選擇某一特定播放列表音效在此場景啓用時被播放。"
+    },
+    "weather": {
+      "label": "天氣效果",
+      "hint": "設定該場景內的天氣效果。"
+    }
+  },
+  "SCENE.TABS": {
+    "SHEET": {
+      "basics": "詳情",
+      "grid": "網格",
+      "lighting": "視野與光照",
+      "ambience": "環境與氛圍"
+    },
+    "AMBIENCE": {
+      "basic": "基本選項",
+      "environment": "環境照明"
+    }
+  },
+  "SCENE_NAVIGATION": {
+    "COLLAPSE": "摺疊導航",
+    "EXPAND": "展開導航",
+    "LABEL": "場景導航"
+  },
+  "GRID.STYLES": {
+    "SolidLines": "實線",
+    "DashedLines": "虛線",
+    "DottedLines": "點線",
+    "SquarePoints": "方形點",
+    "DiamondPoints": "菱形點",
+    "RoundPoints": "圓形點"
+  },
+  "SERVER_SETTINGS": {
+    "Title": "應用程式設定",
+    "Warning": "這些欄位自訂 Foundry Virtual Tabletop 應用程式的行為。變更需要重新啟動伺服器。",
+    "Save": {
+      "label": "儲存應用設定",
+      "warning": "這些設定修改後仍需要你手動重啓服務器才能生效。你是否希望繼續？",
+      "restart": "Foundry Virtual Tabletop 應用程式的設定已被更改。您必須重新啟動伺服器才能使更改生效。"
+    },
+    "SSLCert": "SSL證書",
+    "Telemetry": {
+      "request1": "如果您提供許可，Foundry Virtual Tabletop將與 foundryvtt.com 網站共享少量匿名使用數據，這將幫助我們團隊更好地了解 Foundry VTT 的使用情況，並幫助我們改進軟體。",
+      "request2": "此提示只會顯示一次，您可以隨時在應用設定菜單中更改有關共享使用數據的偏好設置，只需點擊此屏幕右上角的<i class=\"fas fa-cogs\"></i>圖標。",
+      "yes": "允許共享",
+      "no": "拒絕共享"
+    },
+    "ChangePassword": {
+      "label": "變更密碼",
+      "hint": "輸入現有的管理員密碼。",
+      "title": "輸入現有密碼"
+    },
+    "SECTIONS": {
+      "FVTTConfig": "Foundry VTT 設定",
+      "ServerConfig": "伺服器設定",
+      "ElectronApp": "Electron 應用程式",
+      "OtherSettings": "其他設定"
+    },
+    "FIELDS": {
+      "adminPassword": {
+        "label": "管理員密碼",
+        "hint": "管理員密碼用於保護對 Foundry Virtual Tabletop的設定和配置功能的使用。強烈建議您為您的伺服器設定管理員密碼。"
+      },
+      "dataPath": {
+        "label": "用戶資料位置",
+        "hint": "設定存儲用戶資料（包括世界、系統和MOD）的位置。"
+      },
+      "telemetry": {
+        "label": "允許分享使用數據",
+        "hint": "允許與我們共享有助於改善 Foundry Virtual Tabletop 的使用數據。如果啟用此選項，收集到的數據將在我們的<a href=\"https://foundryvtt.com/article/privacy-policy/\" target=\"_blank\">隱私政策</a>中有所記載，並且不包含任何個人身份信息，也不會與任何其他方共享。共享使用數據有助於我們回答「哪個 Foundry Virtual Tabletop 軟件版本使用最為廣泛」、「哪個遊戲系統最受歡迎」和「哪個Module版本經常安裝」等問題。我們將根據這些數據的洞察來改善軟件兼容性，提供更好的客戶支持，並與社區分享總體見解。如果禁用此選項，將不會分享任何數據。"
+      },
+      "cssTheme": {
+        "label": "設置主題",
+        "hint": "從多個視覺主題中選擇，設定應用程序設置菜單的外觀。"
+      },
+      "world": {
+        "label": "預設世界",
+        "hint": "你可以選擇在軟件啓動時自動啓動一個可用的世界。"
+      },
+      "language": {
+        "label": "預設語言",
+        "hint": "你可以選擇一項提供對應語言翻譯文件的MOD，以使FVTT使用其作爲預設語言。"
+      },
+      "upnp.label": "啓用UPnP",
+      "port": {
+        "label": "端口",
+        "hint": "你可以選擇Foundry Virtual Tabletop用於TCP連接通信的端口，並啓用或禁用通用即插即用（UPnP）。"
+      },
+      "compressStatic": {
+        "label": "壓縮靜態文件",
+        "hint": "在向客戶端發送Foundry Virtual Tabletop Web服務器提供的文件之前，對這些文件進行壓縮，以減少傳輸的數據量。"
+      },
+      "compressSocket": {
+        "label": "壓縮網絡套接字數據",
+        "hint": "啟用從服務器通過Web套接字向客戶端發送的數據的壓縮。這對網絡性能是推薦的。"
+      },
+      "deleteNEDB": {
+        "label": "刪除遷移後的NEDB文件",
+        "hint": "在版本11中，我們的軟件從舊的數據庫技術(NEDB)轉移到了新的技術(LevelDB)。我們自動將您的舊數據庫文件遷移到新格式，並保留舊的NEDB文件以防您需要回滾或診斷某些問題。這項安全措施增加了Foundry Virtual Tabletop在您硬盤上佔用的空間。啟用此功能將在遷移後自動刪除NEDB文件。這將成為版本12中的默認行為。"
+      },
+      "hotReload": {
+        "label": "熱重載Package文件",
+        "hint": "允許Packages在不完全刷新的情況下熱重載某些資源，如CSS，HTML和本地化文件。此設置僅建議開發人員使用。"
+      },
+      "sslCert": {
+        "label": "證書",
+        "hint": "你可以通過提供證書和密鑰文件的路徑來使用 (SSL) 加密運行服務器。路徑是絕對的或相對於用戶數據中的 Config 子目錄。"
+      },
+      "sslKey.label": "密碼",
+      "awsConfig": {
+        "label": "AWS設定文件位置",
+        "hint": "你可以提供一個用於集成S3的AWS設定文件。該位置可以是絕對位置，或者是用戶資料目錄中Config子目錄的相對位置。"
+      },
+      "fullscreen": {
+        "label": "全螢幕模式",
+        "hint": "以全螢幕模式開啟應用程式，不含工具列或其他使用者介面元素。"
+      }
+    }
+  },
+  "SETTINGS.TokenAutoRotateN": "自動旋轉Token",
+  "SETTINGS.TokenAutoRotateL": "啟用後，Token 會預設朝移動方向自動旋轉。無論此設定為何，個別 Token 上的鎖定旋轉設定仍會防止其美術圖案被視覺化旋轉。",
+  "SETTINGS.PrototypeTokenOverrides": {
+    "Name": "原型Token覆蓋",
+    "Label": "設定原型覆蓋",
+    "Hint": "為所有角色設定原型Token資料的覆蓋。",
+    "Reset": {
+      "Label": "重置預設值",
+      "Warning": "此操作將移除所有已設定的覆蓋。"
+    },
+    "Disabled": "已禁用",
+    "Submit": "儲存覆蓋",
+    "TABS": {
+      "AllTypes": {
+        "Label": "[所有類型]",
+        "Hint": "這些覆蓋適用於所有原型Token，無論父角色的類型為何。它們可以在後續的頁籤中為每種角色類型單獨覆蓋。欄位的空白選擇表示沒有覆蓋。"
+      },
+      "Basics": "基本設定",
+      "Marker": "回合標記"
+    }
+  },
+  "SETTINGS.UniversalKeybindingsN": "通用鍵盤綁定（實驗性）",
+  "SETTINGS.UniversalKeybindingsL": "根據您輸入的字元而非實體按鍵位置來配對捷徑。改善對 AZERTY、QWERTZ、假名及其他鍵盤佈局的支援。此為實驗性功能，需要重新載入。",
+  "SETTINGS.UI": {
+    "MENU": {
+      "name": "使用者介面設定",
+      "label": "設定介面",
+      "hint": "影響 Foundry Virtual Tabletop 使用者介面外觀或行為的設定。"
+    },
+    "HEADERS": {
+      "theme": "主題與配色方案",
+      "size": "介面大小",
+      "fade": "介面淡出",
+      "other": "其他設定"
+    },
+    "FIELDS": {
+      "uiScale": {
+        "label": "介面縮放",
+        "hint": "對整體使用者介面套用全域縮放因子，使其變大或變小。"
+      },
+      "fontScale": {
+        "label": "字體大小",
+        "hint": "放大或縮小應用程式中使用的預設字體大小。"
+      },
+      "colorScheme": {
+        "applications": {
+          "label": "應用程式",
+          "hint": "指定您偏好視窗式 UI 應用程式（如角色表）使用淺色或深色主題呈現。並非所有表單都支援此偏好設定。"
+        },
+        "choices": {
+          "default": "瀏覽器默認",
+          "dark": "深色",
+          "light": "淺色"
+        },
+        "interface": {
+          "label": "介面",
+          "hint": "指定您偏好使用者介面元素使用淺色或深色主題呈現。"
+        }
+      },
+      "chatNotifications": {
+        "label": "聊天通知",
+        "hint": "選擇新聊天訊息的通知是顯示為完整的聊天卡片，還是僅在聊天標籤上顯示一個點。",
+        "cards": "聊天卡片",
+        "pip": "通知點"
+      },
+      "fade": {
+        "opacity": {
+          "label": "非活動不透明度",
+          "hint": "非活動時使用者介面元素的淡出不透明度。較低的值更透明。"
+        },
+        "speed": {
+          "label": "淡出速度",
+          "hint": "滑鼠進入或離開其區域時，介面元素淡入或淡出的速度。較低的值較快。"
+        }
+      }
+    }
+  },
+  "SETUP": {
+    "NavLabel": "設定標籤",
+    "CoreVersion": "核心軟件版本",
+    "CoreVersionHint": "如果FoundryVTT核心軟件有更新，則可以在此處更新。你當前正在使用{versionDisplay}版本。",
+    "SettingsHeader": "軟件設定",
+    "YouMustInstallASystem": "你必須在建立新的世界前安裝一個系統",
+    "UpdateAvailable": "現在可以更新到{channel}頻道下{version}版本！",
+    "Configuration": "設定",
+    "MinifyFiles": "優化靜態文件大小",
+    "MinifyFilesHint": "使用最小化的JavaScript和CSS文件來减少網絡帶寬的占用。對於除了MOD開發者外的大多數用戶，推薦啓用此項。",
+    "Modules": "MOD",
+    "Systems": "遊戲系統",
+    "GettingStarted": "開始使用",
+    "NoSystemsMessage": "為了創造你的第一個World，你必須首先安裝一個<a class=\"system-install\" data-query=\"\" title=\"Game System\">遊戲系統</a>。 請花一些時間瀏覽可供選用的系統並選擇一個進行安裝。 如果你不知道你想要哪個系統，或者你的首選系統不可用，我們建議你安裝<a class=\"system-install\" data-query=\"Simple Worldbuilding\" title=\"Simple Worldbuilding\">Simple Worldbuilding</a> 系統。 ",
+    "NoWorldsMessage": "現在你有了一個遊戲系統，為你提供如何進行遊戲的規則。現在你需要新增一個世界。遊戲世界是包含所有用於遊戲的角色、文件、日誌和地圖的空間，無論是一次性遊戲還是一場完整的戰役。",
+    "NueWorldDescription": "<p>有關設定世界的更多信息，請查看<a href='https://foundryvtt.com/article/game-worlds/' target='_blank'>世界</a> 文檔。</p>",
+    "SeeTutorial": "有關 Foundry Virtual Tabletop 更深入的入門指南，你可以參考 <a href=\"https://foundryvtt.com/article/tutorial/\" target=\"_blank\" title=\"Gamemaster Tutorial\">Gamemaster Tutorial</a> 中的 <a href=\"https://foundryvtt.com/kb/\" target=\"_blank\" title=\"Knowledge Base\">Knowledge Base</a> 中的教學。",
+    "Title": "安裝與設定",
+    "Update": "軟件更新",
+    "UpdateNewGeneration": "需要手動安裝",
+    "PreviewCompatibility": "預覽兼容性",
+    "SystemUpdate": "更新系統",
+    "CoreUpdateInstructions": "核心軟件更新可用，返回設定以便應用！",
+    "SystemUpdateInstructions": "系統更新可用，返回設定以便應用！",
+    "PackagesNoResults": "已安裝的 {type} 中沒有與您搜尋的 \"{name}\" 匹配。",
+    "PackagesNoResultsSearch": "搜索可安裝的Module",
+    "SaveConfiguration": "保存設定",
+    "MissingRequirements": "缺少所需的 {type} \"{id}\"",
+    "UpdateAll": "全部更新",
+    "UpdateChannel": "軟件更新頻道",
+    "UpdateChannelHint": "你可以選擇一個更新頻道來控制希望的更新核心Foundry Virtual Tabletop軟件的方式。如無特殊原因，建議直接使用Release頻道。",
+    "UpdateCheck": "更新",
+    "UpdateCheckFor": "檢查更新",
+    "UpdatePerformIfAvailable": "如果可用，執行更新",
+    "UpdateHint": "你可以通過在你選擇的更新頻道上檢查更新，將你的 Foundry Virtual Tabletop 更新為新版本。",
+    "UpdatePrototype": "原型",
+    "UpdatePrototypeHint": "原型：用於預覽尚未完全開發的實驗性功能的版本。",
+    "UpdateDevelopment": "開發",
+    "UpdateDevelopmentHint": "API開發：用於測試新功能的設計和API變化的版本，以獲得開發者社區的反饋。",
+    "UpdateTesting": "測試",
+    "UpdateTestingHint": "功能測試：用於測試新功能的版本，以獲得普通用戶社區的反饋。",
+    "UpdateStable": "穩定",
+    "UpdateStableHint": "穩定：經過仔細測試的版本，建議在正式遊戲中使用。",
+    "ForceUpdateHint": "勾選强制更新框將會强制變更軟件更新到對應頻道的最新版本。使用前，請確保已知悉該項的預期行爲。",
+    "Uninstall": "移除",
+    "Reinstall": "重新安裝",
+    "ReinstallPackageNotFound": "無法在中央Module存儲庫中找到具有該 ID 的Module，因此Module重新安裝失敗。您需要通過其清單鏈接手動重新安裝它。",
+    "WorldCreate": "創造新的世界",
+    "WorldDelete": "删除",
+    "WorldEdit": "編輯",
+    "WorldLaunch": "啓動",
+    "WorldLaunchFailure": "世界啟動失敗：{message}。有關詳細信息，請參閱控制台（F12）。",
+    "WorldUnavailable": "不可用",
+    "Worlds": "遊戲世界",
+    "RequireUpdate": "需要更新",
+    "RequireSystem": "要求 {system} 系統",
+    "RequireDep": "要求依賴項目: {dependencies}",
+    "IncompatibleDep": "不兼容的依賴項：{dependencies}",
+    "IncompatibleSystems": "不兼容的系統: {systems}",
+    "NoSupportedSystem": "沒有安裝支持的系統",
+    "RequireCoreUpgrade": "需要更新核心",
+    "RequireCoreUnstable": "需要不穩定(Unstable)版本",
+    "RequireCoreDowngrade": "這個核心版本不支持這個Modules",
+    "LockHint": "鎖定Package以避免其被卸載或更新",
+    "FavoritePackage": "收藏",
+    "Verified": "該Module已驗證適用於此版本的 Foundry",
+    "ErrorTimeout": "對 {url} 的請求在 {timeout} 秒後超時",
+    "WarningsTitle": "Module警告",
+    "WarningsNone": "您沒有警告！",
+    "WarningsManage": "管理Module",
+    "ManifestUpdate": "新的安裝 URL 下有可用的更新版本",
+    "ManifestUpdateAvailable": "\"{package}\" 的新版本在另一安裝 URL 下可用。這種情況發生於Package託管位置或作者變更時。",
+    "PriorManifestUrl": "先前的清單 URL（版本 {version}）",
+    "UpdatedManifestUrl": "更新的清單 URL（版本 {version}）",
+    "SwapToTheUpdatedManifest": "是否要切換至新的清單 URL？（推薦）",
+    "CurrentVersion": "當前版本",
+    "ForceUpdate": "強制更新？",
+    "DependencyNotInstalled": "這個依賴包沒有安裝",
+    "CompatibilityUnknown": "兼容性未知",
+    "CompatibilityRiskUnknown": "兼容性風險：未指定兼容性數據",
+    "CompatibilityRiskWithVersion": "相容性風險：最後驗證版本為 {version}",
+    "CompatibilityRequireUpgrade": "這個依賴包比最低要求的版本 {version}",
+    "CompatibilityRequireDowngrade": "這個依賴包比最低要求的版本 {version} 新",
+    "ManifestURL": "在線安裝地址（連結）",
+    "InstallHint": "你可以輸入一個網絡地址（清單文件連結）來安裝。",
+    "InstallModule": "下載新的MOD",
+    "InstallSystem": "下載新遊戲系統",
+    "InstallSuccess": "{type} {id} 安裝成功",
+    "InstallFailure": "安裝失敗：{message}。詳情請查閱控制台日誌 (F12)",
+    "InstallWorld": "下載新世界",
+    "UninstallSuccess": "移除成功",
+    "UninstallFailure": "移除失敗",
+    "UpdateSuccess": "更新成功",
+    "UpdateFailure": "更新失敗",
+    "PackagesLoading": "正在載入可用Package",
+    "CouldntLoadPackages": "無法加載可用的Package",
+    "PackageFilter": "篩選Package",
+    "WorldFilter": "過濾世界",
+    "SystemFilter": "過濾系統",
+    "ModuleFilter": "過濾Module",
+    "PackageCategories": "Package類別",
+    "PackageInstalled": "已安裝",
+    "PackageNotOwned": "未擁有",
+    "PackageName": "Package 名稱",
+    "PackageProtected": "受保護",
+    "PackageRequiresDowngradeHint": "您必須降級至 Foundry VTT {vmax} 版本才能安裝此 package。",
+    "PackageRequiresDowngradeLabel": "需要降級",
+    "PackageRequiresUpgradeHint": "您必須升級至 Foundry VTT {vmin} 版本才能安裝此 package。",
+    "PackageRequiresUpgradeLabel": "需要升級",
+    "PackageVisAll": "全部",
+    "PackageVisInst": "已安裝",
+    "PackageVisUnin": "未安裝",
+    "PackageVisCompatible": "兼容",
+    "PackageVisIncompatible": "不兼容",
+    "PackageVisUnverified": "未驗證",
+    "PremiumContent": "高級內容",
+    "ExclusiveContent": "獨家內容",
+    "ViewPackagePage": "查看package頁面",
+    "ViewPackageWebsite": "查看 package 網站",
+    "ViewPackageChangelog": "查看更新日誌",
+    "PackageHasDependenciesSingular": "{title} 有一個尚未安裝的依賴項目。",
+    "PackageHasDependenciesPlural": "{title} 有 {number} 個依賴項目尚未安裝。",
+    "PackageRequiredDependencies": "這些依賴項是必需的，沒有它們，該Package將無法運行：",
+    "PackageOptionalDependencies": "這些依賴項是可選的，但如果安裝，可能會增強Package的功能：",
+    "PackageDependenciesTitle": "安裝Package依賴項目",
+    "PackageInstallDependencies": "你要自動安裝這些依賴項目嗎？",
+    "PackageDependenciesAutomaticSingular": "自動安裝依賴項目",
+    "PackageDependenciesAutomaticPlural": "自動安裝所選的依賴項目",
+    "PackageDependenciesManualSingular": "手動安裝依賴項目",
+    "PackageDependenciesManualPlural": "手動安裝全部依賴項目",
+    "PackageDependenciesCouldNotInstallSingular": "需要手動安裝依賴項目。",
+    "PackageDependenciesCouldNotInstallPlural": "{number} 個依賴項目需要手動安裝。",
+    "PackageDependenciesCouldInstallSingular": "可以自動安裝依賴項目。",
+    "PackageDependenciesCouldInstallPlural": "可以自動安裝 {number} 個依賴項目。",
+    "PackageDependenciesDecline": "你已拒絕爲{title}自動安裝所需的依賴項目。你需要手動安裝這些依賴項目。",
+    "PackageDependenciesSuccess": "已成功安裝{title}和其需要的{number}個依賴項目。",
+    "PackageUpdateCoreUpdateNeeded": "{title} 有更新，但無法安裝，因為它要求核心軟件至少更新到 {vmin}。你當前使用的是版本 {vcur}。",
+    "PackageUpdateCoreUnstable": "{title} 有可用更新，但可能無法安裝，因為它需要尚未穩定(Unstable)的核心軟件版本 {vmin}。",
+    "PackageUpdateCoreInsufficient": "{title} 有更新可用，但需要舊版核心軟件版本 {vmax} 才能運行。您目前使用的是版本 {vcur}。",
+    "PackageDeleteTitle": "刪除 {type}: {title}",
+    "PackageDeleteConfirm": "你確定想要刪除 {type} <strong>{title}</strong> 嗎？",
+    "WorldDeleteConfirmCode": "在下面的框中輸入此確切代碼以繼續： ",
+    "WorldDeleteConfirmWarning": "這將永久刪除您的世界及其內容，並且無法撤消。您確定要這樣做嗎？",
+    "PackageDeletePersistent": "此Package已存儲持久文件，通常用於設定或緩存數據之類的內容。如果您繼續，此數據將被刪除。",
+    "PackageDeleteNoUndo": "<strong>警告：</strong>此刪除無法撤銷。",
+    "PackageDeleteWorldConfirm": "你必須輸入驗證碼以確認刪除請求。",
+    "RequiredPackageNote": "該依賴項是該Package運行所必需的。",
+    "RecommendedPackageNote": "建議使用此依賴項， क्योंकि यह पैकेज की कार्यक्षमता को बढ़ाता है।",
+    "PackageStatusCheck": "更新",
+    "PackageStatusBlocked": "已鎖定",
+    "PackageStatusUpdate": "更新",
+    "PackageStatusCurrent": "最新",
+    "PackageStatusUpdating": "更新中",
+    "PackageStatusUpdated": "已更新",
+    "PackageProgressDownload": "正在下載Package",
+    "PackageProgressInstall": "正在安裝Package",
+    "PackageProgressCleanup": "Package清理",
+    "PackageProgressComplete": "Package安裝完成",
+    "PackageProgressError": "錯誤",
+    "PackageIncompatibleSystemsPrompt": "此Module更新與以下已安裝系統不兼容，是否繼續？",
+    "PackageIncompatibleSystemsBulkPrompt": "未更新以下Module，因為這樣做會使它們與一個或多個已安裝系統不兼容。是否要更新它們？",
+    "PackageIncompatibleWithSystems": "{module} <em>與</em> {systems} 不兼容",
+    "ConfirmCodeLabel": "輸入 '{code}' 以繼續",
+    "WorldLaunchConnect": "加載世界數據",
+    "WorldLaunchMigrate": "遷移世界數據",
+    "WorldLaunchConnectPackage": "加載Package數據",
+    "WorldLaunchMigratePackage": "遷移數據包",
+    "WorldLaunchMigrateCore": "正在執行核心遷移",
+    "WorldLaunchMigrateSystem": "正在執行系統遷移",
+    "WorldLaunchCleanWorld": "清理世界數據",
+    "WorldLaunchExtractDemo": "正在提取演示數據",
+    "UpdateDownloadingS": "下載更新中",
+    "UpdateDownloadingC": "下載完成",
+    "UpdateExtractingS": "提取更新中",
+    "UpdateExtractingC": "提取完成",
+    "UpdateCleaningS": "清理目錄中",
+    "UpdateCleaningC": "清理完成",
+    "UpdateInstallingS": "安裝更新中",
+    "UpdateInstallingC": "安裝完成",
+    "UpdateCompleteManual": "更新成功完成。關閉 Foundry Virtual Tabletop 服務器以進行手動重啟。",
+    "UpdateCompleteAuto": "更新已成功完成。重新啟動 Foundry VTT。",
+    "UpdateNoInternetError": "Foundry Virtual Tabletop 需要互聯網連接才能更新。",
+    "UpdateWebsiteUnreachableError": "我們此時無法連接 https://foundryvtt.com，請稍後再試。",
+    "UpdateWebsiteSlowWarning": "https://foundryvtt.com 此時似乎處於重載狀態，我們建議你稍後再試。",
+    "UpdateWarningWillDisable": "該更新是Foundry Virtual Tabletop的新的主要版本。安裝該更新可能將禁用某些已安裝的不兼容的MOD。",
+    "UpdateButtonDownload": "下載更新 {display}",
+    "UpdateInfoAvailable": "Foundry Virtual Tabletop版本{display}更新可用！",
+    "UpdateNotAvailable": "當前在請求的更新頻道上沒有可用的軟件更新.",
+    "UpdateNoArchive": "不存在可供安裝的更新存檔",
+    "UpdateLicenseInvalid": "你的 Foundry Virtual Tabletop 許可證密鑰無效。",
+    "UpdatedPackages": "Package 更新日誌",
+    "NoUpdateMode": {
+      "Label": "更新已禁用",
+      "Hint": "你不被允許更新這個 Foundry Virtual Tabletop，因為它是在 --noupdate 模式下啟動的。"
+    },
+    "Package": "Package",
+    "VersionChange": "版本變更",
+    "WorldMigrationRequiredTitle": "遷移世界數據",
+    "WorldCoreMigrationRequired": "<p>啟動World <strong>{world}</strong> 將會將其資料模型從較早版本的核心軟件（<code>{oldVersion}</code>）遷移至當前安裝的 <strong>{newVersion}</strong>。</p>",
+    "WorldSystemMigrationRequired": "<p>這個World上次啟動時使用了較舊的系統版本（<code>{oldVersion}</code>），而當前安裝了的系統版本是 <strong>{newVersion}</strong>，可能需要進行系統遷移。</p>",
+    "WorldMigrationSystemUnavailable": "<p><strong>{system}</strong> (<code>{systemVersion}</code>) 遊戲系統的安裝版本未驗證與此軟件版本兼容。無法保證成功遷移。</p>",
+    "WorldMigrationDisableModules": "<p>請在遷移你的世界之前更新已安裝的遊戲系統和Module。作為向更新軟件遷移的過程，所有Modules都會被禁用。你可以在遷移後手動重新啟用它們。</p>",
+    "WorldMigrationBackupPrompt": "<p><strong>無法逆轉此過程</strong>。建議在繼續之前備份你的世界數據。你需要備份才能恢復到之前的狀態版本。</p>",
+    "WorldMigrationCreateBackup": "遷移前是否新增備份?",
+    "WorldMigrationBegin": "開始遷移",
+    "WorldMigrationInProcess": "你的世界數據正在遷移以與 {version} 兼容。這可能需要一些時間。請保持耐心，不要關閉軟件。",
+    "AdminAccess": "需要管理員權限",
+    "AdminPasswordPrompt": "目前此伺服器上沒有啓用中的遊戲。要進入設定畫面，您必須提供伺服器管理員密碼。",
+    "AdminPasswordForgot": "如果你忘記了管理員密碼，伺服器管理員可以按照這些說明<a href='https://foundryvtt.com/article/reset-admin-password/' target='_blank'>重置它</a>.",
+    "AdminLogIn": "登入",
+    "AdminLogout": "管理員登出",
+    "UPNPLabel": "啓用UPnP",
+    "News": "新聞",
+    "FeaturedContent": "精選內容",
+    "NoFeaturedContent": "未從foundryvtt.com網頁服務器收到內容推薦。",
+    "BACKUPS": {
+      "Backup": "備份",
+      "BackingUp": "正在備份",
+      "BulkActions": "批量操作",
+      "Extracting": "正在提取備份",
+      "ExtractingPl": "正在提取備份",
+      "CheckDiskSpace": "檢查磁盤空間",
+      "Copying": "正在複製備份",
+      "CopyingPl": "正在複製備份",
+      "CreateBackup": "新增 {title} 的備份",
+      "CreateBackupComplete": "已成功新增 {title} 的備份",
+      "CreateBackupFailure": "無法新增package '{title}' 的備份。詳細信息請參閱控制台（F12）。",
+      "CreateSnapshot": "新增快照",
+      "CreateSnapshotComplete": "已新增快照.",
+      "CreateSnapshotFailure": "無法新增快照。詳細信息請參閱控制台（F12）。",
+      "CreateSnapshotHint": "新增快照將對當前安裝的每個package進行備份，使您稍後可以將 Foundry VTT 安裝狀態退回至新增快照時的狀態。",
+      "CreateSnapshotPackageList": "以下package將包含在此快照中：",
+      "CreateSnapshotConfirm": "這個過程可能需要很長的時間，具體取決於package的數量、大小和存儲介質，並且過程無法被中斷。您想要繼續嗎?",
+      "DeletingBackup": "正在刪除備份",
+      "DeleteBackupComplete": "已刪除 {title} 的備份.",
+      "DeleteBackupCompletePl": "已刪除 {title} 的 {count} 個備份.",
+      "DeleteBackupFailure": "無法刪除package '{title}' 的備份。詳細信息請參閱控制台（F12）。",
+      "DeleteBackupTitle": "正在刪除 {title} 的備份",
+      "DeleteBackupWarning": "刪除備份後無法還原。您要繼續嗎?",
+      "DeleteBackupWarningPl": "已選擇要刪除的 <strong>{count}</strong> 個備份。此操作無法還原。您要繼續嗎?",
+      "DeletingSnapshot": "正在刪除快照",
+      "DeleteSnapshotComplete": "已刪除快照.",
+      "DeleteSnapshotCompletePl": "已刪除 {count} 個快照.",
+      "DeleteSnapshotFailure": "無法刪除一個或多個快照。詳細信息請參閱控制台（F12）。",
+      "DeleteSnapshotTitle": "正在刪除快照",
+      "DeleteSnapshotWarning": "刪除快照後無法還原。您要繼續嗎?",
+      "DeleteSnapshotWarningPl": "已選擇要刪除的 <strong>{count}</strong> 個快照。此操作無法還原。您要繼續嗎?",
+      "NoteHint": "可以為快照提輸入備註。",
+      "DiskSpace": "磁盤空間",
+      "DiskSpaceAvailable": "可用：{available}",
+      "DiskSpaceRequired": "所需：{required}",
+      "DiskSpaceChecking": "檢查空間",
+      "DiskSpaceInsufficient": "空間不足",
+      "Manage": "管理",
+      "ManageBackups": "管理備份",
+      "ManagePackage": "{package} 的備份",
+      "LargePackageWarning": "所選package似乎相當大。在備份過程開始之前，進度可能會一直保持在 0%。請耐心等待。",
+      "Loading": "正在讀取備份",
+      "Categories": "備份分類",
+      "Restore": "還原",
+      "Restoring": "正在還原備份",
+      "RestoreLatest": "還原最新版本",
+      "RestoreLatestBackup": "還原最新備份",
+      "RestoreBackupWarning": "還原備份將刪除當前package的狀態。此操作無法撤銷。您是否要繼續?",
+      "RestoreBackupTitle": "正在為 {title} 還原備份",
+      "RestoreBackupFailure": "無法還原 {title} 的備份。詳細資訊請參見控制台 (F12)。",
+      "RestoreBackupComplete": "成功還原 {title}，使用於 {date} 的備份",
+      "RestoringSnapshot": "正在還原快照",
+      "RestoreSnapshotFailure": "無法還原快照。詳細資訊請參見控制台 (F12)。",
+      "RestoreSnapshotComplete": "成功還原於 {date} 建立的快照。",
+      "RestoreSnapshotTitle": "還原快照",
+      "RestoreSnapshotWarning": "還原快照將將您的 Foundry VTT 安裝狀態重置回建立快照時的狀態。所有版本和World狀態將被退回。此過程無法撤銷。",
+      "RestoreSnapshotUnchangedPackages": "建立快照後新增 <strong>1</strong> 個package，將在還原快照後保持不變。",
+      "RestoreSnapshotUnchangedPackagesPl": "建立快照後新增 <strong>{count}</strong> 個package，將在還原快照後保持不變。",
+      "Snapshot": "快照",
+      "TakeBackup": "建立備份",
+      "VersionFormat": "版本 {version}",
+      "Num": "{number} 個備份",
+      "NumPl": "{number} 個備份",
+      "TotalSize": "總大小",
+      "TYPE": {
+        "world": "World",
+        "module": "Module",
+        "system": "系統",
+        "snapshots": "快照"
+      },
+      "CannotDeleteInSnapshot": "屬於快照的備份無法單獨刪除。",
+      "WorldCount": "共 <strong>{count}</strong> 個World",
+      "ModuleCount": "共 <strong>{count}</strong> 個Module",
+      "SystemCount": "共 <strong>{count}</strong> 個系統",
+      "Snapshotting": {
+        "world": "正在建立World快照",
+        "module": "正在建立Module快照",
+        "system": "正在建立系統快照"
+      },
+      "CannotRestoreUnusable": "這個備份無法被還原，否則將導致package無法使用。"
+    },
+    "COMPAT": {
+      "Title": "預覽兼容性: {release}",
+      "Compatible": "相容 {count} 個",
+      "CompatibleTooltip": "經驗證適用於版本 {version} 的package。",
+      "Previewing": "正在讀取預覽",
+      "Incompatible": "不相容 {count} 個",
+      "IncompatibleTooltip": "經驗證不適用於版本 {version} 的package。",
+      "Warning": "存在相容性風險 {count} 個",
+      "WarningTooltip": "上一代核心軟體版本驗證適用，可能不適用於版本 {version} 的package。",
+      "Unverified": "未經驗證 {count} 個",
+      "UnverifiedTooltip": "上一代本版本適用，很可能仍然適用於版本 {version}。",
+      "LearnMore": "了解更多關於這個工具",
+      "INCOMPATIBLE": {
+        "Latest": "這個package的最新版本不相容於 {version} 更新",
+        "World": "這個World系統的相容版本不適用於 {version} 更新"
+      },
+      "COMPATIBLE": {
+        "Latest": "這個package的最新版本相容於 {version} 更新",
+        "World": "這個World系統有一個相容版本適用於 {version} 更新"
+      },
+      "RISK": {
+        "Latest": "這個package的最新版本上一代核心軟體版本是 {verified} 驗證適用",
+        "World": "這個World系統上一代核心軟體版本是 {verified} 驗證適用"
+      }
+    },
+    "INSTALL_PACKAGE": {
+      "ManifestIncompatible": {
+        "Title": "兼容性警告",
+        "Warning": {
+          "0": "提供的 URL 處的 {packageType} 與當前版本的 Foundry Virtual Tabletop 不兼容。",
+          "1": "您確定要繼續安裝嗎？"
+        }
+      },
+      "ManifestWrongPackageType": "提供的 URL 似乎並未指向 {packageType}。"
+    },
+    "UPDATE_NOTES": {
+      "Title": "發布說明：{release}",
+      "FullList": "查看 <a href=\"{url}\" target=\"_blank\">完整的發佈說明</a>。",
+      "BeginDownload": "開始下載",
+      "NewGenerationHint": "考慮在更新前將所有已安裝的package建立一個快照，以防需要退回舊版本。",
+      "PreviewCompatibilityHint": "使用下方的 '預覽兼容性' 按鈕，您可以檢查您的所有World、系統和Module是否支持 Foundry Virtual Tabletop 版本 {version}。"
+    }
+  },
+  "PACKAGE": {
+    "Type": {
+      "world": "世界",
+      "worldPl": "世界們",
+      "system": "系統",
+      "systemPl": "系統們",
+      "module": "Module",
+      "modulePl": "Module們",
+      "allPl": "全部"
+    },
+    "Create": "新增Package",
+    "Compatibility": {
+      "Label": "兼容性",
+      "Hint": "您可以選擇性地表示此Package僅與一定範圍的 Foundry Virtual Tabletop 軟體版本兼容。兼容性可以針對特定的構建版本（如 \"13.339\"）或者針對一個廣泛的世代（如 \"13\"）。"
+    },
+    "TagJavaScript": "JavaScript",
+    "TagCSS": "CSS",
+    "TagCompendium": "Compendium",
+    "TagLocalization": "本地化",
+    "TagVersion": "版本",
+    "TagCoreVersion": "核心版本",
+    "TagUnavailable": "不可用",
+    "GetPackagesTimedOut": "檢索Package的時間逾時",
+    "PackageInstallTimedOut": "Package安裝逾時",
+    "UpdateCheckTimedOut": "超時",
+    "WarmCacheTimedOut": "Package緩存逾時",
+    "Lock": "鎖定 {type}",
+    "Locked": "已鎖定",
+    "Unlock": "解鎖 {type}",
+    "Unlocked": "已解鎖",
+    "Favorite": "標記收藏",
+    "Unfavorite": "取消收藏",
+    "InstallFailed": "安裝包時遇到錯誤。詳情請查閱控制台日誌 (F12)。",
+    "UninstallLocked": "您無法卸載 {type} \"{id}\"，因為它已被鎖定。",
+    "LaunchLocked": "您無法啟動世界 \"{id}\"，因為它已被鎖定。",
+    "AlreadyUpdated": "{name} 已經是最新的。",
+    "AllUpdated": "所有 {type} 都已更新至最新!",
+    "UpdateAllInProgress": "一個 \"全部更新\" 工作流程已在進行中。在更新其他Package類型之前，您必須等待它完成。",
+    "ModuleCreate": "新增Module",
+    "ModuleCreateHint": "您可以使用此表單新增一個Module，該Module可以在多個世界之間共享或打包供其他用戶使用。此表單支持一部分可能的Package設定。新增Module後，您可以通過修改其 JSON 清單文件進一步管理和編輯您的Package。",
+    "ModuleCreateSuccess": "新增了新Module \"{id}\"，現在可以使用!",
+    "ModuleCreateErrorAlreadyExists": "Module「{id}」已存在！請選擇其他package id。",
+    "ConfigTitle": "Module: {module}",
+    "NewModuleTitle": "我的新Module",
+    "ModuleEdit": "編輯Module",
+    "ModuleEditHint": "您可以使用此表單更新Module的清單數據屬性。",
+    "ModuleEditWarning": "您正在編輯可安裝Module的Package清單數據。對此數據所做的更改可能會破壞功能或使Module無法進一步更新。請謹慎進行。",
+    "ModuleEditSuccess": "修改了Module \"{id}\" 的Package清單數據。",
+    "Relationship": {
+      "Package": "相關Package",
+      "Category": "關係類別"
+    },
+    "Relationships": {
+      "Systems": "遊戲系統",
+      "Requires": "需要",
+      "Recommends": "建議",
+      "Conflicts": "已知衝突"
+    },
+    "VIEW_MODES": {
+      "GALLERY": "畫廊視圖",
+      "TILES": "磁貼視圖",
+      "DETAILS": "詳細視圖"
+    },
+    "ACTIONS": {
+      "AddAuthor": "新增作者",
+      "RemoveAuthor": "移除作者",
+      "AddPack": "添加合集包",
+      "RemovePack": "移除合集包",
+      "AddRelationship": "添加關係",
+      "RemoveRelationship": "移除關係"
+    },
+    "TABS": {
+      "basics": "基本資料",
+      "authors": "作者",
+      "packs": "合集包",
+      "relationships": "關係"
+    },
+    "FIELDS": {
+      "id": {
+        "label": "PACKAGE識別碼",
+        "hint": "識別碼必須是唯一的字母數字字符串，只允許使用破折號。"
+      },
+      "title": {
+        "label": "PACKAGE名稱",
+        "hint": "名稱為人類可讀，可以包含特殊字符。"
+      },
+      "version": {
+        "label": "PACKAGE版本",
+        "hint": "版本欄位標識此PACKAGE的特定迭代。支持的版本方案允許使用由句點分隔的字符串或數字。"
+      },
+      "description": {
+        "label": "PACKAGE描述",
+        "hint": "解釋此PACKAGE的目的和內容的純文本或HTML描述。"
+      },
+      "url": {
+        "label": "PACKAGE網址",
+        "hint": "此Package的詳細資訊可在此網址找到。"
+      },
+      "authors": {
+        "element": {
+          "name.label": "作者名稱",
+          "discord.label": "Discord 用戶名",
+          "email.label": "電子郵件地址",
+          "url.label": "網站網址"
+        }
+      },
+      "packs": {
+        "element": {
+          "name": {
+            "label": "名稱",
+            "hint": "一個不含特殊字元的唯一字母數字字符串，用於識別合集包。",
+            "disabledHint": "由於此合集包名稱已存在，因此您無法更改。"
+          },
+          "label.label": "標籤",
+          "type.label": "文件類型",
+          "system": {
+            "label": "所需系統",
+            "hint": "角色、物品或冒險合集包（包含角色或物品）必須聲明它們是為哪個特定遊戲系統設計的。"
+          }
+        }
+      },
+      "compatibility": {
+        "minimum.label": "最低版本",
+        "verified.label": "已驗證版本",
+        "maximum.label": "最高版本"
+      },
+      "dataPath.label": "資料的位置"
+    }
+  },
+  "PACKAGECONFIG": {
+    "All": "全部",
+    "Reset": "重置預設值",
+    "Filter": "過濾器",
+    "Core": "核心",
+    "Unmapped": "未變換",
+    "TABS": {
+      "core": "核心",
+      "unmapped": "未變換"
+    }
+  },
+  "JOIN": {
+    "CurrentPlayers": "當前玩家",
+    "HeaderJoin": "加入遊戲集會",
+    "HeaderDetails": "遊戲詳情",
+    "HeaderWorld": "世界描述",
+    "NextSession": "下一次集會",
+    "SelectUser": "選擇用戶",
+    "UserKey": "用戶密碼",
+    "AuthAdmin": "您已作為服務器管理員用戶進行身份驗證。",
+    "ErrorMustSelectUser": "您必須選擇一個用戶才能登錄。",
+    "ErrorUserDoesNotExist": "請求的用戶“{user}”不存在！",
+    "ErrorInvalidPassword": "為{user}提供的密碼無效！",
+    "ErrorBanned": "{user}無權訪問此世界！",
+    "LoginSuccess": "作為{user}成功登錄，加入遊戲！"
+  },
+  "SHEETS.ConfigureTitle": "{prefix}: 表單設定",
+  "SHEETS.Defaults": "預設",
+  "SHEETS.Theme": "主題",
+  "SHEETS.ThemeHint": "並非所有主題都適用於每個表單。",
+  "SOUND": {
+    "ConfigTitle": "環境音效設定",
+    "PathPlaceholder": "路徑/到/音頻.mp3",
+    "New": "新音效",
+    "EFFECTS": {
+      "LOWPASS": "低通濾波器",
+      "HIGHPASS": "高通濾波器",
+      "REVERB": "混響"
+    }
+  },
+  "FOLDER.DeleteName": "删除全部: {name}",
+  "FOLDER.RemoveName": "移除文件夾: {name}",
+  "FOLDER.CreateTableConfirm": {
+    "Title": "新增隨機表: {folder}",
+    "Question": "是否用該文件夾的內容作爲隨機表結果，新增一個隨機表實體？"
+  },
+  "FOLDER.FIELDS": {
+    "name.label": "文件夾名",
+    "color.label": "文件夾顔色",
+    "sorting.label": "排序模式"
+  },
+  "OWNERSHIP": {
+    "Title": "擁有權設定: {object}",
+    "NONE": "無",
+    "LIMITED": "限制",
+    "OBSERVER": "查看",
+    "OWNER": "擁有",
+    "DEFAULT": "預設",
+    "NOCHANGE": "不變更",
+    "INHERIT": "繼承",
+    "AllPlayers": "所有玩家",
+    "HintFolder": "設定此文件夾中所有文檔的訪問權限。更改將應用於所有包含的文檔，不包括子文件夾的內容。",
+    "HintDocument": "設定對該特定文檔的訪問權限，允許為每個用戶分配不同級別的可見性。",
+    "Configure": "設定擁有權",
+    "ShowGM": "顯示GM用戶",
+    "Legend": "擁有權",
+    "Save": "儲存變更"
+  },
+  "PERMISSION.QueryUser": "查詢使用者",
+  "PERMISSION.QueryUserHint": "允許具有此角色的使用者查詢其他使用者。",
+  "REGION": {
+    "TABS": {
+      "identity": "身份",
+      "shapes": "形狀",
+      "behaviors": "行為"
+    },
+    "FIELDS": {
+      "color": {
+        "label": "顏色",
+        "hint": "應用於區域可視化的顏色。"
+      },
+      "shapes": {
+        "label": "形狀",
+        "hint": "區域的形狀。"
+      },
+      "elevation": {
+        "label": "高度",
+        "hint": "區域的高度範圍。",
+        "bottom": {
+          "label": "底部",
+          "hint": "高度範圍的底部。"
+        },
+        "top": {
+          "label": "頂部",
+          "hint": "高度範圍的頂部。"
+        }
+      },
+      "behaviors": {
+        "label": "行為",
+        "hint": "區域的行為。"
+      },
+      "visibility": {
+        "label": "可見性",
+        "hint": "設定區域的可見性。"
+      }
+    },
+    "ACTIONS": {
+      "create": "新增區域",
+      "update": "更新區域",
+      "delete": "刪除區域",
+      "shapeCreateFromWalls": "從受控牆壁新增形狀",
+      "shapeMakeHole": "新增孔",
+      "shapeFillHole": "填補孔",
+      "shapeMoveUp": "向上移動形狀",
+      "shapeMoveDown": "向下移動形狀",
+      "shapeRemove": "移除形狀",
+      "behaviorCreate": "新增區域行為",
+      "behaviorEdit": "編輯區域行為",
+      "behaviorDelete": "刪除區域行為",
+      "behaviorEnable": "啟用行為",
+      "behaviorDisable": "禁用行為"
+    },
+    "VISIBILITY": {
+      "LAYER": {
+        "label": "僅在區域層上"
+      },
+      "GAMEMASTER": {
+        "label": "始終對遊戲主持人可見"
+      },
+      "ALWAYS": {
+        "label": "任何人始終可見"
+      }
+    },
+    "EVENTS": {
+      "regionBoundary": {
+        "label": "區域邊界更改"
+      },
+      "behaviorActivated": {
+        "label": "行為已啟用"
+      },
+      "behaviorDeactivated": {
+        "label": "行為已停用"
+      },
+      "behaviorViewed": {
+        "label": "行為已檢視"
+      },
+      "behaviorUnviewed": {
+        "label": "行為未檢視"
+      },
+      "tokenEnter": {
+        "label": "Token進入"
+      },
+      "tokenExit": {
+        "label": "Token退出"
+      },
+      "tokenMoveIn": {
+        "label": "Token移入"
+      },
+      "tokenMoveOut": {
+        "label": "Token移出"
+      },
+      "tokenMoveWithin": {
+        "label": "Token在內部移動"
+      },
+      "tokenAnimateIn": {
+        "label": "Token動畫進入"
+      },
+      "tokenAnimateOut": {
+        "label": "Token動畫退出"
+      },
+      "tokenTurnStart": {
+        "label": "Token開始回合"
+      },
+      "tokenTurnEnd": {
+        "label": "Token結束回合"
+      },
+      "tokenRoundStart": {
+        "label": "Token開始回合"
+      },
+      "tokenRoundEnd": {
+        "label": "Token結束回合"
+      }
+    },
+    "SHAPES": {
+      "rectangle": "矩形",
+      "circle": "圓形",
+      "ellipse": "橢圓",
+      "polygon": "多邊形"
+    },
+    "Behavior": "行為",
+    "Shape": "形狀",
+    "LEGEND": {
+      "control": "控制區域",
+      "config": "設定區域",
+      "create": "新增區域",
+      "delete": "刪除區域",
+      "empty": "空",
+      "filter": "過濾區域",
+      "lock": "鎖定區域",
+      "title": "區域圖例",
+      "unlock": "解鎖區域",
+      "elevationBottom": "高度（底部）",
+      "elevationTop": "高度（頂部）"
+    },
+    "SHEET": {
+      "title": "設定區域"
+    },
+    "NOTIFICATIONS": {
+      "ControlWalls": "控制定義所需形狀的一組牆壁。",
+      "DrawingMultipleRegionsControlled": "當您繪製形狀時，您必須控制一個或沒有區域！",
+      "EmptyEnclosedArea": "受控牆壁圍成的區域是空的！請確保外部牆壁形成一個封閉的循環並且端點相連。",
+      "NoControlledWalls": "您未控制任何牆壁！"
+    }
+  },
+  "BEHAVIOR": {
+    "SECTIONS": {
+      "identity": "行為身份",
+      "status": "行為狀態"
+    },
+    "FIELDS": {
+      "disabled": {
+        "label": "已停用",
+        "hint": "切換此行為是否暫時停用。"
+      }
+    },
+    "ACTIONS": {
+      "create": "新增區域行為",
+      "update": "更新區域行為",
+      "delete": "刪除區域行為"
+    },
+    "TYPES": {
+      "base": {
+        "SECTIONS": {
+          "events": "訂閱事件"
+        },
+        "FIELDS": {
+          "events": {
+            "label": "事件",
+            "hint": "此行為訂閱的事件。"
+          },
+          "once": {
+            "label": "一次",
+            "hint": "在觸發一次後禁用該行為。"
+          }
+        }
+      },
+      "adjustDarknessLevel": {
+        "FIELDS": {
+          "mode": {
+            "label": "模式",
+            "hint": "在此區域內調整黑暗程度的方式。此行為尊重場景的全局照明閾值。如果區域的總黑暗程度超過閾值，則在該區域內阻止全局照明。"
+          },
+          "modifier": {
+            "label": "修改器",
+            "hint": "根據模式應用於黑暗程度的數值修改器。"
+          },
+          "blur": {
+            "label": "模糊",
+            "hint": "黑暗程度是否應在形狀邊界平滑過渡，或立即改變？"
+          }
+        },
+        "MODES": {
+          "OVERRIDE": {
+            "label": "覆蓋"
+          },
+          "BRIGHTEN": {
+            "label": "變亮"
+          },
+          "DARKEN": {
+            "label": "變暗"
+          }
+        }
+      },
+      "displayScrollingText": {
+        "FIELDS": {
+          "color": {
+            "label": "顏色",
+            "hint": "捲動文本的顏色。"
+          },
+          "text": {
+            "label": "文本",
+            "hint": "觸發行為時顯示的文本。"
+          },
+          "visibility": {
+            "label": "可見性",
+            "hint": "根據權限級別設定哪些用戶將看到捲動文本。"
+          }
+        },
+        "VISIBILITY_MODES": {
+          "GAMEMASTER": {
+            "label": "遊戲主持人GM"
+          },
+          "OBSERVER": {
+            "label": "觀察者Observer"
+          },
+          "ANYONE": {
+            "label": "任何人"
+          }
+        }
+      },
+      "executeMacro": {
+        "FIELDS": {
+          "uuid": {
+            "label": "Macro",
+            "hint": "當事件發生時執行的Macro。"
+          },
+          "everyone": {
+            "label": "所有人",
+            "hint": "設定Macro是否由所有連接的用戶執行，而不是具有足夠權限的單個用戶。"
+          }
+        }
+      },
+      "executeScript": {
+        "FIELDS": {
+          "source": {
+            "label": "Script",
+            "hint": "當事件發生時執行的Script。"
+          }
+        }
+      },
+      "modifyMovementCost": {
+        "FIELDS": {
+          "difficulties": {
+            "hint": "為每個移動動作設定移動成本乘數。重疊的移動成本修改會以乘法方式疊加。"
+          }
+        }
+      },
+      "teleportToken": {
+        "FIELDS": {
+          "destination": {
+            "label": "目的地",
+            "hint": "將Token移動到該區域後，Token將被傳送到的目的地區域。"
+          },
+          "choice": {
+            "label": "允許選擇",
+            "hint": "允許移動Token的用戶選擇是否傳送它。"
+          }
+        },
+        "Confirm": "您要傳送 {token} 嗎？",
+        "ConfirmGM": "您要將 {token} 傳送到 {scene} 中的 {region} 嗎？"
+      },
+      "toggleBehavior": {
+        "FIELDS": {
+          "enable": {
+            "label": "啟用行為",
+            "hint": "當事件發生時啟用的行為。"
+          },
+          "disable": {
+            "label": "禁用行為",
+            "hint": "當事件發生時禁用的行為。"
+          }
+        }
+      }
+    }
+  },
+  "SIDEBAR.ACTIONS.CREATE": {
+    "Actor": "新增角色",
+    "Adventure": "創造冒險",
+    "Cards": "新增牌堆",
+    "Compendium": "新增合集",
+    "Folder": "新增文件夾",
+    "Item": "新增物品",
+    "JournalEntry": "新增條目",
+    "Macro": "新增Macro",
+    "Playlist": "新增播放列表",
+    "RollTable": "新增隨機表",
+    "Scene": "新增場景"
+  },
+  "SIDEBAR.COMPENDIUM.LABELS": {
+    "Ownership": "非預設擁有權",
+    "Locked": "已鎖定"
+  },
+  "SIDEBAR.SETTINGS": {
+    "LABELS": {
+      "Build": "Build版本",
+      "Demo": "展示模式",
+      "Modules": "已啟用MOD"
+    },
+    "HEADERS": {
+      "Settings": "遊戲設定",
+      "Docs": "幫助與文件",
+      "Access": "遊戲訪問權限"
+    },
+    "ACTIONS": {
+      "Configure": "設定",
+      "Docs": "查看說明",
+      "Invite": "邀請連結",
+      "Keybindings": "控制設定",
+      "Logout": "登出",
+      "ManageModules": "管理MOD",
+      "Players": "玩家設定",
+      "Support": "支援與問題",
+      "Tours": "旅程管理",
+      "ViewModules": "查看啓用的MOD",
+      "Wiki": "社區WIKI"
+    }
+  },
+  "SUPPORT": {
+    "Title": "支援的詳細資料",
+    "Places": "獲得支援的地方",
+    "Discord": "要尋找其他正在使用 Foundry VTT 的人，或者要從我們優秀的社區用者那裡獲得支援，請加入我們的 <a href=\"https://discord.gg/foundryvtt\" target=\"_blank\" rel=\"nofollow\">Discord</a>。",
+    "BugReporting": "如果你想報告一個錯誤，請使用「聯繫我們」頁面上的錯誤報告。 ",
+    "ReportPrelude": "當在Discord或Github上尋求支援時，了解你的世界裡發生了什麼，對我們很有幫助。下面是我們要求你提供的一份可複製的報告。",
+    "CopyReport": "複製報告到剪貼簿",
+    "ReportCopied": "報告已複製",
+    "OS": "操作系統",
+    "Client": "客戶端",
+    "Screen": "螢幕尺寸",
+    "Viewport": "視口尺寸",
+    "Dimensions": "{width} × {height}",
+    "GPU": "GPU",
+    "MaxTextureSize": "最大紋理尺寸",
+    "LargestTexture": "最大紋理",
+    "NoDocumentIssues": "未發現文件問題。",
+    "NoClientIssues": "未發現客戶端問題。",
+    "NoModuleIssues": "未發現模組問題。",
+    "NoViewedScene": "未顯示的場景",
+    "ModuleSubTypesUnavailableName": "由於'{name}'Module未激活，<strong>{count}</strong> {document} 不可用",
+    "ModuleSubTypesUnavailableNoName": "<strong>{count}</strong> {document} 無法使用，因為ID為 '{name}' 的Module處於非活動狀態",
+    "UnavailableDocuments": {
+      "one": "1 個不可用的 {document} 文件",
+      "other": "{count} 個不可用的 {document} 文件"
+    },
+    "WorldScripts": "世界Script",
+    "GenerateFullReport": "生成完整報告",
+    "GenerateFullReportHint": "完完整報告包含有關您已安裝的模組和彙編的更詳細資訊，生成過程可能需要一些時間。",
+    "WorldData": "世界數據",
+    "CompendiumData": "匯編數據",
+    "ActiveModules": "活動Module",
+    "TABS": {
+      "support": "支援的詳細資料",
+      "documents": "文件問題",
+      "client": "客戶端問題",
+      "modules": "Module問題"
+    }
+  },
+  "TABLE": {
+    "AnimateSetting": "隨機表動畫",
+    "AnimateSettingHint": "從隨機表獲得結果時顯示轉盤式的動畫。",
+    "DrawFlavor": "從 {name} 表中抽取結果",
+    "DrawFlavorPlural": "從 {name} 表中抽取 {number} 個結果",
+    "NoAvailableResults": "此表中沒有可以抽取的結果。",
+    "Result": "結果",
+    "ResultDescription": "結果說明",
+    "SHEETS": {
+      "Config": "設定表單",
+      "View": "檢視表單"
+    },
+    "ACTIONS": {
+      "ChangeMode": {
+        "Edit": "編輯",
+        "View": "檢視"
+      },
+      "OpenResultConfig": "開啟結果設定",
+      "DrawResult": "抽取結果",
+      "DrawSpecificResult": "抽取此結果",
+      "NormalizeResults": "規範化結果權重",
+      "ResetResults": "重置結果",
+      "CreateResult": "新增結果",
+      "DeleteResult": "删除結果",
+      "ToggleDrawn": "切換獲取狀態",
+      "Submit": "更新"
+    },
+    "TABS": {
+      "summary": "摘要",
+      "results": "結果"
+    },
+    "FIELDS": {
+      "description.label": "隨機表描述",
+      "formula.label": "隨機表公式",
+      "replacement.label": "重複獲取",
+      "displayRoll.label": "在聊天視窗顯示擲骰方程式"
+    }
+  },
+  "TABLE_RESULT": {
+    "Details": "結果詳情",
+    "ACTIONS": {
+      "Submit": "更新表格結果"
+    },
+    "TYPES": {
+      "text": "文本",
+      "document": "文件"
+    },
+    "FIELDS": {
+      "name.label": "結果名稱",
+      "type.label": "結果類型",
+      "img.label": "結果圖示",
+      "documentUuid.label": "參考文件",
+      "weight.label": "權重",
+      "range.label": "範圍"
+    }
+  },
+  "TEMPLATE.TYPES": {
+    "circle": "圓形",
+    "cone": "錐形",
+    "ray": "線形",
+    "rect": "矩形"
+  },
+  "TEMPLATE.FIELDS": {
+    "sort.label": "排序",
+    "t.label": "類型",
+    "direction.label": "方向",
+    "angle.label": "角度",
+    "distance.label": "距離",
+    "borderColor.label": "邊框顏色",
+    "fillColor.label": "填充顏色",
+    "texture.label": "填充紋理"
+  },
+  "TILE.Dimensions": "尺寸",
+  "TILE.VideoOptions": "影片選項",
+  "TILE.ACTIONS": {
+    "CREATE": "新增Tile",
+    "UPDATE": "更新Tile"
+  },
+  "TILE.SECTIONS": {
+    "position": "調整圖塊的位置和尺寸。",
+    "overhead": "如果 圖塊 在前景的空中，則附加額外屬性."
+  },
+  "TILE.TABS": {
+    "position": "位置",
+    "appearance": "外觀",
+    "overhead": "空中(Overhead)"
+  },
+  "TILE.FIELDS": {
+    "sort.label": "排序",
+    "texture": {
+      "src.label": "圖塊圖片或影片",
+      "scaleX.label": "水平",
+      "scaleY.label": "垂直",
+      "tint.label": "色調顏色"
+    },
+    "alpha.label": "圖塊不透明度",
+    "occlusion": {
+      "mode.label": "遮擋模式",
+      "alpha.label": "遮擋 Alpha"
+    },
+    "restrictions": {
+      "light": {
+        "label": "限制光線",
+        "hint": "光源是否根據其相對於此瓦片的高度而被阻擋？"
+      },
+      "weather": {
+        "label": "限制天氣",
+        "hint": "天氣效應是否根據其相對於此瓦片的高度而被阻擋？"
+      }
+    },
+    "video": {
+      "loop.label": "循環影片",
+      "autoplay.label": "自動播放影片",
+      "volume.label": "影片音量"
+    }
+  },
+  "TIME": {
+    "Day": {
+      "one": "天",
+      "other": "天",
+      "abbr": "d"
+    },
+    "Hour": {
+      "one": "小時",
+      "other": "小時",
+      "abbr": "h"
+    },
+    "Millisecond": {
+      "one": "毫秒",
+      "other": "毫秒",
+      "abbr": "ms"
+    },
+    "Minute": {
+      "one": "分鐘",
+      "other": "分鐘",
+      "abbr": "m"
+    },
+    "Now": "現在",
+    "Second": {
+      "one": "秒",
+      "other": "秒",
+      "abbr": "s"
+    },
+    "Since": "自從 {since}",
+    "Year": {
+      "one": "年",
+      "other": "年",
+      "abbr": "y"
+    }
+  },
+  "TOKEN.DeleteCombatantWarning": "您正在刪除一個在戰鬥中的Token。其參戰者將被永久刪除。",
+  "TOKEN.TABS": {
+    "identity": "身份",
+    "appearance": "外觀",
+    "vision": "視覺",
+    "light": "光源",
+    "resources": "資源"
+  },
+  "TOKEN.SECTIONS": {
+    "basic": "基本設定",
+    "animation": "光線動畫",
+    "advanced": "進階選項"
+  },
+  "TOKEN.FIELDS": {
+    "name.label": "Token名稱",
+    "sort.label": "排序",
+    "movementAction.label": "移動動作",
+    "actorId.label": "關聯角色",
+    "actorLink.label": "與關聯角色同步資料",
+    "displayName.label": "顯示名稱",
+    "appendNumber": {
+      "label": "將數字附加到未連結Token的名稱上",
+      "hint": "將自動遞增的數字附加到未連結的token名稱上。例如 \"哥布林 3\"。"
+    },
+    "prependAdjective": {
+      "label": "將形容詞加到未連結Token的名稱前？",
+      "hint": "在未連結的Token名稱前加上一個隨機的形容詞。例如「憤怒的哥布林」。"
+    },
+    "occludable.radius": {
+      "label": "遮蔽半徑",
+      "hint": "當此Token位於使用放射遮蔽的瓦片下方時，此值控制在瓦片上切割的孔的大小，以便通過它看到Token。"
+    },
+    "disposition.label": "Token傾向",
+    "lockRotation": {
+      "label": "鎖定旋轉",
+      "hint": "防止此Token的旋轉角度在畫布上呈現。"
+    },
+    "texture": {
+      "src.label": "Token圖片位置",
+      "fit": {
+        "label": "圖像適應模式",
+        "hint": "調整圖像適應Token大小的方式。"
+      },
+      "anchorX.label": "X",
+      "anchorY.label": "Y",
+      "tint.label": "著色色調"
+    },
+    "randomImg.label": "隨機化圖片",
+    "shape": {
+      "label": "形狀",
+      "hint": "Token的形狀。"
+    },
+    "alpha.label": "Token不透明度",
+    "ring": {
+      "colors": {
+        "ring": {
+          "label": "環形顏色",
+          "hint": "應用於環形邊框的顏色。"
+        },
+        "background": {
+          "label": "背景顏色",
+          "hint": "應用於環形背景的顏色。"
+        }
+      },
+      "effects.label": "環形效果",
+      "enabled.label": "環形已啟用",
+      "subject": {
+        "scale": {
+          "label": "主題比例校正",
+          "hint": "調整主題紋理相對於環形的相對大小。增加此值將使主題紋理相對於環形更大。如果主題紋理看起來太突出，請使用較低的值來減小主題紋理大小。"
+        },
+        "texture": {
+          "label": "主題紋理",
+          "hint": "明確指定放置在動態Token環形上的藝術品的路徑。如果未提供，則環形主題與標準Token紋理相同。"
+        }
+      }
+    },
+    "sight": {
+      "enabled": {
+        "label": "視覺啟用",
+        "hint": "允許Token看到其視線內的發光空間。"
+      },
+      "range": {
+        "label": "視覺範圍",
+        "hint": "Token在沒有任何光線的情況下可以看到的距離。"
+      },
+      "angle": {
+        "label": "視野角度",
+        "hint": "視錐的角度（預設為 360）。"
+      },
+      "visionMode": {
+        "label": "視覺模式",
+        "hint": "對視覺應用視覺效果以表示特殊感官（預設為基本視覺）。"
+      },
+      "color.label": "視覺顏色",
+      "attenuation": {
+        "label": "衰變",
+        "hint": "調整視覺源的衰變強度（預設為0）。"
+      },
+      "brightness": {
+        "label": "視覺亮度",
+        "hint": "調整此視覺源的亮度。亮度越大，角色在黑暗中的視力越好（預設為 0）。"
+      },
+      "saturation": {
+        "label": "飽和度",
+        "hint": "調整視覺源半徑內的背景飽和度（預設為0）。"
+      },
+      "contrast": {
+        "label": "對比度",
+        "hint": "調整視覺源半徑內的背景對比度（預設為0）。"
+      }
+    },
+    "turnMarker": {
+      "mode": {
+        "label": "模式",
+        "hint": "選擇「預設」以使用預設戰鬥設定，「禁用」以隱藏回合標記，或「自訂」以獲得獨特的回合標記行為。"
+      },
+      "animation": {
+        "label": "動畫",
+        "hint": "為此Token的戰鬥回合標記選擇一種動畫風格。"
+      },
+      "src": {
+        "label": "媒體來源",
+        "hint": "為此Token的戰鬥回合標記選擇一個圖像或影片檔案。"
+      },
+      "disposition": {
+        "label": "傾向色調",
+        "hint": "根據其傾向為此Token的戰鬥回合標記上色。"
+      }
+    },
+    "displayBars.label": "顯示屬性條",
+    "bar1.attribute.label": "屬性條1 屬性",
+    "bar2.attribute.label": "屬性條2 屬性"
+  },
+  "TOKEN.SHAPES.ELLIPSE.label": "橢圓",
+  "TOKEN.SHAPES.ELLIPSE_1.label": "橢圓（變體1）",
+  "TOKEN.SHAPES.ELLIPSE_2.label": "橢圓（變體2）",
+  "TOKEN.SHAPES.TRAPEZOID.label": "梯形",
+  "TOKEN.SHAPES.TRAPEZOID_1.label": "梯形（變體1）",
+  "TOKEN.SHAPES.TRAPEZOID_2.label": "梯形（變體2）",
+  "TOKEN.SHAPES.RECTANGLE.label": "矩形",
+  "TOKEN.SHAPES.RECTANGLE_1.label": "矩形（變體1）",
+  "TOKEN.SHAPES.RECTANGLE_2.label": "矩形（變體2）",
+  "TOKEN.RING": {
+    "EFFECTS": {
+      "BKG_WAVE": "背景波浪",
+      "RING_GRADIENT": "環形漸變",
+      "RING_PULSE": "環形脈衝",
+      "INVISIBILITY": "光譜脈衝",
+      "COLOR_OVER_SUBJECT": "顏色覆蓋主體"
+    },
+    "SHEET": {
+      "legend": "動態Token環形"
+    },
+    "SETTINGS": {
+      "label": "動態Token環",
+      "hint": "選擇可用的動態Token環視覺化。更改它需要重新加載。",
+      "coreSteel": "Foundry VTT 鋼環",
+      "coreBronze": "Foundry VTT 青銅環",
+      "FIT_MODES": {
+        "label": "動態Token環適應模式",
+        "hint": "選擇動態環的適應模式。",
+        "subject": "標準",
+        "grid": "網格"
+      }
+    }
+  },
+  "TOKEN.TURNMARKER": {
+    "SHEET": {
+      "legend": "戰鬥回合標記"
+    },
+    "MODES": {
+      "DISABLED": "已禁用",
+      "DEFAULT": "預設",
+      "CUSTOM": "自訂"
+    }
+  },
+  "TOKEN.MOVEMENT": {
+    "ACTIONS": {
+      "blink.label": "傳送（閃爍）",
+      "burrow.label": "挖洞",
+      "climb.label": "攀爬",
+      "crawl.label": "爬行",
+      "displace.label": "傳送（位移）",
+      "jump.label": "跳躍",
+      "fly.label": "飛行",
+      "swim.label": "游泳",
+      "walk.label": "行走"
+    }
+  },
+  "TYPES": {
+    "Base": "基本",
+    "Cards": {
+      "deck": "牌組",
+      "hand": "手牌",
+      "pile": "牌堆"
+    },
+    "JournalEntryPage": {
+      "image": "圖片",
+      "pdf": "PDF",
+      "text": "文本",
+      "video": "影片"
+    },
+    "Macro": {
+      "chat": "聊天",
+      "script": "script"
+    },
+    "RegionBehavior": {
+      "adjustDarknessLevel": "調整黑暗程度",
+      "displayScrollingText": "顯示捲動中的文本",
+      "executeMacro": "執行Macro",
+      "executeScript": "執行Script",
+      "modifyMovementCost": "修改移動成本",
+      "pauseGame": "暫停遊戲",
+      "suppressWeather": "抑制天氣",
+      "teleportToken": "傳送Token",
+      "toggleBehavior": "切換行為"
+    },
+    "TableResult": {
+      "document": "文件",
+      "text": "文本"
+    }
+  },
+  "TOURS": {
+    "NavLabel": "旅程管理標籤",
+    "ShowMeHow": "告訴我怎麼做",
+    "TourCategories": "旅程類別",
+    "AllTours": "所有旅程",
+    "ResetAll": "重置所有旅程",
+    "TourFilter": "旅游過濾器",
+    "TourName": "旅程名稱",
+    "Start": "開始旅程",
+    "Resume": "繼續旅程",
+    "Restart": "從頭開始旅程",
+    "Reset": "重置旅程進度",
+    "NotStarted": "未開始",
+    "InProgress": "進行中 - {current}/{total}",
+    "Completed": "已完成",
+    "ResetTitle": "重置旅程",
+    "ResetWarning": "你想重置所有的旅程進度嗎？",
+    "ResetSuccess": "重置所有旅程的完成狀態。",
+    "SuggestedTitle": "建議的下一次旅程",
+    "SuggestedDescription": "<p>你已完成旅程 <strong>{currentTitle}</strong>。</p><p>我們建議繼續進行旅程 <strong>{nextTitle}</strong>。要繼續嗎？</p>"
+  },
+  "USER": {
+    "FIELDS": {
+      "name": {
+        "label": "玩家名稱",
+        "hint": "玩家名稱必須由遊戲主持人GM設定，並可以在用戶管理屏幕上更改。"
+      },
+      "avatar": {
+        "label": "玩家頭像",
+        "hint": "在使用內置音頻/視頻聊天時顯示玩家頭像，或者可能由Module顯示。"
+      },
+      "color": {
+        "label": "玩家顏色",
+        "hint": "玩家顏色用於區分用戶之間的光標、尺規、模板和其他元素。"
+      },
+      "pronouns": {
+        "label": "玩家代詞",
+        "hint": "這些代詞告訴這位玩家希望在第三人稱中如何稱呼他。"
+      },
+      "character": {
+        "label": "玩家角色",
+        "hint": "從您至少具有觀察者權限的角色集合中選擇一個代表此用戶的主要角色。"
+      }
+    },
+    "SHEET": {
+      "HEADERS": {
+        "INFO": "玩家信息",
+        "CHAR": "玩家角色"
+      },
+      "BUTTONS": {
+        "SAVE": "儲存玩家設定",
+        "RELEASE": "釋放角色"
+      }
+    },
+    "MESSAGES": {
+      "KICKED": "使用者 {user} 已被<strong>踢出</strong>世界。",
+      "BANNED": "使用者 {user} 已被<strong>封禁</strong>於此世界。",
+      "UNBANNED": "使用者 {user} 已被<strong>解除封禁</strong>於此世界。"
+    },
+    "RoleNone": "無",
+    "RolePlayer": "玩家",
+    "RoleTrusted": "信任的玩家",
+    "RoleAssistant": "助理GM",
+    "RoleGamemaster": "遊戲主持人",
+    "GM": "GM"
+  },
+  "USERS.DeleteName": "删除用戶: {name}",
+  "WALL.FIELDS": {
+    "c.label": "牆體坐標",
+    "light.label": "光線",
+    "move.label": "移動",
+    "sight.label": "視線",
+    "sound.label": "聲音",
+    "dir.label": "限制方向",
+    "door.label": "門的類型",
+    "ds.label": "門狀態",
+    "doorSound.label": "門聲音",
+    "threshold.attenuation": {
+      "hint": "感知可以穿透這堵牆的距離是相對於觀察者鄰近度和激活閾值的自適應。只有在定義閾值時才適用。",
+      "label": "鄰近閾值衰減"
+    },
+    "animation": {
+      "strength": {
+        "label": "動畫強度",
+        "hint": "一個介於 0 和 2 之間的乘數，用於修改門在動畫時移動的幅度。例如，對於擺動門，強度越大，開啟角度越寬。對於滑動門，強度越大，門滑動得越遠。"
+      },
+      "direction.label": "開啟方向",
+      "double.label": "雙開門",
+      "duration.label": "動畫持續時間（毫秒）",
+      "flip.label": "翻轉門紋理",
+      "texture.label": "門紋理",
+      "type.label": "動畫類型"
+    }
+  },
+  "WALL.ANIMATION_TYPES": {
+    "ASCEND": "上升",
+    "DESCEND": "下降",
+    "SLIDE": "滑動",
+    "SWING": "擺動",
+    "SWIVEL": "旋轉"
+  },
+  "WALL.ANIMATION_DIRECTIONS": {
+    "DEFAULT": "預設",
+    "REVERSE": "反向"
+  },
+  "WALL.Title": "設定牆體",
+  "WALL.TitleMany": "設定牆體 [多重]",
+  "WALL.Instructions": "自定義牆體如何限制移動和視線。",
+  "WALL.CoordinateRange": "({p0X}, {p0Y}) 到 ({p1X}, {p1Y})",
+  "WALL.DoorAnimation": "門動畫",
+  "WALL.DoorConfiguration": "門的設定",
+  "WALL.NWalls": "[{n} 道牆]",
+  "WALL.Restrictions": "牆體限制",
+  "WALL.Submit": "更新牆",
+  "WALL.SenseTypes.NONE": "無",
+  "WALL.SenseTypes.LIMITED": "有限",
+  "WALL.SenseTypes.NORMAL": "正常",
+  "WALL.SenseTypes.PROXIMITY": "鄰近",
+  "WALL.SenseTypes.DISTANCE": "反向接近感",
+  "WALL.Directions.BOTH": "兩側",
+  "WALL.Directions.LEFT": "左側",
+  "WALL.Directions.RIGHT": "右側",
+  "WALL.DoorTypes.NONE": "無",
+  "WALL.DoorTypes.DOOR": "門",
+  "WALL.DoorTypes.SECRET": "秘密門",
+  "WALL.DoorStates.CLOSED": "關閉",
+  "WALL.DoorStates.OPEN": "開啟",
+  "WALL.DoorStates.LOCKED": "上鎖",
+  "WALL.DoorSounds.FuturisticFast": "未來主義，快速",
+  "WALL.DoorSounds.FuturisticHydraulic": "未來主義，液壓",
+  "WALL.DoorSounds.FuturisticForcefield": "未來主義，力場",
+  "WALL.DoorSounds.Industrial": "工業",
+  "WALL.DoorSounds.IndustrialCreaky": "工業，吱吱作響",
+  "WALL.DoorSounds.Jail": "監獄",
+  "WALL.DoorSounds.MagicDoor": "魔法門",
+  "WALL.DoorSounds.MagicWall": "魔法牆",
+  "WALL.DoorSounds.Metal": "金屬",
+  "WALL.DoorSounds.SlidingMetal": "滑動，金屬 (輕)",
+  "WALL.DoorSounds.SlidingMetalHeavy": "滑動，金屬 (重)",
+  "WALL.DoorSounds.SlidingModern": "滑動，現代",
+  "WALL.DoorSounds.SlidingWood": "滑動，木頭",
+  "WALL.DoorSounds.StoneBasic": "石頭",
+  "WALL.DoorSounds.StoneRocky": "石頭，岩石",
+  "WALL.DoorSounds.StoneSandy": "石頭，沙石",
+  "WALL.DoorSounds.WoodBasic": "木頭，基本",
+  "WALL.DoorSounds.WoodCreaky": "木頭，吱吱作響",
+  "WALL.DoorSounds.WoodHeavy": "木頭，沉重",
+  "WEBRTC": {
+    "Title": "語音/視訊設定",
+    "MenuLabel": "設定語音/視訊",
+    "MenuHint": "設定特定於集成語音/視訊WebRTC組件的設定。",
+    "UnknownDevice": "<未知裝置>",
+    "DeviceUnavailableWarning": "設定的輸入裝置中有裝置不可用，語音/視訊通信無法啓動。",
+    "DisableVideoSource": "禁用發送攝像頭",
+    "DisableAudioSource": "禁用發送音訊",
+    "DisableAudioOutput": "禁用音訊輸出",
+    "DefaultSource": "預設裝置",
+    "DevicesSubsections": {
+      "Video": "視訊",
+      "Audio": "音訊"
+    },
+    "UnavailableDevice": "不可用裝置（將使用預設裝置）",
+    "TURNServerConfiguration": "自訂伺服器設定",
+    "TURNServerProvisioned": "由通信服務器提供",
+    "CustomTURNServer": "自訂中繼服務器",
+    "GeneralTabNotGM": "通用的語音/視訊設定只能由GM修改",
+    "AVModeNotes": "只有GM可以修改這些設定，需要重載Foundry VTT。",
+    "ModeDisabled": "禁用",
+    "ModeAudioOnly": "僅限音訊",
+    "ModeVideoOnly": "僅限視訊",
+    "ModeAudioVideo": "啓用語音/視訊",
+    "NavLabel": "用戶音樂/影片控件",
+    "TooltipToggleVideo": "切換視訊",
+    "TooltipConfigure": "設定",
+    "TooltipDock": "發送到Dock",
+    "TooltipPopout": "彈出",
+    "PTTKeyWarn": "你的《發言/靜音鍵》正在使用舊版本設定，可能導致無法按正常運作，請重新設定.",
+    "VoiceModeAlways": "始終啓用",
+    "VoiceModeActivity": "啓用聲音",
+    "VoiceModePtt": "按鍵發話",
+    "DockPositionTop": "頂部",
+    "DockPositionRight": "右",
+    "DockPositionBottom": "底部",
+    "DockPositionLeft": "左",
+    "TooltipAllowUserVideo": "允許用戶視訊",
+    "TooltipBlockUserVideo": "阻止用戶視訊",
+    "TooltipAllowUserAudio": "允許用戶語音",
+    "TooltipBlockUserAudio": "阻止用戶語音",
+    "TooltipHideUser": "隱藏用戶",
+    "TooltipShowUser": "顯示用戶",
+    "TooltipEnableMyVideo": "啓用視訊",
+    "TooltipDisableMyVideo": "關閉視訊",
+    "TooltipEnableMyAudio": "啓用語音",
+    "TooltipDisableMyAudio": "關閉語音",
+    "TooltipMutePeers": "關閉其他用戶的語音",
+    "TooltipUnmutePeers": "僅開啓其他用戶的語音",
+    "TooltipDisableAllVideo": "禁用接收影片",
+    "TooltipEnableVideo": "啟用接收影片",
+    "TooltipShowPlayers": "顯示玩家列表",
+    "TooltipHidePlayers": "隱藏玩家列表",
+    "TooltipExpandDock": "展開 Dock",
+    "TooltipMinimizeDock": "最小化 Dock",
+    "NameplatesOff": "關閉",
+    "NameplatesPlayer": "僅玩家名字",
+    "NameplatesCharacter": "僅角色名字",
+    "NameplatesBoth": "兩者交替",
+    "CaptureWarningVideo": "無法獲取你的音訊裝置；僅分享視訊",
+    "CaptureWarningAudio": "無法獲取你的視訊裝置；僅分享音訊",
+    "CaptureErrorAudioVideo": "無法捕獲你的音訊和視訊裝置",
+    "CaptureErrorVideo": "無法捕獲你的視訊裝置",
+    "CaptureErrorAudio": "無法捕獲你的音訊裝置",
+    "ConnectError": "在連接語音/視訊信號服務器時出錯",
+    "ConnectionLostWarning": "與語音/視訊信號服務器失去連接。試圖重新增立連接。",
+    "GenericError": "WebRTC錯誤： ",
+    "NoSSLError": "無法使用語音/視訊通信，除非你的Foundry VTT服務器正在使用SSL證書。有關說明，請參閱連線說明。",
+    "Volume": "音量",
+    "WarningCannotEnableVideo": "你沒有廣播視訊流的權限，無法啓用攝像頭。",
+    "WarningCannotEnableAudio": "你沒有廣播音訊流的權限，無法啓用麥克風。",
+    "WorldSettings": {
+      "FIELDS": {
+        "mode": {
+          "label": "會議模式",
+          "hint": "設定特定於整合式音訊/視訊 WebRTC 元件的設定。"
+        },
+        "turn": {
+          "type.label": "中繼伺服器",
+          "url.label": "URL",
+          "username.label": "使用者名稱",
+          "password.label": "密碼"
+        }
+      }
+    },
+    "ClientSettings": {
+      "FIELDS": {
+        "voice": {
+          "mode": {
+            "label": "語音廣播",
+            "hint": "選擇您的語音在影音通話中的廣播方式。"
+          }
+        },
+        "dockPosition.label": "停靠位置",
+        "nameplates.label": "名牌",
+        "borderColors.label": "使用播放器邊框顏色",
+        "videoSrc": {
+          "label": "擷取裝置",
+          "hint": "選擇您希望使用的視訊擷取裝置（若有）。"
+        },
+        "audioSrc": {
+          "label": "擷取裝置",
+          "hint": "選擇您希望使用的音訊擷取裝置（若有）。"
+        },
+        "audioSink": {
+          "label": "輸出裝置",
+          "hint": "選擇您希望使用的音訊輸出裝置。"
+        }
+      }
+    },
+    "TABS": {
+      "general": "常規",
+      "devices": "裝置",
+      "server": "服務器"
+    }
+  },
+  "WORLD": {
+    "JOIN_THEMES": {
+      "default": "預設",
+      "minimal": "最低限度"
+    },
+    "Title": {
+      "Create": "新增世界",
+      "Update": "編輯世界: {world}"
+    },
+    "SubmitUpdate": "更新世界",
+    "ResetModules": "重置啓用MOD",
+    "FIELDS": {
+      "title.label": "世界的標題",
+      "id.label": "資料的位置",
+      "system.label": "遊戲系統",
+      "background.label": "背景圖片",
+      "joinTheme.label": "加入頁面主題",
+      "nextSession.label": "下一次集會",
+      "resetKeys.label": "重置用戶密碼",
+      "safeMode": {
+        "label": "在安全模式中啓動",
+        "hint": "禁用所有MOD和活動場景，並停止任何播放音樂"
+      },
+      "description.label": "世界的描述"
+    }
+  }
 }

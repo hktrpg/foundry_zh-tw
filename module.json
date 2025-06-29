@@ -2,12 +2,12 @@
   "id": "foundry_zh-tw",
   "name": "foundry_zh-tw",
   "title": "Translation: 正體中文 [Core]",
-  "description": "為 FVTT V12 核心系统提供正體中文翻譯。<a href='https://support.hktrpg.com'>Discord頻道</a></p>",
-  "version": "1.12.331",
+  "description": "為 FVTT V13 核心系统提供正體中文翻譯。<a href='https://support.hktrpg.com'>Discord頻道</a></p>",
+  "version": "1.13.0",
   "compatibility": {
     "minimum": "10",
-    "verified": "12",
-    "maximum": "12"
+    "verified": "13",
+    "maximum": "13"
   },
   "coreTranslation": true,
   "authors": [
