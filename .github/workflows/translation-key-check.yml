@@ -1,0 +1,32 @@
+name: Translation Key Check (zh-TW)
+
+on:
+  schedule:
+    # Run once per day at 00:00 UTC
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  check-translation-keys:
+    name: Compare zh-TW keys with en.json
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run translation key comparison
+        run: |
+          node ./scripts/compare-translation-keys.mjs
+
+      - name: Upload markdown report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: translation-report
+          path: .github/translation-report.md
+
