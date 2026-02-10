@@ -1,0 +1,86 @@
+[
+  {
+    "key": "COMBAT.ACTIONS.LinkToScene",
+    "en": "Link to Viewed Scene"
+  },
+  {
+    "key": "COMBAT.ACTIONS.UnlinkFromScene",
+    "en": "Unlink from Scene"
+  },
+  {
+    "key": "COMBAT.DURATION.None",
+    "en": "None"
+  },
+  {
+    "key": "COMBAT.DURATION.ROUNDS.few",
+    "en": "Rounds"
+  },
+  {
+    "key": "COMBAT.DURATION.ROUNDS.many",
+    "en": "Rounds"
+  },
+  {
+    "key": "COMBAT.DURATION.ROUNDS.one",
+    "en": "Round"
+  },
+  {
+    "key": "COMBAT.DURATION.ROUNDS.other",
+    "en": "Rounds"
+  },
+  {
+    "key": "COMBAT.DURATION.ROUNDS.two",
+    "en": "Rounds"
+  },
+  {
+    "key": "COMBAT.DURATION.TURNS.few",
+    "en": "Turns"
+  },
+  {
+    "key": "COMBAT.DURATION.TURNS.many",
+    "en": "Turns"
+  },
+  {
+    "key": "COMBAT.DURATION.TURNS.one",
+    "en": "Turn"
+  },
+  {
+    "key": "COMBAT.DURATION.TURNS.other",
+    "en": "Turns"
+  },
+  {
+    "key": "COMBAT.DURATION.TURNS.two",
+    "en": "Turns"
+  },
+  {
+    "key": "COMBAT.TargetedBy",
+    "en": "Targeted by {list}"
+  },
+  {
+    "key": "COMBAT.ToggleTargeting",
+    "en": "Toggle Targeting"
+  },
+  {
+    "key": "COMPENDIUM.Migration.Begin",
+    "error": "'COMPENDIUM'"
+  },
+  {
+    "key": "COMPENDIUM.Migration.Complete",
+    "error": "'COMPENDIUM'"
+  },
+  {
+    "key": "HOTBAR.EMPTY",
+    "en": "Empty Slot"
+  },
+  {
+    "key": "KEYBINDINGS.UnconstrainedMovement",
+    "en": "Toggle Unconstrained Movement"
+  },
+  {
+    "key": "SETUP.INSTALL_PACKAGE.ManifestIncompatible.Warning[0]",
+    "en": "The {packageType} at the provided URL is not compatible with the current version of Foundry Virtual Tabletop."
+  },
+  {
+    "key": "SETUP.INSTALL_PACKAGE.ManifestIncompatible.Warning[1]",
+    "en": "Are you sure you wish to proceed with the installation?"
+  }
+]

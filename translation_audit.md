@@ -1,0 +1,166 @@
+# Translation Audit
+
+## Summary
+
+- **en_leaf_count**: 3144
+- **zh_leaf_count**: 3787
+- **missing_keys_count**: 21
+- **extra_keys_count**: 664
+- **placeholder_mismatch_count**: 2
+- **identical_to_en_count**: 43
+- **mostly_ascii_count**: 69
+
+## Missing keys in zh-tw (first 200)
+
+- COMBAT.ACTIONS.LinkToScene
+- COMBAT.ACTIONS.UnlinkFromScene
+- COMBAT.DURATION.None
+- COMBAT.DURATION.ROUNDS.few
+- COMBAT.DURATION.ROUNDS.many
+- COMBAT.DURATION.ROUNDS.one
+- COMBAT.DURATION.ROUNDS.other
+- COMBAT.DURATION.ROUNDS.two
+- COMBAT.DURATION.TURNS.few
+- COMBAT.DURATION.TURNS.many
+- COMBAT.DURATION.TURNS.one
+- COMBAT.DURATION.TURNS.other
+- COMBAT.DURATION.TURNS.two
+- COMBAT.TargetedBy
+- COMBAT.ToggleTargeting
+- COMPENDIUM.Migration.Begin
+- COMPENDIUM.Migration.Complete
+- HOTBAR.EMPTY
+- KEYBINDINGS.UnconstrainedMovement
+- SETUP.INSTALL_PACKAGE.ManifestIncompatible.Warning[0]
+- SETUP.INSTALL_PACKAGE.ManifestIncompatible.Warning[1]
+
+## Placeholder mismatches
+
+- COMBAT.Round
+  - EN: Round {round}
+  - ZH: 戰鬥輪
+  - EN placeholders: ['{round}']
+  - ZH placeholders: []
+- SHEETS.DocumentSheetPrivate
+  - EN: You do not have sufficient permission to view the sheet for this {type}.
+  - ZH: 你沒有足夠的權限來查看這個文件表。
+  - EN placeholders: ['{type}']
+  - ZH placeholders: []
+
+## Identical to EN (first 200)
+
+- AMBIENT_LIGHT.FIELDS.x.label = X
+- AMBIENT_LIGHT.FIELDS.y.label = Y
+- AMBIENT_SOUND.FIELDS.x.label = X
+- AMBIENT_SOUND.FIELDS.y.label = Y
+- BEHAVIOR.TYPES.executeMacro.FIELDS.uuid.label = Macro
+- BEHAVIOR.TYPES.executeScript.FIELDS.source.label = Script
+- CONTROLS.CtrlAbbr = CTRL
+- CONTROLS.Shift = Shift
+- DOCUMENT.FIELDS.x.label = X
+- DOCUMENT.FIELDS.y.label = Y
+- DOCUMENT.Macro = Macro
+- DOCUMENT.Macros = Macros
+- DOCUMENT.Token = Token
+- DOCUMENT.Tokens = Tokens
+- DOCUMENT.TypePageFormat = {type} {page}
+- EDITOR.Markdown = Markdown
+- EDITOR.TinyMCE = TinyMCE
+- FILES.TABS.s3 = Amazon S3
+- FONTS.Family = Font Family
+- Foundry Virtual Tabletop = Foundry Virtual Tabletop
+- JOURNALENTRYPAGE.TypePDF = PDF
+- PACKAGE.ConfigTitle = Module: {module}
+- PACKAGE.TagCSS = CSS
+- PACKAGE.TagCompendium = Compendium
+- PACKAGE.TagJavaScript = JavaScript
+- PACKAGE.Type.module = Module
+- PLAYERS.FPS = FPS
+- SETUP.Package = Package
+- SUPPORT.Dimensions = {width} × {height}
+- SUPPORT.GPU = GPU
+- TIME.Day.abbr = d
+- TIME.Hour.abbr = h
+- TIME.Millisecond.abbr = ms
+- TIME.Minute.abbr = m
+- TIME.Second.abbr = s
+- TIME.Year.abbr = y
+- TOKEN.FIELDS.texture.anchorX.label = X
+- TOKEN.FIELDS.texture.anchorY.label = Y
+- TYPES.JournalEntryPage.pdf = PDF
+- Token = Token
+- URL = URL
+- USER.GM = GM
+- WEBRTC.WorldSettings.FIELDS.turn.url.label = URL
+
+## Mostly ASCII (first 200)
+
+- AMBIENT_LIGHT.FIELDS.x.label (ascii_ratio=1.00) = X
+- AMBIENT_LIGHT.FIELDS.y.label (ascii_ratio=1.00) = Y
+- AMBIENT_SOUND.FIELDS.x.label (ascii_ratio=1.00) = X
+- AMBIENT_SOUND.FIELDS.y.label (ascii_ratio=1.00) = Y
+- BEHAVIOR.TYPES.executeMacro.FIELDS.uuid.label (ascii_ratio=1.00) = Macro
+- BEHAVIOR.TYPES.executeScript.FIELDS.source.label (ascii_ratio=1.00) = Script
+- COMPENDIUM.ART.CONFIG.Tokens (ascii_ratio=1.00) = Token
+- CONTROLS.Alt (ascii_ratio=1.00) = ALT
+- CONTROLS.CtrlAbbr (ascii_ratio=1.00) = CTRL
+- CONTROLS.Shift (ascii_ratio=1.00) = Shift
+- DOCUMENT.FIELDS.x.label (ascii_ratio=1.00) = X
+- DOCUMENT.FIELDS.y.label (ascii_ratio=1.00) = Y
+- DOCUMENT.Macro (ascii_ratio=1.00) = Macro
+- DOCUMENT.Macros (ascii_ratio=1.00) = Macros
+- DOCUMENT.Token (ascii_ratio=1.00) = Token
+- DOCUMENT.Tokens (ascii_ratio=1.00) = Tokens
+- DOCUMENT.TypePageFormat (ascii_ratio=1.00) = {type} {page}
+- EDITOR.Markdown (ascii_ratio=1.00) = Markdown
+- EDITOR.TinyMCE (ascii_ratio=1.00) = TinyMCE
+- FILES.TABS.s3 (ascii_ratio=1.00) = Amazon S3
+- FONTS.Family (ascii_ratio=1.00) = Font Family
+- Foundry Virtual Tabletop (ascii_ratio=1.00) = Foundry Virtual Tabletop
+- JOURNALENTRYPAGE.TypePDF (ascii_ratio=1.00) = PDF
+- PACKAGE.ConfigTitle (ascii_ratio=1.00) = Module: {module}
+- PACKAGE.TagCSS (ascii_ratio=1.00) = CSS
+- PACKAGE.TagCompendium (ascii_ratio=1.00) = Compendium
+- PACKAGE.TagJavaScript (ascii_ratio=1.00) = JavaScript
+- PACKAGE.Type.module (ascii_ratio=1.00) = Module
+- PLAYERS.FPS (ascii_ratio=1.00) = FPS
+- SETUP.BACKUPS.TYPE.module (ascii_ratio=1.00) = Module
+- SETUP.BACKUPS.TYPE.world (ascii_ratio=1.00) = World
+- SETUP.Modules (ascii_ratio=1.00) = MOD
+- SETUP.Package (ascii_ratio=1.00) = Package
+- SUPPORT.GPU (ascii_ratio=1.00) = GPU
+- TIME.Day.abbr (ascii_ratio=1.00) = d
+- TIME.Hour.abbr (ascii_ratio=1.00) = h
+- TIME.Millisecond.abbr (ascii_ratio=1.00) = ms
+- TIME.Minute.abbr (ascii_ratio=1.00) = m
+- TIME.Second.abbr (ascii_ratio=1.00) = s
+- TIME.Year.abbr (ascii_ratio=1.00) = y
+- TOKEN.FIELDS.texture.anchorX.label (ascii_ratio=1.00) = X
+- TOKEN.FIELDS.texture.anchorY.label (ascii_ratio=1.00) = Y
+- TYPES.JournalEntryPage.pdf (ascii_ratio=1.00) = PDF
+- TYPES.Macro.script (ascii_ratio=1.00) = script
+- Token (ascii_ratio=1.00) = Token
+- URL (ascii_ratio=1.00) = URL
+- USER.GM (ascii_ratio=1.00) = GM
+- WEBRTC.WorldSettings.FIELDS.turn.url.label (ascii_ratio=1.00) = URL
+- WALL.CoordinateRange (ascii_ratio=0.97) = ({p0X}, {p0Y}) 到 ({p1X}, {p1Y})
+- DOCUMENT.NewCount (ascii_ratio=0.94) = 新 {type} ({count})
+- SUPPORT.Dimensions (ascii_ratio=0.94) = {width} × {height}
+- CONTROLS.ShiftOrCtrlScroll (ascii_ratio=0.94) = <span class="reference">SHIFT + 捲動</span> 或 <span class="reference">{mod} + 捲動</span>
+- SETUP.BACKUPS.ModuleCount (ascii_ratio=0.94) = 共 <strong>{count}</strong> 個Module
+- CONTROLS.WallSelectEdit (ascii_ratio=0.94) = <span class="reference">雙擊</span>
+- SETUP.BACKUPS.WorldCount (ascii_ratio=0.94) = 共 <strong>{count}</strong> 個World
+- CONTROLS.ChainCtrlClick (ascii_ratio=0.92) = 按住 <span class="reference">{mod}</span> 然後 <span class="reference">點擊</span>
+- SETUP.SeeTutorial (ascii_ratio=0.91) = 有關 Foundry Virtual Tabletop 更深入的入門指南，你可以參考 <a href="https://foundryvtt.com/article/tutorial/" target="_blank" title="Gamemaster Tutorial">Gamemaster Tutorial</a> 中的 <a href="https://foundryvtt.com/kb/" target="_blank" title="Knowledge Base">Knowledge Base</a> 中的教學。
+- PLAYLIST.ModeDisabled (ascii_ratio=0.91) = 僅Soundboard
+- CONTROLS.ClickOrClickDrag (ascii_ratio=0.91) = <span class="reference">點擊</span> 或 <span class="reference">點擊 + 拖曳</span>
+- SIDEBAR.Wiki (ascii_ratio=0.89) = Foundry VTT 社區 Wiki
+- SETUP.PackageDeleteTitle (ascii_ratio=0.89) = 刪除 {type}: {title}
+- SETUP.PackageIncompatibleWithSystems (ascii_ratio=0.88) = {module} <em>與</em> {systems} 不兼容
+- DOCUMENT.New (ascii_ratio=0.88) = 新 {type}
+- TOURS.InProgress (ascii_ratio=0.87) = 進行中 - {current}/{total}
+- SETUP.BACKUPS.SystemCount (ascii_ratio=0.87) = 共 <strong>{count}</strong> 個系統
+- PACKAGE.Type.modulePl (ascii_ratio=0.86) = Module們
+- SERVER_SETTINGS.SECTIONS.FVTTConfig (ascii_ratio=0.86) = Foundry VTT 設定
+- SIDEBAR.Documentation (ascii_ratio=0.86) = Foundry VTT 文件
+- TOKEN.RING.SETTINGS.coreSteel (ascii_ratio=0.86) = Foundry VTT 鋼環
