@@ -292,6 +292,7 @@ async function main() {
   const lastCheckedVersion = existingCache?.lastCheckedVersion ?? null;
   const lastZhLastChange = existingCache?.lastZhLastChange ?? null;
   const lastComparison = existingCache?.lastComparison ?? null;
+  const lastNotification = existingCache?.lastNotification ?? null;
 
   const reportFullPath = path.join(repoRoot, REPORT_PATH);
   let reportExists = false;
@@ -416,10 +417,36 @@ async function main() {
       }
     : lastComparison;
 
+  // Decide whether we should send a one-time notification by failing the run.
+  let shouldNotify = false;
+  if (shouldCompareKeys && missingKeys.length > 0) {
+    const currentKey = {
+      version: updatedLastComparison.version,
+      zhCommit: updatedLastComparison.zhCommit
+    };
+    const lastKey = lastNotification
+      ? { version: lastNotification.version ?? null, zhCommit: lastNotification.zhCommit ?? null }
+      : null;
+
+    if (!lastKey || lastKey.version !== currentKey.version || lastKey.zhCommit !== currentKey.zhCommit) {
+      shouldNotify = true;
+    }
+  }
+
+  const updatedLastNotification =
+    shouldNotify && updatedLastComparison
+      ? {
+          version: updatedLastComparison.version,
+          zhCommit: updatedLastComparison.zhCommit,
+          missingCount: updatedLastComparison.missingCount
+        }
+      : lastNotification;
+
   const newCache = {
     lastCheckedVersion: latestVersion ?? lastCheckedVersion ?? null,
     lastZhLastChange: zhLastChange ?? lastZhLastChange ?? null,
     lastComparison: updatedLastComparison,
+    lastNotification: updatedLastNotification,
     sources: Object.fromEntries(
       statusInfo.map((s) => [
         s.id,
@@ -449,6 +476,15 @@ async function main() {
       ? `Translation report written to ${REPORT_PATH}`
       : `Translation report unchanged at ${REPORT_PATH}`
   );
+
+  if (shouldNotify) {
+    console.error(
+      `New untranslated keys detected: ${updatedLastNotification?.missingCount ?? "unknown"} missing key(s) for zh-tw.json ` +
+        `at version ${updatedLastNotification?.version ?? "unknown"} (commit ${updatedLastNotification?.zhCommit ?? "unknown"}).`
+    );
+    // Signal failure once for this combination so GitHub can send a notification email.
+    process.exitCode = 1;
+  }
 }
 
 main().catch((err) => {
