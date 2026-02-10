@@ -4822,7 +4822,7 @@
     "TagUnavailable": "不可用",
     "GetPackagesTimedOut": "檢索Package的時間逾時",
     "PackageInstallTimedOut": "Package安裝逾時",
-    "UpdateCheckTimedOut": "超時",
+    "UpdateCheckTimedOut": "逾時",
     "WarmCacheTimedOut": "Package緩存逾時",
     "Lock": "鎖定 {type}",
     "Locked": "已鎖定",
