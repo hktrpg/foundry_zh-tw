@@ -1,16 +1,16 @@
 {
   "lastCheckedVersion": "13.347",
   "lastZhLastChange": {
-    "commit": "57e5ef62a2e24a1a777909aec71410d62e3e5fee",
-    "time": "2025-06-29T15:59:54+08:00"
+    "commit": "a2bafb4dda4e1316e28dc59709e0db176eb5c2e2",
+    "time": "2026-02-10T18:58:40+08:00"
   },
   "lastComparison": {
     "version": "13.347",
     "sourceId": "demo.foundryvtt.com",
     "enUrl": "https://demo.foundryvtt.com/lang/en.json",
-    "zhCommit": "57e5ef62a2e24a1a777909aec71410d62e3e5fee",
-    "missingCount": 19,
-    "obsoleteCount": 661
+    "zhCommit": "a2bafb4dda4e1316e28dc59709e0db176eb5c2e2",
+    "missingCount": 0,
+    "obsoleteCount": 659
   },
   "lastNotification": {
     "version": "13.347",

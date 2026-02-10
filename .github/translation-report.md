@@ -6,51 +6,27 @@
 - **fvtt.hktrpg.com** `https://fvtt.hktrpg.com/api/status` → version: `unknown`
 
 - **Latest detected version**: `13.347`
-- **Last checked version**: `none`
+- **Last checked version**: `13.347`
 - **Key comparison performed**: `yes`
 - **Selected English source**: `demo.foundryvtt.com`
 - **Selected en.json URL**: `https://demo.foundryvtt.com/lang/en.json`
-- **Current zh-tw.json last commit**: `57e5ef62a2e24a1a777909aec71410d62e3e5fee`
-- **Current zh-tw.json last commit time**: `2025-06-29T15:59:54+08:00`
-- **Last recorded zh-tw.json last commit**: `none`
-- **Last recorded zh-tw.json last commit time**: `none`
+- **Current zh-tw.json last commit**: `a2bafb4dda4e1316e28dc59709e0db176eb5c2e2`
+- **Current zh-tw.json last commit time**: `2026-02-10T18:58:40+08:00`
+- **Last recorded zh-tw.json last commit**: `57e5ef62a2e24a1a777909aec71410d62e3e5fee`
+- **Last recorded zh-tw.json last commit time**: `2025-06-29T15:59:54+08:00`
 
 ## Summary
 
 - **Source URL**: `https://demo.foundryvtt.com/lang/en.json`
 - **Local file**: `zh-tw.json`
 - **Total English keys**: 3142
-- **Total zh-TW keys**: 3784
-- **Missing translations** (present in English, missing in zh-TW): 19
-- **Obsolete keys** (present in zh-TW, missing in English): 661
+- **Total zh-TW keys**: 3801
+- **Missing translations** (present in English, missing in zh-TW): 0
+- **Obsolete keys** (present in zh-TW, missing in English): 659
 
 ## Missing translations
 
-Keys that exist in `en.json` but are not found in `zh-tw.json` (after lowercasing and dot-path normalization).
-
-The following block can be copied directly into `zh-tw.json` (inside an object):
-
-```json
-"COMBAT.ACTIONS.LinkToScene": "Link to Viewed Scene",
-"COMBAT.ACTIONS.UnlinkFromScene": "Unlink from Scene",
-"COMBAT.DURATION.None": "None",
-"COMBAT.DURATION.ROUNDS.few": "Rounds",
-"COMBAT.DURATION.ROUNDS.many": "Rounds",
-"COMBAT.DURATION.ROUNDS.one": "Round",
-"COMBAT.DURATION.ROUNDS.other": "Rounds",
-"COMBAT.DURATION.ROUNDS.two": "Rounds",
-"COMBAT.DURATION.TURNS.few": "Turns",
-"COMBAT.DURATION.TURNS.many": "Turns",
-"COMBAT.DURATION.TURNS.one": "Turn",
-"COMBAT.DURATION.TURNS.other": "Turns",
-"COMBAT.DURATION.TURNS.two": "Turns",
-"COMBAT.TargetedBy": "Targeted by {list}",
-"COMBAT.ToggleTargeting": "Toggle Targeting",
-"COMPENDIUM.Migration.Begin": "Beginning migration for Compendium pack {collection}, please be patient.",
-"COMPENDIUM.Migration.Complete": "Successfully migrated Compendium pack {collection}.",
-"HOTBAR.EMPTY": "Empty Slot",
-"SETUP.INSTALL_PACKAGE.ManifestIncompatible.Warning": ["The {packageType} at the provided URL is not compatible with the current version of Foundry Virtual Tabletop.","Are you sure you wish to proceed with the installation?"],
-```
+All English keys have corresponding zh-TW entries (case-insensitive key comparison).
 
 ## Obsolete keys
 
@@ -559,6 +535,6 @@ Keys that exist in `zh-tw.json` but are not found in `en.json` (after lowercasin
 "WORLD.TitleEdit": "",
 ```
 
-_Output truncated: showing first 500 obsolete keys out of 661 total._
+_Output truncated: showing first 500 obsolete keys out of 659 total._
 
 > Note: Key comparison is performed using dot-separated paths and is case-insensitive (paths are lowercased).
