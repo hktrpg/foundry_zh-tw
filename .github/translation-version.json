@@ -1,0 +1,32 @@
+{
+  "lastCheckedVersion": "13.347",
+  "lastZhLastChange": {
+    "commit": "57e5ef62a2e24a1a777909aec71410d62e3e5fee",
+    "time": "2025-06-29T15:59:54+08:00"
+  },
+  "lastComparison": {
+    "version": "13.347",
+    "sourceId": "demo.foundryvtt.com",
+    "enUrl": "https://demo.foundryvtt.com/lang/en.json",
+    "zhCommit": "57e5ef62a2e24a1a777909aec71410d62e3e5fee",
+    "missingCount": 19,
+    "obsoleteCount": 661
+  },
+  "lastNotification": {
+    "version": "13.347",
+    "zhCommit": "57e5ef62a2e24a1a777909aec71410d62e3e5fee",
+    "missingCount": 19
+  },
+  "sources": {
+    "demo.foundryvtt.com": {
+      "statusUrl": "https://demo.foundryvtt.com/api/status",
+      "langUrl": "https://demo.foundryvtt.com/lang/en.json",
+      "version": "13.347"
+    },
+    "fvtt.hktrpg.com": {
+      "statusUrl": "https://fvtt.hktrpg.com/api/status",
+      "langUrl": "https://fvtt.hktrpg.com/lang/en.json",
+      "version": null
+    }
+  }
+}
