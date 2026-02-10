@@ -4801,11 +4801,11 @@
   "PACKAGE": {
     "Type": {
       "world": "世界",
-      "worldPl": "世界們",
+      "worldPl": "世界",
       "system": "系統",
-      "systemPl": "系統們",
+      "systemPl": "系統",
       "module": "Module",
-      "modulePl": "Module們",
+      "modulePl": "Modules",
       "allPl": "全部"
     },
     "Create": "新增Package",
