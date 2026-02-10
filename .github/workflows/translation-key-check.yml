@@ -10,10 +10,14 @@ jobs:
   check-translation-keys:
     name: Compare zh-TW keys with en.json
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -30,3 +34,14 @@ jobs:
           name: translation-report
           path: .github/translation-report.md
 
+      - name: Commit updated report and cache
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .github/translation-report.md .github/translation-version.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: update translation key report"
+          git push

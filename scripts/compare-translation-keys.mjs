@@ -1,5 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import { execFile } from "node:child_process";
+import { promisify } from "node:util";
 
 const STATUS_SOURCES = [
   {
@@ -17,6 +19,7 @@ const STATUS_SOURCES = [
 const ZH_FILE = "zh-tw.json";
 const REPORT_PATH = path.join(".github", "translation-report.md");
 const VERSION_CACHE_PATH = path.join(".github", "translation-version.json");
+const execFileAsync = promisify(execFile);
 
 async function loadEnJson(url) {
   const res = await fetch(url);
@@ -79,10 +82,18 @@ async function loadZhJson(rootDir) {
   return JSON.parse(data);
 }
 
-async function getZhFileMTime(rootDir) {
-  const filePath = path.join(rootDir, ZH_FILE);
-  const stats = await fs.stat(filePath);
-  return stats.mtime.toISOString();
+async function getGitLastChangeForFile(filePath) {
+  // Use git history rather than filesystem mtime.
+  // This avoids CI checkout timestamps causing false positives.
+  const [{ stdout: hashStdout }, { stdout: timeStdout }] = await Promise.all([
+    execFileAsync("git", ["log", "-1", "--format=%H", "--", filePath]),
+    execFileAsync("git", ["log", "-1", "--format=%cI", "--", filePath])
+  ]);
+
+  const commit = String(hashStdout).trim() || null;
+  const time = String(timeStdout).trim() || null;
+
+  return { commit, time };
 }
 
 /**
@@ -133,21 +144,17 @@ function generateReport({
   comparisonPerformed,
   selectedSourceId,
   selectedEnUrl,
-  zhMTime,
-  lastZhMTime
+  zhLastChange,
+  lastZhLastChange
 }) {
-  const now = new Date().toISOString();
-
-  const totalEn = enIndex.size;
-  const totalZh = zhIndex.size;
-  const missingCount = missingKeys.length;
-  const obsoleteCount = obsoleteKeys.length;
+  const totalEn = comparisonPerformed ? enIndex.size : null;
+  const totalZh = comparisonPerformed ? zhIndex.size : null;
+  const missingCount = comparisonPerformed ? missingKeys.length : null;
+  const obsoleteCount = comparisonPerformed ? obsoleteKeys.length : null;
 
   const lines = [];
 
   lines.push("# zh-TW Translation Key Report");
-  lines.push("");
-  lines.push(`Generated at: \`${now}\``);
   lines.push("");
   lines.push("## Status versions");
   lines.push("");
@@ -162,22 +169,26 @@ function generateReport({
   lines.push(`- **Key comparison performed**: \`${comparisonPerformed ? "yes" : "no"}\``);
   lines.push(`- **Selected English source**: \`${selectedSourceId ?? "none"}\``);
   lines.push(`- **Selected en.json URL**: \`${selectedEnUrl ?? "n/a"}\``);
-  lines.push(`- **Current zh-tw.json mtime**: \`${zhMTime ?? "unknown"}\``);
-  lines.push(`- **Last recorded zh-tw.json mtime**: \`${lastZhMTime ?? "none"}\``);
+  lines.push(`- **Current zh-tw.json last commit**: \`${zhLastChange?.commit ?? "unknown"}\``);
+  lines.push(`- **Current zh-tw.json last commit time**: \`${zhLastChange?.time ?? "unknown"}\``);
+  lines.push(`- **Last recorded zh-tw.json last commit**: \`${lastZhLastChange?.commit ?? "none"}\``);
+  lines.push(`- **Last recorded zh-tw.json last commit time**: \`${lastZhLastChange?.time ?? "none"}\``);
   lines.push("");
   lines.push("## Summary");
   lines.push("");
   lines.push(`- **Source URL**: \`${selectedEnUrl ?? "n/a"}\``);
   lines.push(`- **Local file**: \`${ZH_FILE}\``);
-  lines.push(`- **Total English keys**: ${totalEn}`);
-  lines.push(`- **Total zh-TW keys**: ${totalZh}`);
-  lines.push(`- **Missing translations** (present in English, missing in zh-TW): ${missingCount}`);
-  lines.push(`- **Obsolete keys** (present in zh-TW, missing in English): ${obsoleteCount}`);
+  lines.push(`- **Total English keys**: ${totalEn ?? "n/a"}`);
+  lines.push(`- **Total zh-TW keys**: ${totalZh ?? "n/a"}`);
+  lines.push(`- **Missing translations** (present in English, missing in zh-TW): ${missingCount ?? "n/a"}`);
+  lines.push(`- **Obsolete keys** (present in zh-TW, missing in English): ${obsoleteCount ?? "n/a"}`);
   lines.push("");
 
   lines.push("## Missing translations");
   lines.push("");
-  if (!missingCount) {
+  if (!comparisonPerformed) {
+    lines.push("Key comparison was skipped. No missing-keys list was generated.");
+  } else if (!missingCount) {
     lines.push("All English keys have corresponding zh-TW entries (case-insensitive key comparison).");
   } else {
     lines.push("Keys that exist in `en.json` but are not found in `zh-tw.json` (after lowercasing and dot-path normalization).");
@@ -207,21 +218,24 @@ function generateReport({
   lines.push("");
   lines.push("## Obsolete keys");
   lines.push("");
-  if (!obsoleteCount) {
+  if (!comparisonPerformed) {
+    lines.push("Key comparison was skipped. No obsolete-keys list was generated.");
+  } else if (!obsoleteCount) {
     lines.push("No obsolete keys were found in `zh-tw.json`.");
   } else {
     lines.push("Keys that exist in `zh-tw.json` but are not found in `en.json` (after lowercasing and dot-path normalization):");
     lines.push("");
-    lines.push("| Key |");
-    lines.push("| --- |");
-
     const MAX_ROWS = 500;
-    const limited = obsoleteKeys.slice(0, MAX_ROWS);
+    const limited = obsoleteKeys.slice(0, MAX_ROWS).map((canonical) => zhIndex.get(canonical));
+    // Sort by original path for a stable, readable order
+    limited.sort((a, b) => a.path.localeCompare(b.path));
 
-    for (const canonical of limited) {
-      const entry = zhIndex.get(canonical);
-      lines.push(`| \`${entry.path}\` |`);
+    lines.push("```json");
+    for (const entry of limited) {
+      // For obsolete keys we only output the key path with a placeholder value.
+      lines.push(`"${entry.path}": "",`);
     }
+    lines.push("```");
 
     if (obsoleteKeys.length > MAX_ROWS) {
       lines.push("");
@@ -276,31 +290,48 @@ async function main() {
 
   const existingCache = await loadVersionCache(repoRoot);
   const lastCheckedVersion = existingCache?.lastCheckedVersion ?? null;
-  const lastZhMTime = existingCache?.lastZhMTime ?? null;
+  const lastZhLastChange = existingCache?.lastZhLastChange ?? null;
+  const lastComparison = existingCache?.lastComparison ?? null;
 
-  let zhMTime = null;
+  const reportFullPath = path.join(repoRoot, REPORT_PATH);
+  let reportExists = false;
   try {
-    zhMTime = await getZhFileMTime(repoRoot);
+    await fs.access(reportFullPath);
+    reportExists = true;
+  } catch {
+    reportExists = false;
+  }
+  let zhLastChange = null;
+  try {
+    zhLastChange = await getGitLastChangeForFile(ZH_FILE);
   } catch (err) {
-    console.error(`Failed to read mtime for ${ZH_FILE}: ${String(err)}`);
+    console.error(`Failed to read git last change for ${ZH_FILE}: ${String(err)}`);
   }
 
   let shouldCompareKeys = false;
   if (!latestVersion || !lastCheckedVersion) {
     // No prior version information, perform an initial comparison.
     shouldCompareKeys = true;
+  } else if (!lastComparison || !reportExists) {
+    // We do not have a previously generated comparison/report.
+    shouldCompareKeys = true;
   } else if (compareVersionStrings(latestVersion, lastCheckedVersion) > 0) {
     // Remote version increased.
     shouldCompareKeys = true;
-  } else if (zhMTime && lastZhMTime && zhMTime > lastZhMTime) {
-    // Local translation file changed since last check.
+  } else if (zhLastChange?.commit && !lastZhLastChange?.commit) {
+    // No prior local translation fingerprint exists.
+    shouldCompareKeys = true;
+  } else if (zhLastChange?.commit && lastZhLastChange?.commit && zhLastChange.commit !== lastZhLastChange.commit) {
+    // Local translation file changed since last check (git commit changed).
     shouldCompareKeys = true;
   }
 
   console.log(`Latest detected version: ${latestVersion ?? "unknown"}`);
   console.log(`Last checked version: ${lastCheckedVersion ?? "none"}`);
-  console.log(`Current zh-tw.json mtime: ${zhMTime ?? "unknown"}`);
-  console.log(`Last recorded zh-tw.json mtime: ${lastZhMTime ?? "none"}`);
+  console.log(`Current zh-tw.json last commit: ${zhLastChange?.commit ?? "unknown"}`);
+  console.log(`Current zh-tw.json last commit time: ${zhLastChange?.time ?? "unknown"}`);
+  console.log(`Last recorded zh-tw.json last commit: ${lastZhLastChange?.commit ?? "none"}`);
+  console.log(`Last recorded zh-tw.json last commit time: ${lastZhLastChange?.time ?? "none"}`);
   console.log(`Key comparison will ${shouldCompareKeys ? "" : "NOT "}be performed.`);
 
   let enIndex = new Map();
@@ -342,28 +373,53 @@ async function main() {
     }
   }
 
-  const report = generateReport({
-    enIndex,
-    zhIndex,
-    missingKeys,
-    obsoleteKeys,
-    statusInfo,
-    latestVersion,
-    lastCheckedVersion,
-    comparisonPerformed: shouldCompareKeys,
-    selectedSourceId,
-    selectedEnUrl,
-    zhMTime,
-    lastZhMTime
-  });
+  if (shouldCompareKeys) {
+    const report = generateReport({
+      enIndex,
+      zhIndex,
+      missingKeys,
+      obsoleteKeys,
+      statusInfo,
+      latestVersion,
+      lastCheckedVersion,
+      comparisonPerformed: true,
+      selectedSourceId,
+      selectedEnUrl,
+      zhLastChange,
+      lastZhLastChange
+    });
 
-  const reportFullPath = path.join(repoRoot, REPORT_PATH);
-  await fs.mkdir(path.dirname(reportFullPath), { recursive: true });
-  await fs.writeFile(reportFullPath, report, "utf8");
+    await fs.mkdir(path.dirname(reportFullPath), { recursive: true });
+    let shouldWriteReport = true;
+    try {
+      const existing = await fs.readFile(reportFullPath, "utf8");
+      shouldWriteReport = existing !== report;
+    } catch {
+      // File does not exist yet.
+    }
+    if (shouldWriteReport) {
+      await fs.writeFile(reportFullPath, report, "utf8");
+    }
+    reportExists = true;
+  } else {
+    console.log("Report content update skipped; existing report is preserved.");
+  }
+
+  const updatedLastComparison = shouldCompareKeys
+    ? {
+        version: latestVersion ?? null,
+        sourceId: selectedSourceId,
+        enUrl: selectedEnUrl,
+        zhCommit: zhLastChange?.commit ?? null,
+        missingCount: missingKeys.length,
+        obsoleteCount: obsoleteKeys.length
+      }
+    : lastComparison;
 
   const newCache = {
     lastCheckedVersion: latestVersion ?? lastCheckedVersion ?? null,
-    lastZhMTime: zhMTime ?? lastZhMTime ?? null,
+    lastZhLastChange: zhLastChange ?? lastZhLastChange ?? null,
+    lastComparison: updatedLastComparison,
     sources: Object.fromEntries(
       statusInfo.map((s) => [
         s.id,
@@ -375,9 +431,24 @@ async function main() {
       ])
     )
   };
-  await saveVersionCache(repoRoot, newCache);
+  const cacheJson = JSON.stringify(newCache, null, 2);
+  const cacheFullPath = path.join(repoRoot, VERSION_CACHE_PATH);
+  let shouldWriteCache = true;
+  try {
+    const existing = await fs.readFile(cacheFullPath, "utf8");
+    shouldWriteCache = existing !== cacheJson;
+  } catch {
+    // File does not exist yet.
+  }
+  if (shouldWriteCache) {
+    await saveVersionCache(repoRoot, newCache);
+  }
 
-  console.log(`Translation report written to ${REPORT_PATH}`);
+  console.log(
+    shouldCompareKeys
+      ? `Translation report written to ${REPORT_PATH}`
+      : `Translation report unchanged at ${REPORT_PATH}`
+  );
 }
 
 main().catch((err) => {
