@@ -6024,5 +6024,1455 @@
       },
       "description.label": "世界的描述"
     }
+  },
+  "ADVENTURE": {
+    "ImportLoading": "正在載入冒險資料…"
+  },
+  "AMBIENT_LIGHT": {
+    "FIELDS": {
+      "name": {
+        "hint": "可選名稱，用於辨識此光源。",
+        "label": "名稱"
+      }
+    }
+  },
+  "AMBIENT_SOUND": {
+    "FIELDS": {
+      "name": {
+        "hint": "可選名稱，用於辨識此音效。",
+        "label": "名稱"
+      }
+    }
+  },
+  "APPLICATION": {
+    "ACTIONS": {
+      "Attach": "重新附加視窗",
+      "Close": "關閉",
+      "Collapse": "摺疊",
+      "CopyUuid": "複製文件 UUID",
+      "DeleteDocument": "刪除文件",
+      "Detach": "分離視窗",
+      "Expand": "展開",
+      "ImportDocument": "匯入"
+    },
+    "NavigateBackConfirm": "你確定要離開 Foundry Virtual Tabletop 遊戲嗎？"
+  },
+  "BEHAVIOR": {
+    "TYPES": {
+      "applyActiveEffect": {
+        "FIELDS": {
+          "effects": {
+            "hint": "套用於區域內 Token 的效果。",
+            "label": "效果"
+          }
+        }
+      },
+      "changeLevel": {
+        "Confirm": "要將 {token} 移動到 {level} 嗎？",
+        "ConfirmSelect": "選擇要將 {token} 移動到的樓層。",
+        "Move": "移動",
+        "MoveDown": "下移",
+        "MoveUp": "上移"
+      },
+      "defineSurface": {
+        "FIELDS": {
+          "exposure": {
+            "hint": "向下方與外側的觀察者部分顯示此抬高表面的可見區域。可見範圍取決於觀察者與表面邊界夾角，夾角越陡範圍越小。適用於屋頂、陽台或其他高架平台。",
+            "label": "顯露抬高表面"
+          },
+          "light": {
+            "label": "限制光線與黑暗"
+          },
+          "move": {
+            "label": "限制移動"
+          },
+          "occlusion": {
+            "hint": "當可被遮擋的 Token 位於表面下方時，遮擋模式為「表面」的圖塊，以及相同或更高高度的前景或背景樓層紋理，將會被遮擋。",
+            "label": "遮擋"
+          },
+          "placement": {
+            "label": "位置"
+          },
+          "sight": {
+            "label": "限制視覺"
+          },
+          "sound": {
+            "label": "限制聲音"
+          }
+        },
+        "PLACEMENTS": {
+          "both": {
+            "label": "底部與頂部"
+          },
+          "bottom": {
+            "label": "底部"
+          },
+          "top": {
+            "label": "頂部"
+          }
+        }
+      },
+      "teleportToken": {
+        "ConfirmRevealed": "要將 {token} 傳送到 {scene} 的 {region} 嗎？",
+        "ConfirmSelectDifferentScene": "選擇要傳送 {token} 的目的地。",
+        "ConfirmSelectOption": "{scene} 中的 {region}",
+        "ConfirmSelectSameScene": "選擇在 {scene} 中要傳送 {token} 的目的地。",
+        "FIELDS": {
+          "destinations": {
+            "hint": "Token 移入此區域後會被傳送至的目的地區域。若設定多個目的地，除非允許選擇且（此傳送門已揭露或移動 Token 的使用者為 GM），否則會隨機擇一。",
+            "label": "目的地"
+          },
+          "dialog": {
+            "revealed": {
+              "hint": "若目的地已揭露或使用者為 GM，確認對話框顯示的文字。{token} 會替換為 Token 名稱；{region} 會替換為目的地區域名稱（僅當此傳送門只有一個目的地時）；{scene} 會替換為目的地場景名稱（僅當此傳送門的目的地分屬不同場景時）。",
+              "label": "對話框（已揭露）"
+            },
+            "unrevealed": {
+              "hint": "若目的地未揭露且使用者不是 GM，確認對話框顯示的文字。{token} 會替換為 Token 名稱。",
+              "label": "對話框（未揭露）"
+            }
+          },
+          "placement": {
+            "hint": "選擇 Token 在目的地區域內的位置。",
+            "label": "位置"
+          },
+          "revealed": {
+            "hint": "向所有人揭露此傳送門的目的地。",
+            "label": "已揭露"
+          },
+          "snap": {
+            "hint": "將 Token 傳送後的目的地位置對齊網格。",
+            "label": "對齊"
+          },
+          "transition": {
+            "duration": {
+              "hint": "轉場動畫持續時間（毫秒）。",
+              "label": "轉場持續時間"
+            },
+            "type": {
+              "hint": "Token 傳送時播放的轉場動畫類型。",
+              "label": "轉場類型"
+            }
+          }
+        },
+        "PLACEMENTS": {
+          "center": {
+            "label": "中央"
+          },
+          "random": {
+            "label": "隨機"
+          },
+          "relative": {
+            "label": "相對"
+          }
+        }
+      }
+    }
+  },
+  "CHAT": {
+    "MODES": {
+      "blind": "對 GM 隱藏",
+      "gm": "僅 GM 可見",
+      "ic": "以角色公開",
+      "public": "以使用者公開",
+      "self": "僅自己"
+    },
+    "SendMessage": "傳送訊息"
+  },
+  "COMBATANT": {
+    "ACTIONS": {
+      "Clear": "清除先攻",
+      "ClearMovementHistory": "清除移動紀錄",
+      "Create": "建立戰鬥參與者",
+      "Remove": "移除戰鬥參與者",
+      "Reroll": "重擲先攻",
+      "Update": "更新戰鬥參與者"
+    },
+    "FIELDS": {
+      "actorId": {
+        "label": "代表角色"
+      },
+      "defeated": {
+        "label": "已擊敗"
+      },
+      "hidden": {
+        "label": "隱藏"
+      },
+      "img": {
+        "label": "縮圖"
+      },
+      "initiative": {
+        "label": "先攻值"
+      },
+      "name": {
+        "label": "顯示名稱"
+      },
+      "tokenId": {
+        "label": "代表 Token"
+      }
+    },
+    "MovementHistoryCleared": "已清除Token \"{name}\"的移動紀錄。",
+    "PanTo": "平移至戰鬥參與者",
+    "Ping": "Ping Token",
+    "Status": "戰鬥參與者狀態",
+    "ToggleDead": "標記擊敗",
+    "ToggleVis": "切換可見性",
+    "Unknown": "未知戰鬥參與者",
+    "UpdateNamed": "更新戰鬥參與者：{name}",
+    "WarnNonVisibleToken": "你看不見此戰鬥參與者。"
+  },
+  "COMMON": {
+    "AreYouSure": "你確定嗎？",
+    "Cancel": "取消",
+    "Confirm": "確認",
+    "Default": "預設",
+    "Delete": "刪除",
+    "Invalid": "無效",
+    "No": "否",
+    "None": "無",
+    "Preview": "預覽",
+    "Unknown": "未知",
+    "Warning": "警告",
+    "Yes": "是"
+  },
+  "COMPENDIUM": {
+    "CopyId": "複製合集 ID",
+    "IdCopiedClipboard": "合集 ID「{id}」已複製到剪貼簿。"
+  },
+  "CONTROLS": {
+    "ClearAllOwned": "清除所有擁有的物件",
+    "ClearAllOwnedHint": "要永久刪除你所擁有、已檢視過的所有 {type} 物件嗎？",
+    "DeleteLockedObjects": "刪除已鎖定物件",
+    "LightSelect": "選擇光源",
+    "Palette": "調色板",
+    "RegionCircle": "繪製圓形",
+    "RegionCone": "繪製圓錐",
+    "RegionEmanation": "繪製發散",
+    "RegionLine": "繪製線段",
+    "RegionRing": "繪製環形",
+    "RegionTemplateMode": "測量範本模式",
+    "RegionTemplateModeP": "啟用時會忽略調色板，你繪製的每個形狀都會建立新區域。無法將形狀加入現有區域。",
+    "SoundSelect": "選擇環境音效",
+    "WallDoor": "門",
+    "WallDoorBlocks": "移動、視覺與聽覺（開啟門前）",
+    "WallSolid": "實牆",
+    "WallSolidBlocks": "移動、視覺與聽覺"
+  },
+  "DICE": {
+    "CONFIG": {
+      "DefaultMethod": "預設方式"
+    },
+    "FULFILLMENT": {
+      "UseDefault": "使用預設"
+    }
+  },
+  "DOCUMENT": {
+    "FIELDS": {
+      "author": {
+        "label": "作者"
+      },
+      "folder": {
+        "label": "資料夾"
+      },
+      "levels": {
+        "hint": "選擇套用包含關係的樓層。若未選取任何項目，則套用到所有樓層。",
+        "label": "樓層"
+      }
+    },
+    "Level": "樓層",
+    "Levels": "樓層",
+    "Replace": "取代 {type}",
+    "ReplaceWarning": "此集合中已有 ID 為 <code>{id}</code> 的文件 {link}。要取代還是建立副本？",
+    "Sheet": "資訊卡介面"
+  },
+  "DRAWING": {
+    "ACTIONS": {
+      "resetDefaults": "重設為預設",
+      "submitCreate": "建立繪圖",
+      "submitUpdate": "更新繪圖"
+    },
+    "FIELDS": {
+      "bezierFactor": {
+        "hint": "手繪時，平滑係數控制樣條平滑程度。",
+        "label": "平滑係數"
+      },
+      "fillAlpha": {
+        "label": "填色不透明度"
+      },
+      "fillColor": {
+        "label": "填色"
+      },
+      "fillType": {
+        "label": "填色類型"
+      },
+      "fontFamily": {
+        "label": "字型"
+      },
+      "fontSize": {
+        "label": "字型大小"
+      },
+      "interface": {
+        "hint": "代表「物件」的繪圖會在主畫布群組中繪製，並受光照與戰爭迷霧探索影響。代表「資訊」的繪圖則繪製在介面群組中，除非隱藏，否則所有玩家皆可見。",
+        "label": "繪圖角色"
+      },
+      "name": {
+        "hint": "可選名稱，用於辨識此繪圖。",
+        "label": "名稱"
+      },
+      "shape": {
+        "height": {
+          "label": "高度"
+        },
+        "width": {
+          "label": "寬度"
+        }
+      },
+      "strokeAlpha": {
+        "label": "線條不透明度"
+      },
+      "strokeColor": {
+        "label": "線條顏色"
+      },
+      "strokeWidth": {
+        "label": "線條寬度"
+      },
+      "text": {
+        "label": "文字標籤"
+      },
+      "textAlpha": {
+        "label": "文字不透明度"
+      },
+      "textColor": {
+        "label": "文字顏色"
+      },
+      "texture": {
+        "label": "填色紋理"
+      }
+    },
+    "FILL_TYPES": {
+      "none": "無",
+      "pattern": "圖案",
+      "solid": "實線／實心"
+    }
+  },
+  "EDITOR": {
+    "Custom": "自訂",
+    "Font": {
+      "Color": {
+        "Label": "字型顏色",
+        "Set": "設定字型顏色",
+        "Title": "顏色"
+      },
+      "Size": {
+        "Huge": "巨大",
+        "Invalid": "無效的字型大小",
+        "Label": "字型大小",
+        "Large": "大",
+        "Normal": "一般",
+        "Placeholder": "12pt",
+        "Set": "設定字型大小",
+        "Small": "小",
+        "Title": "大小"
+      },
+      "Title": "字型"
+    },
+    "HTML": "HTML",
+    "ImageCaption": "標題",
+    "Insert": "插入",
+    "Lists": "清單"
+  },
+  "EFFECT": {
+    "CHANGES": {
+      "PHASES": {
+        "final": {
+          "hint": "在衍生資料屬性計算之後",
+          "label": "最終"
+        },
+        "initial": {
+          "hint": "在基礎資料屬性初始化之後、衍生資料準備之前",
+          "label": "初始"
+        }
+      },
+      "TYPES": {
+        "add": "新增",
+        "custom": "自訂",
+        "downgrade": "降級",
+        "multiply": "乘算",
+        "override": "覆寫",
+        "subtract": "減算",
+        "upgrade": "升級"
+      }
+    },
+    "DURATION": {
+      "EXPIRY_EVENTS": {
+        "combatEnd": "戰鬥結束",
+        "combatStart": "戰鬥開始",
+        "roundEnd": "回合結束",
+        "roundStart": "回合開始",
+        "turnEnd": "輪次結束",
+        "turnStart": "輪次開始"
+      },
+      "Header": "效果持續時間",
+      "Label": "持續時間",
+      "MaxOneWarning": "以 {units} 表示的持續時間將視為數值不大於 1。",
+      "ROUNDS": {
+        "few": "{rounds} 回合",
+        "many": "{rounds} 回合",
+        "one": "1 回合",
+        "other": "{rounds} 回合",
+        "two": "2 回合"
+      },
+      "ROUNDS_AGO": {
+        "few": "{rounds} 回合前",
+        "many": "{rounds} 回合前",
+        "one": "1 回合前",
+        "other": "{rounds} 回合前",
+        "two": "2 回合前"
+      },
+      "TURNS": {
+        "few": "{turns} 輪",
+        "many": "{turns} 輪",
+        "one": "1 輪",
+        "other": "{turns} 輪",
+        "two": "2 輪"
+      },
+      "TURNS_AGO": {
+        "few": "{turns} 輪前",
+        "many": "{turns} 輪前",
+        "one": "1 輪前",
+        "other": "{turns} 輪前",
+        "two": "2 輪前"
+      },
+      "UNITS": {
+        "GROUPS": {
+          "combat": "戰鬥",
+          "time": "時間"
+        },
+        "combats": "戰鬥遭遇",
+        "days": "天",
+        "hours": "小時",
+        "minutes": "分鐘",
+        "months": "月",
+        "rounds": "回合",
+        "seconds": "秒",
+        "turns": "輪",
+        "weeks": "週",
+        "years": "年"
+      }
+    },
+    "FIELDS": {
+      "changes": {
+        "element": {
+          "key": {
+            "label": "屬性鍵"
+          },
+          "phase": {
+            "hint": "資料準備過程或另一事件中套用變更的時間點。",
+            "label": "階段"
+          },
+          "priority": {
+            "label": "優先度"
+          },
+          "type": {
+            "label": "類型"
+          },
+          "value": {
+            "label": "數值"
+          }
+        }
+      },
+      "duration": {
+        "expiry": {
+          "label": "到期事件"
+        },
+        "units": {
+          "label": "持續時間單位"
+        },
+        "value": {
+          "label": "持續時間數值"
+        }
+      },
+      "showIcon": {
+        "hint": "此效果啟用時，是否要在介面中顯示代表圖示？",
+        "label": "顯示圖示？"
+      },
+      "start": {
+        "combatant": {
+          "label": "戰鬥參與者"
+        },
+        "initiative": {
+          "label": "先攻"
+        },
+        "round": {
+          "label": "回合"
+        },
+        "time": {
+          "label": "開始時間"
+        },
+        "turn": {
+          "label": "輪"
+        }
+      }
+    },
+    "SHOW_ICON": {
+      "always": "總是",
+      "conditional": "僅限暫時效果",
+      "never": "永不"
+    },
+    "START": {
+      "Combat": "第 {round} 回合，第 {turn} 輪",
+      "Combatant": "{combatant}（先攻擲骰：{initiative}）",
+      "Header": "效果開始",
+      "NoInitiative": "未擲骰",
+      "Time": "開始時間"
+    }
+  },
+  "ELEMENTS": {
+    "TAGS": {
+      "AddGridOffset": "新增網格偏移",
+      "ErrorInvalidGridOffset2D": "二維網格偏移必須有兩個整數座標，並以句點分隔。",
+      "ErrorInvalidGridOffset3D": "三維網格偏移必須有三個整數座標，並以句點分隔。",
+      "RemoveGridOffset": "移除網格偏移"
+    }
+  },
+  "ERROR": {
+    "DETACHED": {
+      "PopupBlocked": "無法分離應用程式。你可能啟用了阻擋彈出式視窗。",
+      "TimedOut": "分離應用程式視窗逾時。你可能啟用了阻擋彈出式視窗。"
+    }
+  },
+  "HOTBAR": {
+    "ACTIONS": {
+      "Clear": "清除快捷列",
+      "Lock": "鎖定快捷列",
+      "Menu": "主選單",
+      "Mute": "靜音",
+      "PageNext": "下一頁",
+      "PagePrev": "上一頁",
+      "Unlock": "解鎖快捷列",
+      "Unmute": "取消靜音"
+    },
+    "ClearConfirm": "要清除快捷列上所有已指派的巨集嗎？",
+    "Empty": "空欄位",
+    "Label": "動作列",
+    "ToggleSheet": "顯示 {document}"
+  },
+  "HUD": {
+    "ChangeLevel": "切換樓層",
+    "ToFrontOrBack": "移到最前／送到最後"
+  },
+  "JOIN": {
+    "WorldPendingSetup": "此世界尚未就緒。請等待遊戲主持人登入並完成設定後再嘗試加入。"
+  },
+  "JOURNAL": {
+    "FIELDS": {
+      "name": {
+        "label": "條目標題"
+      }
+    },
+    "SHOW": {
+      "all": "全部",
+      "authorized": "已授權",
+      "selected": "已選"
+    }
+  },
+  "JOURNALENTRYPAGE": {
+    "FIELDS": {
+      "category": {
+        "label": "頁面類別"
+      },
+      "image": {
+        "caption": {
+          "label": "圖片標題"
+        }
+      },
+      "name": {
+        "label": "頁面名稱"
+      },
+      "src": {
+        "label": "檔案路徑"
+      },
+      "text": {
+        "format": {
+          "label": "格式"
+        }
+      },
+      "title": {
+        "level": {
+          "label": "標題層級"
+        },
+        "show": {
+          "label": "顯示頁面標題"
+        }
+      },
+      "video": {
+        "autoplay": {
+          "label": "自動播放影片"
+        },
+        "controls": {
+          "label": "顯示影片控制項"
+        },
+        "loop": {
+          "label": "循環播放影片"
+        },
+        "volume": {
+          "label": "影片音量"
+        }
+      }
+    }
+  },
+  "KEYBINDINGS": {
+    "Ascend": "垂直上升",
+    "Descend": "垂直下降",
+    "MoveDown": "下移",
+    "MoveDownLeft": "左下移",
+    "MoveDownRight": "右下移",
+    "MoveLeft": "左移",
+    "MoveRight": "右移",
+    "MoveUp": "上移",
+    "MoveUpLeft": "左上移",
+    "MoveUpRight": "右上移",
+    "UnconstrainedMovement": "切換無約束移動"
+  },
+  "LIGHT": {
+    "ANIMATION": {
+      "BewitchingWave": "魅惑波紋",
+      "BlackHole": "黑洞",
+      "Chroma": "色度",
+      "DenseSmoke": "濃煙",
+      "Emanation": "神秘發散",
+      "EnergyField": "能量場",
+      "FairyLight": "仙靈光",
+      "Flame": "火炬",
+      "Fog": "旋渦霧",
+      "ForceGrid": "力場網格",
+      "GhostLight": "幽靈光",
+      "HexaDome": "六角穹頂",
+      "LightDome": "光穹",
+      "MagicalGloom": "魔法陰霾",
+      "Pulse": "脈動",
+      "RadialRainbow": "放射彩虹",
+      "ReactivePulse": "聲音反應脈動",
+      "Revolving": "旋轉光",
+      "RoilingMass": "翻騰煙塵",
+      "Siren": "警笛光",
+      "SmokePatch": "煙塊",
+      "StarLight": "星光",
+      "Sunburst": "日芒",
+      "SwirlingRainbow": "旋渦彩虹",
+      "Torch": "閃爍光",
+      "Vortex": "漩渦",
+      "Wave": "脈動波"
+    },
+    "COLORATION": {
+      "AdaptiveAttenuation": "自適應衰減",
+      "AdaptiveLuminance": "自適應亮度",
+      "ColorBurn": "色彩加深",
+      "ExternalBurn": "外部色彩加深",
+      "ExternalHalo": "外部光暈",
+      "HighAbsorption": "高吸收",
+      "InternalBurn": "內部色彩加深",
+      "InternalHalo": "內部光暈",
+      "InvertAbsorption": "反轉吸收",
+      "Legacy": "舊版著色",
+      "LowAbsorption": "低吸收",
+      "NaturalAttenuation": "自然衰減",
+      "NaturalLight": "自然光"
+    },
+    "FIELDS": {
+      "animation": {
+        "type": {
+          "any": "任意",
+          "none": "無動畫"
+        }
+      }
+    }
+  },
+  "MEASUREMENT": {
+    "ABBR": {
+      "Pixels": "px"
+    },
+    "Angle": "角度",
+    "Coordinates": "座標",
+    "Degrees": "度",
+    "Direction": "方向",
+    "Distance": "距離",
+    "GridSpaces": "網格空間",
+    "GridUnits": "網格單位",
+    "Height": "高度",
+    "Pixels": "像素",
+    "Ratio": "比例",
+    "Scale": "縮放",
+    "Width": "寬度"
+  },
+  "MENU": {
+    "Close": "關閉主選單"
+  },
+  "MODMANAGE": {
+    "Activate": "啟用",
+    "Deactivate": "停用"
+  },
+  "PACKAGE": {
+    "RESULT": {
+      "Error": "錯誤",
+      "Information": "資訊",
+      "Label": "結果",
+      "Update": "更新",
+      "Warning": "警告"
+    }
+  },
+  "PERMISSION": {
+    "RegionCreate": "建立區域",
+    "RegionCreateHint": "允許擁有此身分的使用者建立區域。",
+    "Setting": "權限"
+  },
+  "PLACEABLE_PALETTE": {
+    "Apply": "套用",
+    "CloneSettings": "複製",
+    "MultipleValues": "<多個數值>",
+    "Selected": "{document} 調色板 [{count}]",
+    "Title": "{document} 調色板"
+  },
+  "REGION": {
+    "EVENTS": {
+      "regionAnimation": {
+        "label": "區域動畫狀態已變更"
+      }
+    },
+    "FIELDS": {
+      "attachment": {
+        "token": {
+          "hint": "區域附著的 Token。移動此 Token 時，區域會一併移動。",
+          "label": "附著的 Token"
+        }
+      },
+      "color": {
+        "placeholder": "隨機顏色"
+      },
+      "displayMeasurements": {
+        "hint": "設定是否顯示此區域的測量資訊。",
+        "label": "顯示測量"
+      },
+      "highlightMode": {
+        "hint": "設定要高亮真實形狀，還是區域覆蓋的網格空間。",
+        "label": "高亮模式"
+      },
+      "restriction": {
+        "enabled": {
+          "hint": "設定此區域的形狀是否受牆壁約束。",
+          "label": "受限制"
+        },
+        "priority": {
+          "label": "優先度閾值"
+        },
+        "type": {
+          "label": "受限於"
+        }
+      }
+    },
+    "HIGHLIGHT_MODES": {
+      "coverage": {
+        "label": "覆蓋的網格空間"
+      },
+      "shapes": {
+        "label": "真實形狀"
+      }
+    },
+    "NOTIFICATIONS": {
+      "CopiedShape": "已複製區域形狀。",
+      "CutShape": "已剪下區域形狀。",
+      "PastedShape": "已貼上區域形狀。",
+      "PastedShapeWithoutControlledRegion": "你未控制可貼上形狀的區域。",
+      "PlacedRegionNotAttachedToToken": "放置的區域必須附著於 Token。",
+      "PlacedRegionRotationNotAllowed": "你不能旋轉已放置區域的形狀。"
+    },
+    "RESTRICTION_TYPES": {
+      "darkness": {
+        "label": "阻擋黑暗的牆與優先度大於閾值的光源"
+      },
+      "light": {
+        "label": "阻擋光線的牆與優先度 ≥ 閾值的黑暗來源"
+      },
+      "move": {
+        "label": "阻擋移動的牆"
+      },
+      "sight": {
+        "label": "阻擋視線的牆與優先度 ≥ 閾值的黑暗來源"
+      },
+      "sound": {
+        "label": "阻擋聲音的牆"
+      }
+    },
+    "SECTIONS": {
+      "restriction": "牆限制"
+    },
+    "TABS": {
+      "appearance": "外觀",
+      "placement": "位置"
+    },
+    "TOOLTIPS": {
+      "CannotChangeLevelsIfAttached": "區域必須與附著的 Token 位於同一樓層。",
+      "CannotEnableRestriction": "此區域包含於多個樓層時無法設為受限制。",
+      "CannotSelectMultipleLevelsIfRestricted": "此區域受限制時不能包含於多個樓層。"
+    },
+    "VISIBILITY": {
+      "LAYER_UNLOCKED": {
+        "label": "僅在解鎖時於區域圖層顯示"
+      },
+      "OBSERVER": {
+        "label": "觀察者永遠可見"
+      }
+    }
+  },
+  "SCENE": {
+    "Audio": "音訊",
+    "CurrentLevel": "目前樓層",
+    "Darkness": "黑暗",
+    "Details": "詳細資訊",
+    "DeterminingDimensions": "正在判斷場景尺寸。",
+    "Environment": {
+      "Base": "基礎環境",
+      "Dark": "黑暗環境",
+      "DarkHint": "行為與基礎環境設定相同，但會隨場景黑暗程度接近 1 而套用。",
+      "Reset": "重設為預設選項"
+    },
+    "FIELDS": {
+      "fog": {
+        "MODES": {
+          "DISABLED": "無",
+          "INDIVIDUAL": "個別",
+          "SHARED": "共用"
+        },
+        "mode": {
+          "hint": "控制戰爭迷霧模式：「無」會停用探索（Token 僅能看見目前可見範圍）；「個別」為每位使用者分別記錄探索；「共用」則由所有使用者貢獻單一探索狀態。",
+          "label": "探索模式"
+        }
+      },
+      "grid": {
+        "distance": {
+          "hint": "此場景中每個網格空間代表的距離，單位依遊戲系統而定。"
+        }
+      },
+      "initialLevel": {
+        "hint": "若使用者可看見此樓層，在首次啟用場景時，或加入遊戲時場景已啟用，將被放置於此樓層。",
+        "label": "初始樓層"
+      },
+      "shiftX": {
+        "hint": "套用至場景可遊玩區域的偏移，預設以畫布為中心。",
+        "label": "X 偏移"
+      },
+      "shiftY": {
+        "label": "Y 偏移"
+      },
+      "transition": {
+        "activeOnly": {
+          "hint": "僅在啟用場景時，或加入遊戲後場景已啟用時播放此轉場動畫。",
+          "label": "僅在場景啟用時"
+        },
+        "duration": {
+          "hint": "轉場動畫持續時間（毫秒）。",
+          "label": "持續時間"
+        },
+        "type": {
+          "hint": "檢視場景時播放的轉場動畫類型。",
+          "label": "轉場類型"
+        }
+      }
+    },
+    "FogModeChangeMessage": "迷霧探索模式已變更。將重新載入迷霧探索並重設視野。",
+    "FogOfWar": "戰爭迷霧",
+    "GlobalIllumination": "全域照明",
+    "GridAppearance": "外觀",
+    "GridAppearanceHint": "設定網格線的外觀。",
+    "GridMeasurement": "測量",
+    "GridMechanics": "機制",
+    "InheritedField": "此欄位值繼承自「{level}」樓層。按一下此處可直接編輯。",
+    "InitialLevel": "初始樓層",
+    "Perception": "感知",
+    "Presentation": "呈現",
+    "Properties": "場景屬性",
+    "TABS": {
+      "SHEET": {
+        "environment": "環境",
+        "levels": "樓層",
+        "misc": "其他",
+        "visibility": "可見性"
+      }
+    },
+    "Transition": {
+      "Animation": "轉場動畫",
+      "Config": "設定",
+      "Preview": "預覽",
+      "Types": {
+        "crosshatch": "交叉線",
+        "dots": "點點",
+        "fade": "淡化",
+        "glitch": "故障",
+        "hole": "孔洞",
+        "holeSwirl": "孔洞旋渦",
+        "hologram": "全像",
+        "morph": "變形",
+        "swirl": "旋渦",
+        "waterDrop": "水滴",
+        "waves": "波浪",
+        "whiteNoise": "白雜訊",
+        "wind": "風"
+      }
+    }
+  },
+  "SCENE_LEVEL": {
+    "Actions": {
+      "Add": {
+        "hint": "場景可包含多個垂直樓層。新增樓層可將此場景轉為多樓層場景。",
+        "label": "新增樓層"
+      },
+      "Down": "下移一層樓",
+      "Edit": "編輯樓層",
+      "Remove": "移除樓層",
+      "Up": "上移一層樓",
+      "View": "檢視樓層"
+    },
+    "FIELDS": {
+      "background": {
+        "alphaThreshold": {
+          "hint": "背景紋理中 Alpha 低於此閾值的像素不會限制光線或天氣。",
+          "label": "Alpha 閾值"
+        },
+        "color": {
+          "label": "顏色"
+        },
+        "label": "背景",
+        "src": {
+          "label": "紋理"
+        },
+        "tint": {
+          "label": "染色"
+        }
+      },
+      "elevation": {
+        "bottom": {
+          "label": "背景高度"
+        },
+        "label": "高度範圍",
+        "top": {
+          "label": "前景高度"
+        }
+      },
+      "fog": {
+        "label": "迷霧探索",
+        "src": {
+          "label": "未探索紋理"
+        },
+        "tint": {
+          "label": "紋理染色"
+        }
+      },
+      "foreground": {
+        "alphaThreshold": {
+          "label": "Alpha 閾值"
+        },
+        "label": "前景",
+        "src": {
+          "label": "紋理"
+        },
+        "tint": {
+          "label": "染色"
+        }
+      },
+      "textures": {
+        "anchor": "錨點",
+        "anchorX": {
+          "label": "X"
+        },
+        "anchorY": {
+          "label": "Y"
+        },
+        "fit": {
+          "label": "適配模式"
+        },
+        "label": "定位",
+        "offset": "偏移",
+        "offsetX": {
+          "label": "X"
+        },
+        "offsetY": {
+          "label": "Y"
+        },
+        "rotation": {
+          "label": "旋轉"
+        },
+        "scale": "縮放",
+        "scaleX": {
+          "label": "X"
+        },
+        "scaleY": {
+          "label": "Y"
+        }
+      },
+      "visibility": {
+        "label": "樓層可見性",
+        "levels": {
+          "hint": "設定從此樓層可完整或部分看見的其他樓層。",
+          "label": "可見樓層"
+        }
+      }
+    }
+  },
+  "SERVER_SETTINGS": {
+    "FIELDS": {
+      "unixSocket": {
+        "hint": "可輸入 Unix domain socket 的檔案路徑以取代埠號。若同時輸入埠與 socket，將使用 socket 路徑。",
+        "label": "Unix Socket"
+      }
+    }
+  },
+  "SETTINGS": {
+    "UI": {
+      "ACTIONS": {
+        "Reset": "重設"
+      }
+    }
+  },
+  "SETUP": {
+    "ACTIONS": {
+      "Configure": "設定",
+      "Logout": "登出",
+      "Update": "更新",
+      "Warnings": "警告"
+    },
+    "BACKUPS": {
+      "DeleteSelected": "刪除所選",
+      "SelectAll": "全選"
+    },
+    "ImportingAdventure": "正在匯入冒險",
+    "Install": "安裝",
+    "InstallDependenciesSuccess": "已成功安裝依賴項目",
+    "InstallingDependencies": "正在安裝依賴項目",
+    "PackageUpdateCoreUnknown": "{title} 有可用更新，但可能無法安裝，因為需要未知的核心軟件版本 {vmin}。",
+    "QuickstartFailure": "模組「{title}」快速啟動失敗：{message}。詳見控制台（F12）。",
+    "RequireCoreUnknown": "需要未知版本",
+    "Software": "軟件",
+    "WorldBlank": "空白世界",
+    "WorldCancelConfirm": "若現在返回設定，你在此所做的變更將會遺失。",
+    "WorldContinue": "繼續",
+    "WorldCreateCancel": "取消建立世界",
+    "WorldCreateDependencyFail": "因必要依賴項目未安裝，無法建立世界。",
+    "WorldCreateNoSystem": "繼續前你必須為世界選擇遊戲系統。",
+    "WorldCreateNoTitle": "繼續前你必須為世界提供標題。",
+    "WorldCreateSuccess": "建立成功，正在啟動…",
+    "WorldCreating": "正在建立世界…",
+    "WorldFilterAdventures": "篩選冒險",
+    "WorldFilterSystems": "篩選系統"
+  },
+  "SHAPE": {
+    "ACTIONS": {
+      "createFromWalls": "由受控牆建立形狀",
+      "edit": "編輯形狀",
+      "fillHole": "填補孔洞",
+      "makeHole": "挖孔",
+      "moveDown": "下移形狀",
+      "moveUp": "上移形狀",
+      "remove": "移除形狀",
+      "removeAll": "移除所有形狀"
+    },
+    "NOTIFICATIONS": {
+      "ControlWalls": "控制一組定義目標形狀邊界的牆。",
+      "DrawingMultipleObjectsControlled": "繪製形狀時，你只能控制或設定一個或零個 {type}！",
+      "EmptyEnclosedArea": "受控牆所圍區域為空！請確認外牆形成封閉迴路且端點相連。",
+      "NoControlledWalls": "你沒有控制任何牆！"
+    },
+    "TYPES": {
+      "base": {
+        "FIELDS": {
+          "gridBased": {
+            "hint": "基於網格的形狀遵循網格距離規則，如遊戲設定「網格對角線」所定義。",
+            "label": "基於網格"
+          },
+          "hole": {
+            "label": "為孔洞"
+          },
+          "rotation": {
+            "label": "旋轉"
+          },
+          "type": {
+            "label": "類型"
+          },
+          "x": {
+            "label": "X 原點"
+          },
+          "y": {
+            "label": "Y 原點"
+          }
+        },
+        "origin": {
+          "label": "原點"
+        }
+      },
+      "circle": {
+        "FIELDS": {
+          "radius": {
+            "label": "半徑"
+          }
+        },
+        "name": "圓形"
+      },
+      "cone": {
+        "CURVATURES": {
+          "flat": {
+            "label": "平面"
+          },
+          "round": {
+            "label": "圓弧"
+          },
+          "semicircle": {
+            "label": "半圓"
+          }
+        },
+        "FIELDS": {
+          "angle": {
+            "label": "角度"
+          },
+          "curvature": {
+            "label": "曲率"
+          },
+          "radius": {
+            "label": "半徑"
+          }
+        },
+        "name": "圓錐"
+      },
+      "ellipse": {
+        "FIELDS": {
+          "radiusX": {
+            "label": "X 半徑"
+          },
+          "radiusY": {
+            "label": "Y 半徑"
+          }
+        },
+        "name": "橢圓"
+      },
+      "emanation": {
+        "FIELDS": {
+          "base": {
+            "label": "基礎"
+          },
+          "radius": {
+            "label": "半徑"
+          }
+        },
+        "name": "發散"
+      },
+      "grid": {
+        "FIELDS": {
+          "offsets": {
+            "label": "網格偏移"
+          },
+          "origin": {
+            "label": "原點"
+          }
+        },
+        "name": "網格空間"
+      },
+      "line": {
+        "FIELDS": {
+          "length": {
+            "label": "長度"
+          },
+          "width": {
+            "label": "寬度"
+          }
+        },
+        "name": "線段"
+      },
+      "polygon": {
+        "FIELDS": {
+          "origin": {
+            "label": "原點"
+          },
+          "points": {
+            "label": "點"
+          }
+        },
+        "name": "多邊形"
+      },
+      "rectangle": {
+        "FIELDS": {
+          "anchorX": {
+            "label": "X 錨點"
+          },
+          "anchorY": {
+            "label": "Y 錨點"
+          },
+          "height": {
+            "label": "Y 尺寸"
+          },
+          "width": {
+            "label": "X 尺寸"
+          }
+        },
+        "anchor": {
+          "label": "錨點"
+        },
+        "name": "矩形"
+      },
+      "ring": {
+        "FIELDS": {
+          "innerWidth": {
+            "label": "內側寬度"
+          },
+          "outerWidth": {
+            "label": "外側寬度"
+          },
+          "radius": {
+            "label": "半徑"
+          }
+        },
+        "name": "環形"
+      },
+      "token": {
+        "FIELDS": {
+          "height": {
+            "label": "高度"
+          },
+          "shape": {
+            "label": "形狀"
+          },
+          "width": {
+            "label": "寬度"
+          },
+          "x": {
+            "label": "X"
+          },
+          "y": {
+            "label": "Y"
+          }
+        },
+        "name": "Token",
+        "position": {
+          "label": "位置"
+        },
+        "size": {
+          "label": "大小"
+        }
+      }
+    },
+    "label": "形狀",
+    "labelPlural": "形狀"
+  },
+  "SIDEBAR": {
+    "ACTIONS": {
+      "CREATE": {
+        "ActiveEffect": "建立啟用效果"
+      }
+    },
+    "PLACEABLES": {
+      "ACTIONS": {
+        "ChangeLevel": "切換樓層",
+        "Clear": "清除",
+        "Configure": "設定",
+        "Create": "建立 {name}",
+        "Delete": "刪除",
+        "Hidden": "隱藏",
+        "Hide": "隱藏",
+        "InLevel": "包含於樓層",
+        "Lock": "鎖定",
+        "Locked": "已鎖定",
+        "NotInLevel": "未包含於樓層",
+        "Show": "顯示",
+        "Unlock": "解鎖",
+        "Unlocked": "已解鎖",
+        "Visible": "可見"
+      },
+      "Categories": {
+        "NoAuthor": "無作者",
+        "NoLevel": "無樓層"
+      },
+      "Filter": {
+        "ACTIONS": {
+          "Clear": "清除"
+        },
+        "Bottom": "底部",
+        "Level": "依樓層篩選",
+        "Title": "進階篩選",
+        "Tooltip": "進階篩選。右鍵以清除。",
+        "Top": "頂部"
+      },
+      "Meta": {
+        "empty": "空",
+        "hidden": "對玩家隱藏",
+        "locked": "已鎖定",
+        "visible": "對部分玩家可見"
+      },
+      "Search": {
+        "placeholder": "篩選 {name}"
+      },
+      "WALLS": {
+        "door": "門",
+        "ethereal": "靈體牆",
+        "filterByCategory": "依類別篩選",
+        "invisible": "隱形牆",
+        "normal": "一般牆",
+        "secret": "密門",
+        "terrain": "地形牆",
+        "window": "窗戶"
+      }
+    },
+    "TabPlaceables": "可放置物"
+  },
+  "SUPPORT": {
+    "Errors": "錯誤",
+    "Warnings": "警告"
+  },
+  "TILE": {
+    "Anchor": "圖塊錨點",
+    "FIELDS": {
+      "OCCLUSION_MODES": {
+        "FADE": {
+          "label": "淡化"
+        },
+        "NONE": {
+          "label": "無"
+        },
+        "RADIAL": {
+          "label": "放射"
+        },
+        "SURFACE": {
+          "label": "表面"
+        },
+        "VISION": {
+          "label": "視覺"
+        }
+      },
+      "name": {
+        "hint": "可選名稱，用於辨識此圖塊。",
+        "label": "名稱"
+      },
+      "occlusion": {
+        "modes": {
+          "label": "遮擋模式"
+        }
+      },
+      "restrictions": {
+        "label": "限制"
+      },
+      "texture": {
+        "alphaThreshold": {
+          "hint": "圖塊影像中 Alpha 低於此閾值的像素不會限制光線或天氣，也不會觸發懸停淡化。",
+          "label": "Alpha 閾值"
+        }
+      }
+    },
+    "OcclusionModeSurface": "表面",
+    "TABS": {
+      "video": "影片"
+    }
+  },
+  "TIME": {
+    "Day": {
+      "few": "天",
+      "many": "天",
+      "two": "天"
+    },
+    "Hour": {
+      "few": "小時",
+      "many": "小時",
+      "two": "小時"
+    },
+    "Millisecond": {
+      "few": "毫秒",
+      "many": "毫秒",
+      "two": "毫秒"
+    },
+    "Minute": {
+      "few": "分鐘",
+      "many": "分鐘",
+      "two": "分鐘"
+    },
+    "Second": {
+      "few": "秒",
+      "many": "秒",
+      "two": "秒"
+    },
+    "Year": {
+      "few": "年",
+      "many": "年",
+      "two": "年"
+    }
+  },
+  "TOKEN": {
+    "Anchor": "錨點",
+    "DeleteAttachedRegionWarning": "你正在刪除附有區域的 Token，其附著的區域將被永久刪除。",
+    "DetectionOverride": "覆寫偵測模式",
+    "FIELDS": {
+      "depth": {
+        "label": "Z 尺寸"
+      },
+      "height": {
+        "label": "Y 尺寸"
+      },
+      "level": {
+        "label": "樓層"
+      },
+      "width": {
+        "label": "X 尺寸"
+      }
+    },
+    "MOVEMENT": {
+      "NOTIFICATIONS": {
+        "PLAN": {
+          "DirectViolation": "規劃此移動時，你不能放置路徑點。",
+          "MaxCostViolation": "規劃的移動路徑超過最高允許消耗。",
+          "MaxDistanceViolation": "規劃的移動路徑超過最高允許距離。",
+          "MinCostViolation": "規劃的移動路徑未達最低所需消耗。",
+          "MinDistanceViolation": "規劃的移動路徑未達最低所需距離。"
+        }
+      }
+    },
+    "NOTIFICATIONS": {
+      "PlacedTokenRotationNotAllowed": "你不能旋轉已放置的 Token。"
+    },
+    "PROTOTYPE": {
+      "OverridesWarning": "此欄位由原型 Token 覆寫定義，無法直接編輯。"
+    },
+    "Size": "大小"
+  },
+  "TOURS": {
+    "Title": "導覽管理"
+  },
+  "TYPES": {
+    "HINTS": {
+      "RegionBehavior": {
+        "adjustDarknessLevel": "在區域內覆寫、提亮或調暗場景的黑暗程度。",
+        "applyActiveEffect": "在 Token 位於區域內時對其套用啟用效果。",
+        "changeLevel": "允許移入此區域的 Token 移動到該區域所屬的另一個樓層。",
+        "defineSurface": "定義可限制光線、移動、視覺與聲音的表面。",
+        "displayScrollingText": "當 Token 觸發任一訂閱事件時，在其上方顯示捲動文字。",
+        "executeMacro": "當任一訂閱事件發生時執行巨集。",
+        "executeScript": "當任一訂閱事件發生時執行指令碼。",
+        "modifyMovementCost": "修改區域內 Token 的移動消耗。",
+        "pauseGame": "當玩家將 Token 移入區域時暫停遊戲。",
+        "suppressWeather": "在區域內抑制天氣效果。",
+        "teleportToken": "將移入區域的 Token 傳送到另一區域。",
+        "toggleBehavior": "當任一訂閱事件發生時，啟用／停用其他區域行為。"
+      }
+    },
+    "RegionBehavior": {
+      "applyActiveEffect": "套用啟用效果",
+      "changeLevel": "切換樓層",
+      "defineSurface": "定義表面"
+    }
+  },
+  "USERS": {
+    "FirstLaunch": "儲存並繼續",
+    "LoginAs": "以其他使用者登入",
+    "LoginAsGMRequired": "你必須是遊戲主持人才能以其他使用者身分登入。",
+    "PasswordWarning": "強烈建議為遊戲主持人帳號設定密碼。"
+  },
+  "WALL": {
+    "DoorSounds": {
+      "JailCreaky": "監獄門，吱嘎",
+      "JailHeavy": "監獄門，沉重"
+    }
   }
 }

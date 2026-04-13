@@ -98,7 +98,7 @@
           },
           "dialog": {
             "revealed": {
-              "hint": "若目的地已揭露或使用者為 GM，確認對話框顯示的文字。{token} 會替換為 Token 名稱；{region} 會替換為目的地區域名稱（若此傳送門僅單一目的地）；{scene} 會替換為目的地場景名稱（若目的地不在不同場景）。",
+              "hint": "若目的地已揭露或使用者為 GM，確認對話框顯示的文字。{token} 會替換為 Token 名稱；{region} 會替換為目的地區域名稱（僅當此傳送門只有一個目的地時）；{scene} 會替換為目的地場景名稱（僅當此傳送門的目的地分屬不同場景時）。",
               "label": "對話框（已揭露）"
             },
             "unrevealed": {
@@ -185,7 +185,7 @@
         "label": "代表 Token"
       }
     },
-    "MovementHistoryCleared": "已清除 Token「{name}」的移動紀錄。",
+    "MovementHistoryCleared": "已清除Token \"{name}\"的移動紀錄。",
     "PanTo": "平移至戰鬥參與者",
     "Ping": "Ping Token",
     "Status": "戰鬥參與者狀態",
@@ -490,7 +490,7 @@
     },
     "SHOW_ICON": {
       "always": "總是",
-      "conditional": "若為暫時",
+      "conditional": "僅限暫時效果",
       "never": "永不"
     },
     "START": {
@@ -697,7 +697,7 @@
   },
   "PERMISSION": {
     "RegionCreate": "建立區域",
-    "RegionCreateHint": "允許此角色的使用者建立區域。",
+    "RegionCreateHint": "允許擁有此身分的使用者建立區域。",
     "Setting": "權限"
   },
   "PLACEABLE_PALETTE": {
@@ -1022,8 +1022,8 @@
     "Install": "安裝",
     "InstallDependenciesSuccess": "已成功安裝依賴項目",
     "InstallingDependencies": "正在安裝依賴項目",
-    "PackageUpdateCoreUnknown": "{title} 有可用更新，但可能無法安裝，因為需要未知的核心軟體版本 {vmin}。",
-    "QuickstartFailure": "模組「{title}」快速啟動失敗：{message}。詳見主控台（F12）。",
+    "PackageUpdateCoreUnknown": "{title} 有可用更新，但可能無法安裝，因為需要未知的核心軟件版本 {vmin}。",
+    "QuickstartFailure": "模組「{title}」快速啟動失敗：{message}。詳見控制台（F12）。",
     "RequireCoreUnknown": "需要未知版本",
     "Software": "軟件",
     "WorldBlank": "空白世界",
