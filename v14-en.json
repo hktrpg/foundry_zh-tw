@@ -1,0 +1,1452 @@
+{
+  "ADVENTURE": {
+    "ImportLoading": "Loading adventure data..."
+  },
+  "AMBIENT_LIGHT": {
+    "FIELDS": {
+      "name": {
+        "hint": "An optional name to help identify the light source.",
+        "label": "Name"
+      }
+    }
+  },
+  "AMBIENT_SOUND": {
+    "FIELDS": {
+      "name": {
+        "hint": "An optional name to help identify the sound.",
+        "label": "Name"
+      }
+    }
+  },
+  "APPLICATION": {
+    "ACTIONS": {
+      "Attach": "Re-attach Window",
+      "Close": "Close",
+      "Collapse": "Collapse",
+      "CopyUuid": "Copy Document UUID",
+      "DeleteDocument": "Delete Document",
+      "Detach": "Detach Window",
+      "Expand": "Expand",
+      "ImportDocument": "Import"
+    },
+    "NavigateBackConfirm": "Are you sure you want to exit the Foundry Virtual Tabletop game?"
+  },
+  "BEHAVIOR": {
+    "TYPES": {
+      "applyActiveEffect": {
+        "FIELDS": {
+          "effects": {
+            "hint": "The effects that are applied to Tokens within the Region.",
+            "label": "Effects"
+          }
+        }
+      },
+      "changeLevel": {
+        "Confirm": "Do you want to move {token} to {level}?",
+        "ConfirmSelect": "Select the level you want to move {token} to.",
+        "Move": "Move",
+        "MoveDown": "Move Down",
+        "MoveUp": "Move Up"
+      },
+      "defineSurface": {
+        "FIELDS": {
+          "exposure": {
+            "hint": "Partially reveal the visible area of this elevated surface to observers below and outside of it. The revealed area depends on the angle between the observer and the surface boundary, this area decreases as the angle becomes steeper. This option is useful for roofs, balconies, or other overhead platforms.",
+            "label": "Reveal Elevated Surface"
+          },
+          "light": {
+            "label": "Restricts Light and Darkness"
+          },
+          "move": {
+            "label": "Restricts Movement"
+          },
+          "occlusion": {
+            "hint": "When an occludable Token is beneath the surface, Tiles with occlusion mode set to Surface, and any foreground or background Level textures at the same elevation or higher, will be occluded.",
+            "label": "Occlusion"
+          },
+          "placement": {
+            "label": "Placement"
+          },
+          "sight": {
+            "label": "Restricts Sight"
+          },
+          "sound": {
+            "label": "Restricts Sound"
+          }
+        },
+        "PLACEMENTS": {
+          "both": {
+            "label": "Bottom and Top"
+          },
+          "bottom": {
+            "label": "Bottom"
+          },
+          "top": {
+            "label": "Top"
+          }
+        }
+      },
+      "teleportToken": {
+        "ConfirmRevealed": "Do you want to teleport {token} to {region} in {scene}?",
+        "ConfirmSelectDifferentScene": "Select the destination you want to teleport {token} to.",
+        "ConfirmSelectOption": "{region} in {scene}",
+        "ConfirmSelectSameScene": "Select the destination in {scene} you want to teleport {token} to.",
+        "FIELDS": {
+          "destinations": {
+            "hint": "The destination Region(s) the Token is teleported to once it is moved into this Region. If multiple destination Regions are configured, one of them is randomly selected unless a choice is allowed and either this teleporter is revealed or the User that moved the Token is a GM.",
+            "label": "Destinations"
+          },
+          "dialog": {
+            "revealed": {
+              "hint": "The text that is displayed in the confirmation dialog if the destination(s) are revealed or the User is a GM. {token} is replaced by the Token's name. {region} is replaced by the destination Region's name unless this teleporter has multiple destinations. {scene} is replaced by the destination Scene's name unless this teleporter has destinations in different Scenes.",
+              "label": "Dialog (Revealed)"
+            },
+            "unrevealed": {
+              "hint": "The text that is displayed in the confirmation dialog if the destination(s) are unrevealed and the User is not a GM. {token} is replaced by the Token's name.",
+              "label": "Dialog (Unrevealed)"
+            }
+          },
+          "placement": {
+            "hint": "Choose the placement of the Token inside the destination Region.",
+            "label": "Placement"
+          },
+          "revealed": {
+            "hint": "Reveal the destination(s) of this teleporter to anyone.",
+            "label": "Revealed"
+          },
+          "snap": {
+            "hint": "Snap the destination position the Token is teleported to.",
+            "label": "Snap"
+          },
+          "transition": {
+            "duration": {
+              "hint": "The duration of the transition animation in milliseconds.",
+              "label": "Transition Duration"
+            },
+            "type": {
+              "hint": "The type of transition animation that is played when a Token is teleported.",
+              "label": "Transition Type"
+            }
+          }
+        },
+        "PLACEMENTS": {
+          "center": {
+            "label": "Center"
+          },
+          "random": {
+            "label": "Random"
+          },
+          "relative": {
+            "label": "Relative"
+          }
+        }
+      }
+    }
+  },
+  "CHAT": {
+    "MODES": {
+      "blind": "Blind to Gamemasters",
+      "gm": "Private to Gamemasters",
+      "ic": "Public as Character",
+      "public": "Public as User",
+      "self": "Self Only"
+    },
+    "SendMessage": "Send Message"
+  },
+  "COMBATANT": {
+    "ACTIONS": {
+      "Clear": "Clear Initiative",
+      "ClearMovementHistory": "Clear Movement History",
+      "Create": "Create Combatant",
+      "Remove": "Remove Combatant",
+      "Reroll": "Re-roll Initiative",
+      "Update": "Update Combatant"
+    },
+    "FIELDS": {
+      "actorId": {
+        "label": "Represented Actor"
+      },
+      "defeated": {
+        "label": "Defeated"
+      },
+      "hidden": {
+        "label": "Hidden"
+      },
+      "img": {
+        "label": "Thumbnail Image"
+      },
+      "initiative": {
+        "label": "Initiative Value"
+      },
+      "name": {
+        "label": "Displayed Name"
+      },
+      "tokenId": {
+        "label": "Represented Token"
+      }
+    },
+    "MovementHistoryCleared": "Cleared movement history for Token \"{name}\".",
+    "PanTo": "Pan to Combatant",
+    "Ping": "Ping Token",
+    "Status": "Combatant Status",
+    "ToggleDead": "Mark Defeated",
+    "ToggleVis": "Toggle Visibility",
+    "Unknown": "Unknown Combatant",
+    "UpdateNamed": "Update Combatant: {name}",
+    "WarnNonVisibleToken": "This Combatant is not visible to you."
+  },
+  "COMMON": {
+    "AreYouSure": "Are You Sure?",
+    "Cancel": "Cancel",
+    "Confirm": "Confirm",
+    "Default": "Default",
+    "Delete": "Delete",
+    "Invalid": "Invalid",
+    "No": "No",
+    "None": "None",
+    "Preview": "Preview",
+    "Unknown": "Unknown",
+    "Warning": "Warning",
+    "Yes": "Yes"
+  },
+  "COMPENDIUM": {
+    "CopyId": "Copy Compendium ID",
+    "IdCopiedClipboard": "Compendium ID \"{id}\" copied to clipboard."
+  },
+  "CONTROLS": {
+    "ClearAllOwned": "Clear All Owned Objects",
+    "ClearAllOwnedHint": "Permanently delete all viewed {type} objects that you own?",
+    "DeleteLockedObjects": "Delete Locked Objects",
+    "LightSelect": "Select Light Sources",
+    "Palette": "Palette",
+    "RegionCircle": "Draw Circle",
+    "RegionCone": "Draw Cone",
+    "RegionEmanation": "Draw Emanation",
+    "RegionLine": "Draw Line",
+    "RegionRing": "Draw Ring",
+    "RegionTemplateMode": "Measured Template Mode",
+    "RegionTemplateModeP": "When enabled, the palette is ignored and each shape you draw creates a new Region. Shapes cannot be added to existing Regions.",
+    "SoundSelect": "Select Ambient Sounds",
+    "WallDoor": "Door",
+    "WallDoorBlocks": "Movement, vision, and hearing unless opened",
+    "WallSolid": "Solid Wall",
+    "WallSolidBlocks": "Movement, vision, and hearing"
+  },
+  "DICE": {
+    "CONFIG": {
+      "DefaultMethod": "Default Method"
+    },
+    "FULFILLMENT": {
+      "UseDefault": "Use Default"
+    }
+  },
+  "DOCUMENT": {
+    "FIELDS": {
+      "author": {
+        "label": "Author"
+      },
+      "folder": {
+        "label": "Folder"
+      },
+      "levels": {
+        "hint": "Choose the Levels in which inclusion applies. An empty selection applies inclusion to all Levels.",
+        "label": "Levels"
+      }
+    },
+    "Level": "Level",
+    "Levels": "Levels",
+    "Replace": "Replace {type}",
+    "ReplaceWarning": "There is already a Document {link} with ID <code>{id}</code> in this collection. Do you wish to replace it or create a copy?",
+    "Sheet": "Sheet"
+  },
+  "DRAWING": {
+    "ACTIONS": {
+      "resetDefaults": "Reset Defaults",
+      "submitCreate": "Create Drawing",
+      "submitUpdate": "Update Drawing"
+    },
+    "FIELDS": {
+      "bezierFactor": {
+        "hint": "For freehand drawing, the smoothing factor controls the amount of spline smoothing.",
+        "label": "Smoothing Factor"
+      },
+      "fillAlpha": {
+        "label": "Fill Opacity"
+      },
+      "fillColor": {
+        "label": "Fill Color"
+      },
+      "fillType": {
+        "label": "Fill Types"
+      },
+      "fontFamily": {
+        "label": "Font Family"
+      },
+      "fontSize": {
+        "label": "Font Size"
+      },
+      "interface": {
+        "hint": "A Drawing that represents an \"Object\" is rendered in the Primary Canvas Group and is affected by lighting and fog of war exploration. One that conveys \"Information\" is rendered in the Interface Group and is visible to all players unless hidden.",
+        "label": "Drawing Role"
+      },
+      "name": {
+        "hint": "An optional name to help identify the drawing.",
+        "label": "Name"
+      },
+      "shape": {
+        "height": {
+          "label": "Height"
+        },
+        "width": {
+          "label": "Width"
+        }
+      },
+      "strokeAlpha": {
+        "label": "Line Opacity"
+      },
+      "strokeColor": {
+        "label": "Line Color"
+      },
+      "strokeWidth": {
+        "label": "Line Width"
+      },
+      "text": {
+        "label": "Text Label"
+      },
+      "textAlpha": {
+        "label": "Text Opacity"
+      },
+      "textColor": {
+        "label": "Text Color"
+      },
+      "texture": {
+        "label": "Fill Texture"
+      }
+    },
+    "FILL_TYPES": {
+      "none": "None",
+      "pattern": "Pattern",
+      "solid": "Solid"
+    }
+  },
+  "EDITOR": {
+    "Custom": "Custom",
+    "Font": {
+      "Color": {
+        "Label": "Font Color",
+        "Set": "Set Font Color",
+        "Title": "Color"
+      },
+      "Size": {
+        "Huge": "Huge",
+        "Invalid": "Invalid font size",
+        "Label": "Font Size",
+        "Large": "Large",
+        "Normal": "Normal",
+        "Placeholder": "12pt",
+        "Set": "Set Font Size",
+        "Small": "Small",
+        "Title": "Size"
+      },
+      "Title": "Font"
+    },
+    "HTML": "HTML",
+    "ImageCaption": "Caption",
+    "Insert": "Insert",
+    "Lists": "Lists"
+  },
+  "EFFECT": {
+    "CHANGES": {
+      "PHASES": {
+        "final": {
+          "hint": "After derived-data attributes are computed",
+          "label": "Final"
+        },
+        "initial": {
+          "hint": "After base-data attributes are initialized, but before derived data is prepared",
+          "label": "Initial"
+        }
+      },
+      "TYPES": {
+        "add": "Add",
+        "custom": "Custom",
+        "downgrade": "Downgrade",
+        "multiply": "Multiply",
+        "override": "Override",
+        "subtract": "Subtract",
+        "upgrade": "Upgrade"
+      }
+    },
+    "DURATION": {
+      "EXPIRY_EVENTS": {
+        "combatEnd": "Combat End",
+        "combatStart": "Combat Start",
+        "roundEnd": "Round End",
+        "roundStart": "Round Start",
+        "turnEnd": "Turn End",
+        "turnStart": "Turn Start"
+      },
+      "Header": "Effect Duration",
+      "Label": "Duration",
+      "MaxOneWarning": "A duration in {units} will be treated as having a value of no greater than one.",
+      "ROUNDS": {
+        "few": "{rounds} Rounds",
+        "many": "{rounds} Rounds",
+        "one": "1 Round",
+        "other": "{rounds} Rounds",
+        "two": "2 Rounds"
+      },
+      "ROUNDS_AGO": {
+        "few": "{rounds} Rounds Ago",
+        "many": "{rounds} Rounds Ago",
+        "one": "1 Round Ago",
+        "other": "{rounds} Rounds Ago",
+        "two": "2 Rounds Ago"
+      },
+      "TURNS": {
+        "few": "{turns} Turns",
+        "many": "{turns} Turns",
+        "one": "1 Turn",
+        "other": "{turns} Turns",
+        "two": "2 Turns"
+      },
+      "TURNS_AGO": {
+        "few": "{turns} Turns Ago",
+        "many": "{turns} Turns Ago",
+        "one": "1 Turn Ago",
+        "other": "{turns} Turns Ago",
+        "two": "2 Turns Ago"
+      },
+      "UNITS": {
+        "GROUPS": {
+          "combat": "Combat",
+          "time": "Time"
+        },
+        "combats": "Combat Encounters",
+        "days": "Days",
+        "hours": "Hours",
+        "minutes": "Minutes",
+        "months": "Months",
+        "rounds": "Rounds",
+        "seconds": "Seconds",
+        "turns": "Turns",
+        "weeks": "Weeks",
+        "years": "Years"
+      }
+    },
+    "FIELDS": {
+      "changes": {
+        "element": {
+          "key": {
+            "label": "Attribute Key"
+          },
+          "phase": {
+            "hint": "The point in data preparation or another event a change is to be applied.",
+            "label": "Phase"
+          },
+          "priority": {
+            "label": "Priority"
+          },
+          "type": {
+            "label": "Type"
+          },
+          "value": {
+            "label": "Value"
+          }
+        }
+      },
+      "duration": {
+        "expiry": {
+          "label": "Expiry Event"
+        },
+        "units": {
+          "label": "Duration Units"
+        },
+        "value": {
+          "label": "Duration Value"
+        }
+      },
+      "showIcon": {
+        "hint": "Should the icon representing this Effect be displayed in the UI while this effect is active?",
+        "label": "Show Icon?"
+      },
+      "start": {
+        "combatant": {
+          "label": "Combatant"
+        },
+        "initiative": {
+          "label": "Initiative"
+        },
+        "round": {
+          "label": "Round"
+        },
+        "time": {
+          "label": "Start Time"
+        },
+        "turn": {
+          "label": "Turn"
+        }
+      }
+    },
+    "SHOW_ICON": {
+      "always": "Always",
+      "conditional": "If Temporary",
+      "never": "Never"
+    },
+    "START": {
+      "Combat": "Round {round}, Turn {turn}",
+      "Combatant": "{combatant} (Initiative Roll: {initiative})",
+      "Header": "Effect Start",
+      "NoInitiative": "Not Rolled",
+      "Time": "Start Time"
+    }
+  },
+  "ELEMENTS": {
+    "TAGS": {
+      "AddGridOffset": "Add Grid Offset",
+      "ErrorInvalidGridOffset2D": "A 2D grid offset must have two integer coordinates, which are separated by a dot.",
+      "ErrorInvalidGridOffset3D": "A 3D grid offset must have three integer coordinates, which are separated by dots.",
+      "RemoveGridOffset": "Remove Grid Offset"
+    }
+  },
+  "ERROR": {
+    "DETACHED": {
+      "PopupBlocked": "Unable to detach Application. You may have a popup-blocker active.",
+      "TimedOut": "Operation timed out when detaching Application window. You may have a popup-blocker active."
+    }
+  },
+  "HOTBAR": {
+    "ACTIONS": {
+      "Clear": "Clear Hotbar",
+      "Lock": "Lock Hotbar",
+      "Menu": "Main Menu",
+      "Mute": "Mute Volume",
+      "PageNext": "Next Page",
+      "PagePrev": "Previous Page",
+      "Unlock": "Unlock Hotbar",
+      "Unmute": "Unmute Volume"
+    },
+    "ClearConfirm": "Clear all assigned Macros from your hotbar?",
+    "Empty": "Empty Slot",
+    "Label": "Action Bar",
+    "ToggleSheet": "Display {document}"
+  },
+  "HUD": {
+    "ChangeLevel": "Change Level",
+    "ToFrontOrBack": "Bring to Front / Send to Back"
+  },
+  "JOIN": {
+    "WorldPendingSetup": "This World is not ready yet. Please wait for the Gamemaster to log in and complete setup before attempting to join."
+  },
+  "JOURNAL": {
+    "FIELDS": {
+      "name": {
+        "label": "Entry Title"
+      }
+    },
+    "SHOW": {
+      "all": "all",
+      "authorized": "authorized",
+      "selected": "selected"
+    }
+  },
+  "JOURNALENTRYPAGE": {
+    "FIELDS": {
+      "category": {
+        "label": "Page Category"
+      },
+      "image": {
+        "caption": {
+          "label": "Image Caption"
+        }
+      },
+      "name": {
+        "label": "Page Name"
+      },
+      "src": {
+        "label": "File Path"
+      },
+      "text": {
+        "format": {
+          "label": "Format"
+        }
+      },
+      "title": {
+        "level": {
+          "label": "Heading Level"
+        },
+        "show": {
+          "label": "Display Page Title"
+        }
+      },
+      "video": {
+        "autoplay": {
+          "label": "Autoplay Video"
+        },
+        "controls": {
+          "label": "Show Video Controls"
+        },
+        "loop": {
+          "label": "Loop Video"
+        },
+        "volume": {
+          "label": "Video Volume"
+        }
+      }
+    }
+  },
+  "KEYBINDINGS": {
+    "Ascend": "Ascend Vertically",
+    "Descend": "Descend Vertically",
+    "MoveDown": "Move Down",
+    "MoveDownLeft": "Move Down+Left",
+    "MoveDownRight": "Move Down+Right",
+    "MoveLeft": "Move Left",
+    "MoveRight": "Move Right",
+    "MoveUp": "Move Up",
+    "MoveUpLeft": "Move Up+Left",
+    "MoveUpRight": "Move Up+Right",
+    "UnconstrainedMovement": "Toggle Unconstrained Movement"
+  },
+  "LIGHT": {
+    "ANIMATION": {
+      "BewitchingWave": "Bewitching Wave",
+      "BlackHole": "Black Hole",
+      "Chroma": "Chroma",
+      "DenseSmoke": "Dense Smoke",
+      "Emanation": "Mysterious Emanation",
+      "EnergyField": "Energy Field",
+      "FairyLight": "Fairy Light",
+      "Flame": "Torch",
+      "Fog": "Swirling Fog",
+      "ForceGrid": "Force Grid",
+      "GhostLight": "Ghostly Light",
+      "HexaDome": "Hexa Dome",
+      "LightDome": "Light Dome",
+      "MagicalGloom": "Magical Gloom",
+      "Pulse": "Pulse",
+      "RadialRainbow": "Radial Rainbow",
+      "ReactivePulse": "Sound-Reactive Pulse",
+      "Revolving": "Revolving Light",
+      "RoilingMass": "Roiling Mass",
+      "Siren": "Siren Light",
+      "SmokePatch": "Smoke Patch",
+      "StarLight": "Star Light",
+      "Sunburst": "Sunburst",
+      "SwirlingRainbow": "Swirling Rainbow",
+      "Torch": "Flickering Light",
+      "Vortex": "Vortex",
+      "Wave": "Pulsing Wave"
+    },
+    "COLORATION": {
+      "AdaptiveAttenuation": "Adaptive Attenuation",
+      "AdaptiveLuminance": "Adaptive Luminance",
+      "ColorBurn": "Color Burn",
+      "ExternalBurn": "External Color Burn",
+      "ExternalHalo": "External Halo",
+      "HighAbsorption": "High Absorption",
+      "InternalBurn": "Internal Color Burn",
+      "InternalHalo": "Internal Halo",
+      "InvertAbsorption": "Invert Absorption",
+      "Legacy": "Legacy Coloration",
+      "LowAbsorption": "Low Absorption",
+      "NaturalAttenuation": "Natural Attenuation",
+      "NaturalLight": "Natural Light"
+    },
+    "FIELDS": {
+      "animation": {
+        "type": {
+          "any": "Any",
+          "none": "No Animation"
+        }
+      }
+    }
+  },
+  "MEASUREMENT": {
+    "ABBR": {
+      "Pixels": "px"
+    },
+    "Angle": "Angle",
+    "Coordinates": "Coordinates",
+    "Degrees": "Degrees",
+    "Direction": "Direction",
+    "Distance": "Distance",
+    "GridSpaces": "Grid Spaces",
+    "GridUnits": "Grid Units",
+    "Height": "Height",
+    "Pixels": "Pixels",
+    "Ratio": "Ratio",
+    "Scale": "Scale",
+    "Width": "Width"
+  },
+  "MENU": {
+    "Close": "Close Main Menu"
+  },
+  "MODMANAGE": {
+    "Activate": "Activate",
+    "Deactivate": "Deactivate"
+  },
+  "PACKAGE": {
+    "RESULT": {
+      "Error": "Error",
+      "Information": "Information",
+      "Label": "Result",
+      "Update": "Update",
+      "Warning": "Warning"
+    }
+  },
+  "PERMISSION": {
+    "RegionCreate": "Create Regions",
+    "RegionCreateHint": "Allow users with this role to create regions.",
+    "Setting": "Permissions"
+  },
+  "PLACEABLE_PALETTE": {
+    "Apply": "Apply",
+    "CloneSettings": "Clone",
+    "MultipleValues": "<Multiple Values>",
+    "Selected": "{document} Palette [{count}]",
+    "Title": "{document} Palette"
+  },
+  "REGION": {
+    "EVENTS": {
+      "regionAnimation": {
+        "label": "Region Animation State Changed"
+      }
+    },
+    "FIELDS": {
+      "attachment": {
+        "token": {
+          "hint": "The Token the Region is attached to. When this Token is moved, the Region is moved with it.",
+          "label": "Attached Token"
+        }
+      },
+      "color": {
+        "placeholder": "Random Color"
+      },
+      "displayMeasurements": {
+        "hint": "Configure whether to display measurements for the Region.",
+        "label": "Display Measurements"
+      },
+      "highlightMode": {
+        "hint": "Configure whether to highlight the true shapes or the grid spaces covered by the Region.",
+        "label": "Highlight Mode"
+      },
+      "restriction": {
+        "enabled": {
+          "hint": "Configure whether the shapes of this Region are constrained by walls.",
+          "label": "Is Restricted"
+        },
+        "priority": {
+          "label": "Priority Threshold"
+        },
+        "type": {
+          "label": "Restricted By"
+        }
+      }
+    },
+    "HIGHLIGHT_MODES": {
+      "coverage": {
+        "label": "Covered Grid Spaces"
+      },
+      "shapes": {
+        "label": "True Shapes"
+      }
+    },
+    "NOTIFICATIONS": {
+      "CopiedShape": "Copied Region shape.",
+      "CutShape": "Cut Region shape.",
+      "PastedShape": "Pasted Region shape.",
+      "PastedShapeWithoutControlledRegion": "You are not controlling a Region that the shape can be pasted into.",
+      "PlacedRegionNotAttachedToToken": "The placed Region must be attached to a Token.",
+      "PlacedRegionRotationNotAllowed": "You are not allowed to rotate the shape of the placed Region."
+    },
+    "RESTRICTION_TYPES": {
+      "darkness": {
+        "label": "Darkness-blocking Walls and Light Sources with Priority > Threshold"
+      },
+      "light": {
+        "label": "Light-blocking Walls and Darkness Sources with Priority ≥ Threshold"
+      },
+      "move": {
+        "label": "Movement-blocking Walls"
+      },
+      "sight": {
+        "label": "Sight-blocking Walls and Darkness Sources with Priority ≥ Threshold"
+      },
+      "sound": {
+        "label": "Sound-blocking Walls"
+      }
+    },
+    "SECTIONS": {
+      "restriction": "Wall Restriction"
+    },
+    "TABS": {
+      "appearance": "Appearance",
+      "placement": "Placement"
+    },
+    "TOOLTIPS": {
+      "CannotChangeLevelsIfAttached": "The Region must be on the same Level as the Token it's attached to.",
+      "CannotEnableRestriction": "This Region can't be restricted because it's included in more than one Level.",
+      "CannotSelectMultipleLevelsIfRestricted": "This Region can't be included in multiple Levels while it's restricted."
+    },
+    "VISIBILITY": {
+      "LAYER_UNLOCKED": {
+        "label": "Only on Region Layer when unlocked"
+      },
+      "OBSERVER": {
+        "label": "Always for Observers"
+      }
+    }
+  },
+  "SCENE": {
+    "Audio": "Audio",
+    "CurrentLevel": "Current Level",
+    "Darkness": "Darkness",
+    "Details": "Details",
+    "DeterminingDimensions": "Determining Scene dimensions.",
+    "Environment": {
+      "Base": "Base Environment",
+      "Dark": "Darkness Environment",
+      "DarkHint": "Behaves as the base environmental settings, but applies as the scene's darkness level gets closer to 1.",
+      "Reset": "Reset to Default Options"
+    },
+    "FIELDS": {
+      "fog": {
+        "MODES": {
+          "DISABLED": "None",
+          "INDIVIDUAL": "Individual",
+          "SHARED": "Shared"
+        },
+        "mode": {
+          "hint": "Controls Fog of War mode: \"None\" disables exploration (tokens only see what they currently can), \"Individual\" tracks exploration separately for each user, and \"Shared\" uses a single exploration state contributed to by all users.",
+          "label": "Exploration Mode"
+        }
+      },
+      "grid": {
+        "distance": {
+          "hint": "The distance each grid space represents on this scene, in units appropriate to the game system."
+        }
+      },
+      "initialLevel": {
+        "hint": "If a User has visibility of this Level, they will be placed on it when the Scene is activated for the first time, or if the Scene is active when joining the game.",
+        "label": "Initial Level"
+      },
+      "shiftX": {
+        "hint": "The offset applied to the Scene's playable area, which is centered on the canvas by default.",
+        "label": "X-Shift"
+      },
+      "shiftY": {
+        "label": "Y-Shift"
+      },
+      "transition": {
+        "activeOnly": {
+          "hint": "Play this transition animation only when the Scene is activated or when it is active after joining the game.",
+          "label": "Active Only"
+        },
+        "duration": {
+          "hint": "The duration of the transition animation in milliseconds.",
+          "label": "Duration"
+        },
+        "type": {
+          "hint": "The type of transition animation that is played when the Scene is viewed.",
+          "label": "Transition Type"
+        }
+      }
+    },
+    "FogModeChangeMessage": "Fog exploration mode has changed. This will reload fog exploration and reset vision.",
+    "FogOfWar": "Fog of War",
+    "GlobalIllumination": "Global Illumination",
+    "GridAppearance": "Appearance",
+    "GridAppearanceHint": "Configure the appearance of the grid lines.",
+    "GridMeasurement": "Measurement",
+    "GridMechanics": "Mechanics",
+    "InheritedField": "This field's value is being inherited from the '{level}' level. Click here to edit it directly.",
+    "InitialLevel": "Initial Level",
+    "Perception": "Perception",
+    "Presentation": "Presentation",
+    "Properties": "Scene Properties",
+    "TABS": {
+      "SHEET": {
+        "environment": "Environment",
+        "levels": "Levels",
+        "misc": "Miscellaneous",
+        "visibility": "Visibility"
+      }
+    },
+    "Transition": {
+      "Animation": "Transition Animation",
+      "Config": "Configure",
+      "Preview": "Preview",
+      "Types": {
+        "crosshatch": "Crosshatch",
+        "dots": "Dots",
+        "fade": "Fade",
+        "glitch": "Glitch",
+        "hole": "Hole",
+        "holeSwirl": "Hole Swirl",
+        "hologram": "Hologram",
+        "morph": "Morph",
+        "swirl": "Swirl",
+        "waterDrop": "Water Drop",
+        "waves": "Waves",
+        "whiteNoise": "White Noise",
+        "wind": "Wind"
+      }
+    }
+  },
+  "SCENE_LEVEL": {
+    "Actions": {
+      "Add": {
+        "hint": "Scenes support more than one vertical level. Add a new level to convert this scene into a multi-level scene.",
+        "label": "Add Level"
+      },
+      "Down": "Down one level",
+      "Edit": "Edit level",
+      "Remove": "Remove level",
+      "Up": "Up one level",
+      "View": "View level"
+    },
+    "FIELDS": {
+      "background": {
+        "alphaThreshold": {
+          "hint": "Pixels in the background texture with alpha values below this threshold do not restrict light or weather.",
+          "label": "Alpha Threshold"
+        },
+        "color": {
+          "label": "Color"
+        },
+        "label": "Background",
+        "src": {
+          "label": "Texture"
+        },
+        "tint": {
+          "label": "Tint"
+        }
+      },
+      "elevation": {
+        "bottom": {
+          "label": "Background Elevation"
+        },
+        "label": "Elevation Range",
+        "top": {
+          "label": "Foreground Elevation"
+        }
+      },
+      "fog": {
+        "label": "Fog Exploration",
+        "src": {
+          "label": "Unexplored Texture"
+        },
+        "tint": {
+          "label": "Texture Tint"
+        }
+      },
+      "foreground": {
+        "alphaThreshold": {
+          "label": "Alpha Threshold"
+        },
+        "label": "Foreground",
+        "src": {
+          "label": "Texture"
+        },
+        "tint": {
+          "label": "Tint"
+        }
+      },
+      "textures": {
+        "anchor": "Anchor",
+        "anchorX": {
+          "label": "X"
+        },
+        "anchorY": {
+          "label": "Y"
+        },
+        "fit": {
+          "label": "Fit Mode"
+        },
+        "label": "Positioning",
+        "offset": "Offset",
+        "offsetX": {
+          "label": "X"
+        },
+        "offsetY": {
+          "label": "Y"
+        },
+        "rotation": {
+          "label": "Rotation"
+        },
+        "scale": "Scale",
+        "scaleX": {
+          "label": "X"
+        },
+        "scaleY": {
+          "label": "Y"
+        }
+      },
+      "visibility": {
+        "label": "Level Visibility",
+        "levels": {
+          "hint": "Configure the set of other Levels which are fully or partially visible from this one.",
+          "label": "Visible Levels"
+        }
+      }
+    }
+  },
+  "SERVER_SETTINGS": {
+    "FIELDS": {
+      "unixSocket": {
+        "hint": "Instead of a port number, a file path to a Unix domain socket can be entered. If both a port and socket are entered, the socket path will be used.",
+        "label": "Unix Socket"
+      }
+    }
+  },
+  "SETTINGS": {
+    "UI": {
+      "ACTIONS": {
+        "Reset": "Reset"
+      }
+    }
+  },
+  "SETUP": {
+    "ACTIONS": {
+      "Configure": "Configure",
+      "Logout": "Log Out",
+      "Update": "Update",
+      "Warnings": "Warnings"
+    },
+    "BACKUPS": {
+      "DeleteSelected": "Delete Selected",
+      "SelectAll": "Select All"
+    },
+    "ImportingAdventure": "Importing Adventure",
+    "Install": "Install",
+    "InstallDependenciesSuccess": "Successfully installed dependencies",
+    "InstallingDependencies": "Installing dependencies",
+    "PackageUpdateCoreUnknown": "An update is available for {title} but it may not be installed because it requires unknown core software version {vmin}.",
+    "QuickstartFailure": "Quick-Start of module '{title}' failed: {message}. See the console (F12) for more details.",
+    "RequireCoreUnknown": "Requires Unknown Version",
+    "Software": "Software",
+    "WorldBlank": "Blank World",
+    "WorldCancelConfirm": "If you return to setup now, you will lose any changes you have made here.",
+    "WorldContinue": "Continue",
+    "WorldCreateCancel": "Cancel World Creation",
+    "WorldCreateDependencyFail": "The World could not be created as required dependencies were not installed.",
+    "WorldCreateNoSystem": "You must select a Game System for the World before continuing.",
+    "WorldCreateNoTitle": "You must provide a title for the World before continuing.",
+    "WorldCreateSuccess": "Creation successful, launching...",
+    "WorldCreating": "Creating World...",
+    "WorldFilterAdventures": "Filter adventures",
+    "WorldFilterSystems": "Filter systems"
+  },
+  "SHAPE": {
+    "ACTIONS": {
+      "createFromWalls": "Create Shapes from Controlled Walls",
+      "edit": "Edit Shape",
+      "fillHole": "Fill Hole",
+      "makeHole": "Make Hole",
+      "moveDown": "Move Shape Down",
+      "moveUp": "Move Shape Up",
+      "remove": "Remove Shape",
+      "removeAll": "Remove All Shapes"
+    },
+    "NOTIFICATIONS": {
+      "ControlWalls": "Control a group of Walls which define the boundary of your desired shape.",
+      "DrawingMultipleObjectsControlled": "You must control or configure only one or no {type} when you draw a shape!",
+      "EmptyEnclosedArea": "The area enclosed by the controlled Walls is empty! Make sure that the outer Walls form a closed loop and are connected endpoint to endpoint.",
+      "NoControlledWalls": "You are not controlling any Walls!"
+    },
+    "TYPES": {
+      "base": {
+        "FIELDS": {
+          "gridBased": {
+            "hint": "A grid-based shape follows the grid's distance rules, as defined by the Grid Diagonals game setting.",
+            "label": "Is Grid-Based"
+          },
+          "hole": {
+            "label": "Is Hole"
+          },
+          "rotation": {
+            "label": "Rotation"
+          },
+          "type": {
+            "label": "Type"
+          },
+          "x": {
+            "label": "X-Origin"
+          },
+          "y": {
+            "label": "Y-Origin"
+          }
+        },
+        "origin": {
+          "label": "Origin"
+        }
+      },
+      "circle": {
+        "FIELDS": {
+          "radius": {
+            "label": "Radius"
+          }
+        },
+        "name": "Circle"
+      },
+      "cone": {
+        "CURVATURES": {
+          "flat": {
+            "label": "Flat"
+          },
+          "round": {
+            "label": "Round"
+          },
+          "semicircle": {
+            "label": "Semicircle"
+          }
+        },
+        "FIELDS": {
+          "angle": {
+            "label": "Angle"
+          },
+          "curvature": {
+            "label": "Curvature"
+          },
+          "radius": {
+            "label": "Radius"
+          }
+        },
+        "name": "Cone"
+      },
+      "ellipse": {
+        "FIELDS": {
+          "radiusX": {
+            "label": "X-Radius"
+          },
+          "radiusY": {
+            "label": "Y-Radius"
+          }
+        },
+        "name": "Ellipse"
+      },
+      "emanation": {
+        "FIELDS": {
+          "base": {
+            "label": "Base"
+          },
+          "radius": {
+            "label": "Radius"
+          }
+        },
+        "name": "Emanation"
+      },
+      "grid": {
+        "FIELDS": {
+          "offsets": {
+            "label": "Grid Offsets"
+          },
+          "origin": {
+            "label": "Origin"
+          }
+        },
+        "name": "Grid Spaces"
+      },
+      "line": {
+        "FIELDS": {
+          "length": {
+            "label": "Length"
+          },
+          "width": {
+            "label": "Width"
+          }
+        },
+        "name": "Line"
+      },
+      "polygon": {
+        "FIELDS": {
+          "origin": {
+            "label": "Origin"
+          },
+          "points": {
+            "label": "Points"
+          }
+        },
+        "name": "Polygon"
+      },
+      "rectangle": {
+        "FIELDS": {
+          "anchorX": {
+            "label": "X-Anchor"
+          },
+          "anchorY": {
+            "label": "Y-Anchor"
+          },
+          "height": {
+            "label": "Y-Size"
+          },
+          "width": {
+            "label": "X-Size"
+          }
+        },
+        "anchor": {
+          "label": "Anchor"
+        },
+        "name": "Rectangle"
+      },
+      "ring": {
+        "FIELDS": {
+          "innerWidth": {
+            "label": "Inner Width"
+          },
+          "outerWidth": {
+            "label": "Outer Width"
+          },
+          "radius": {
+            "label": "Radius"
+          }
+        },
+        "name": "Ring"
+      },
+      "token": {
+        "FIELDS": {
+          "height": {
+            "label": "Height"
+          },
+          "shape": {
+            "label": "Shape"
+          },
+          "width": {
+            "label": "Width"
+          },
+          "x": {
+            "label": "X"
+          },
+          "y": {
+            "label": "Y"
+          }
+        },
+        "name": "Token",
+        "position": {
+          "label": "Position"
+        },
+        "size": {
+          "label": "Size"
+        }
+      }
+    },
+    "label": "Shape",
+    "labelPlural": "Shapes"
+  },
+  "SIDEBAR": {
+    "ACTIONS": {
+      "CREATE": {
+        "ActiveEffect": "Create Active Effect"
+      }
+    },
+    "PLACEABLES": {
+      "ACTIONS": {
+        "ChangeLevel": "Change Level",
+        "Clear": "Clear",
+        "Configure": "Configure",
+        "Create": "Create {name}",
+        "Delete": "Delete",
+        "Hidden": "Hidden",
+        "Hide": "Hide",
+        "InLevel": "Included in Level",
+        "Lock": "Lock",
+        "Locked": "Locked",
+        "NotInLevel": "Not Included in Level",
+        "Show": "Show",
+        "Unlock": "Unlock",
+        "Unlocked": "Unlocked",
+        "Visible": "Visible"
+      },
+      "Categories": {
+        "NoAuthor": "No Author",
+        "NoLevel": "No Level"
+      },
+      "Filter": {
+        "ACTIONS": {
+          "Clear": "Clear"
+        },
+        "Bottom": "Bottom",
+        "Level": "Filter by Level",
+        "Title": "Advanced Filter",
+        "Tooltip": "Advanced Filters. Right-click to clear.",
+        "Top": "Top"
+      },
+      "Meta": {
+        "empty": "Empty",
+        "hidden": "Hidden from players",
+        "locked": "Locked",
+        "visible": "Visible to some players"
+      },
+      "Search": {
+        "placeholder": "Filter {name}"
+      },
+      "WALLS": {
+        "door": "Doors",
+        "ethereal": "Ethereal Walls",
+        "filterByCategory": "Filter by Category",
+        "invisible": "Invisible Walls",
+        "normal": "Normal Walls",
+        "secret": "Secret Doors",
+        "terrain": "Terrain Walls",
+        "window": "Windows"
+      }
+    },
+    "TabPlaceables": "Placeables"
+  },
+  "SUPPORT": {
+    "Errors": "Errors",
+    "Warnings": "Warnings"
+  },
+  "TILE": {
+    "Anchor": "Tile Anchor",
+    "FIELDS": {
+      "OCCLUSION_MODES": {
+        "FADE": {
+          "label": "Fade"
+        },
+        "NONE": {
+          "label": "None"
+        },
+        "RADIAL": {
+          "label": "Radial"
+        },
+        "SURFACE": {
+          "label": "Surface"
+        },
+        "VISION": {
+          "label": "Vision"
+        }
+      },
+      "name": {
+        "hint": "An optional name to help identify the Tile.",
+        "label": "Name"
+      },
+      "occlusion": {
+        "modes": {
+          "label": "Occlusion Modes"
+        }
+      },
+      "restrictions": {
+        "label": "Restrictions"
+      },
+      "texture": {
+        "alphaThreshold": {
+          "hint": "Pixels in the Tile image with alpha values below this threshold do not restrict light or weather and do not trigger hover fading.",
+          "label": "Alpha Threshold"
+        }
+      }
+    },
+    "OcclusionModeSurface": "Surface",
+    "TABS": {
+      "video": "Video"
+    }
+  },
+  "TIME": {
+    "Day": {
+      "few": "Days",
+      "many": "Days",
+      "two": "Days"
+    },
+    "Hour": {
+      "few": "Hours",
+      "many": "Hours",
+      "two": "Hours"
+    },
+    "Millisecond": {
+      "few": "Milliseconds",
+      "many": "Milliseconds",
+      "two": "Milliseconds"
+    },
+    "Minute": {
+      "few": "Minutes",
+      "many": "Minutes",
+      "two": "Minutes"
+    },
+    "Second": {
+      "few": "Seconds",
+      "many": "Seconds",
+      "two": "Seconds"
+    },
+    "Year": {
+      "few": "Years",
+      "many": "Years",
+      "two": "Years"
+    }
+  },
+  "TOKEN": {
+    "Anchor": "Anchor",
+    "DeleteAttachedRegionWarning": "You are deleting a Token that has a Region attached to it. Its attached Region(s) will be permanently deleted.",
+    "DetectionOverride": "Override Detection Mode",
+    "FIELDS": {
+      "depth": {
+        "label": "Z-Size"
+      },
+      "height": {
+        "label": "Y-Size"
+      },
+      "level": {
+        "label": "Level"
+      },
+      "width": {
+        "label": "X-Size"
+      }
+    },
+    "MOVEMENT": {
+      "NOTIFICATIONS": {
+        "PLAN": {
+          "DirectViolation": "You are not allowed to place waypoints while planning this movement.",
+          "MaxCostViolation": "The planned movement path exceeds the maximum allowed cost.",
+          "MaxDistanceViolation": "The planned movement path exceeds the maximum allowed distance.",
+          "MinCostViolation": "The planned movement path does not meet the minimum required cost.",
+          "MinDistanceViolation": "The planned movement path does not meet the minimum required distance."
+        }
+      }
+    },
+    "NOTIFICATIONS": {
+      "PlacedTokenRotationNotAllowed": "You are not allowed to rotate the placed Token."
+    },
+    "PROTOTYPE": {
+      "OverridesWarning": "This field is defined by Prototype Token Overrides and cannot be edited directly."
+    },
+    "Size": "Size"
+  },
+  "TOURS": {
+    "Title": "Tour Management"
+  },
+  "TYPES": {
+    "HINTS": {
+      "RegionBehavior": {
+        "adjustDarknessLevel": "Override, brighten, or darken the Scene's Darkness Level within the Region.",
+        "applyActiveEffect": "Apply Active Effects to Tokens while they are within the Region.",
+        "changeLevel": "Allow Tokens that move into the Region to move to another Level the Region is included in.",
+        "defineSurface": "Define a surface that can restrict light, movement, sight, and sound.",
+        "displayScrollingText": "Display a scrolling text above a Token when it triggers one of the subscribed events.",
+        "executeMacro": "Execute a Macro when one of the subscribed events occurs.",
+        "executeScript": "Execute a script when one of the subscribed events occurs.",
+        "modifyMovementCost": "Modify the movement cost of Tokens within the Region.",
+        "pauseGame": "Pause the game when a Token is moved into the Region by a player.",
+        "suppressWeather": "Suppress weather effects within the Region.",
+        "teleportToken": "Teleport Tokens that are moved into the Region to another Region.",
+        "toggleBehavior": "Enable/disable other Region Behaviors when one of the subscribed events occurs."
+      }
+    },
+    "RegionBehavior": {
+      "applyActiveEffect": "Apply Active Effect",
+      "changeLevel": "Change Level",
+      "defineSurface": "Define Surface"
+    }
+  },
+  "USERS": {
+    "FirstLaunch": "Save and Continue",
+    "LoginAs": "Login as User",
+    "LoginAsGMRequired": "You must be a Gamemaster to log in as another user.",
+    "PasswordWarning": "Setting a password for the Gamemaster account is strongly recommended."
+  },
+  "WALL": {
+    "DoorSounds": {
+      "JailCreaky": "Jail, Creaky",
+      "JailHeavy": "Jail, Heavy"
+    }
+  }
+}
