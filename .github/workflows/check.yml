@@ -46,11 +46,15 @@ jobs:
         run: |
           zip module.zip module.json zh-tw.json README.md
 
-      - name: Upload release asset
+      - name: Upload release assets
         if: steps.check_version.outputs.updated == 'true'
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ steps.check_version.outputs.new_version }}
-          files: module.zip
+          # module.zip: 安裝用（含 zh-tw.json、README）；module.json: 單獨上傳供 manifest URL 使用
+          # 例如 https://github.com/hktrpg/foundry_zh-tw/releases/download/1.14.360/module.json
+          files: |
+            module.zip
+            module.json
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
