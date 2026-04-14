@@ -44,7 +44,7 @@ jobs:
       - name: Create zip if updated
         if: steps.check_version.outputs.updated == 'true'
         run: |
-          zip -r module.zip . -x '*.git*'
+          zip module.zip module.json zh-tw.json README.md
 
       - name: Upload release asset
         if: steps.check_version.outputs.updated == 'true'
